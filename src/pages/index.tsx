@@ -21,8 +21,8 @@ const Home: NextPage = () => {
             House <span className="text-[hsl(280,100%,70%)]">Call</span> 
           </h1> 
           <div className="flex flex-col items-center gap-2">
-            <p className="text-2xl text-white">
-              Care in the comfort of your home.
+            <p className="text-3xl text-white">
+              Care in the comfort of your home
             </p>
            </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
