@@ -2,6 +2,7 @@ import { type NextPage } from "next";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { router } from "../server/trpc/trpc";
 import { trpc } from "../utils/trpc";
+import Header from "./header"
 
 
 
@@ -11,24 +12,30 @@ import { trpc } from "../utils/trpc";
 
 
 const Caregivers: NextPage = () => {
-    const { mutateAsync: setRoleAsCaregiver } = trpc.useMutation(
-        'auth.setRoleAsCaregiver'
-    )
 
-    const setCaregiverRole = async () => {
-        await setRoleAsCaregiver();
-    }
+
+    // const { mutateAsync: setRoleAsCaregiver } = trpc.useMutation(
+    //     'auth.setRoleAsCaregiver'
+    // )
+
+    // const setCaregiverRole = async () => {
+    //     await setRoleAsCaregiver();
+    // }
 
 
     return (
+        <>
+        < Header />
         <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
             <button
-                onClick={setCaregiverRole}
+                // onClick={setCaregiverRole}
             >
                 caregiver
             </button>
         < AuthShowcase />
     </main>
+    </>
+
     )
 };
 
