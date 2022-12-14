@@ -3,6 +3,11 @@ import { authRouter } from "./auth";
 import { exampleRouter } from "./example";
 import { initTRPC } from '@trpc/server'
 import { z } from 'zod';
+import _app from "../../../pages/_app";
+
+
+// NOTE: 
+// THE DEFAULT _app.TS WAS REPLACED WITH BELOW. REVIEW ASAP
 
 export const t = initTRPC.create()
 export const appRouter = t.router({
