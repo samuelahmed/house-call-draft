@@ -1,24 +1,17 @@
 import { type NextPage } from "next";
-import { trpc } from '../utils/trpc';
+import Header from "./components/header"
+
 
 const Patients: NextPage = () => {
-    const mutation = trpc.login.useMutation();
-    const handleLogin = async () => {
-      const name = 'John Doe';
-      mutation.mutate({ name });
-    };
+
     return (
       <div>
-        <h1>Login Form</h1>
-        <button onClick={handleLogin} disabled={mutation.isLoading}>
-          Login
-        </button>
-        {mutation.error && <p>Something went wrong! {mutation.error.message}</p>}
+        < Header />
+        <p> Patient Dashboard</p>
       </div>
     );
   }
 
-  
 export default Patients;
 
   
