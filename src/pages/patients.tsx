@@ -1,8 +1,6 @@
 import { type NextPage } from "next";
 import { trpc } from '../utils/trpc';
 
-
-
 const Patients: NextPage = () => {
     const mutation = trpc.login.useMutation();
     const handleLogin = async () => {
