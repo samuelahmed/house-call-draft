@@ -23,7 +23,7 @@ const Patients: NextPage = () => {
         {sessionData && <span>{sessionData.user?.name}</span>}
       </p>
       <p className="text-2xl text-white">
-        {hello.data ? hello.data.greeting : "Loading tRPC query..."}
+        {hello.data ? hello.data.meow : "Loading tRPC query..."}
       </p>
       <p className="text-2xl text-white">
         {secretMessage && <span> - {secretMessage}</span>}
