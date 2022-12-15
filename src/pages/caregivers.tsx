@@ -1,69 +1,68 @@
 import { type NextPage } from "next";
 import React from "react";
 import { Label, TextInput, Button, Checkbox } from "flowbite-react";
+import Header from "./components/header";
+import { useForm, SubmitHandler } from "react-hook-form";
 
-
-
-
+type FormValues = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  caregiver: boolean;
+  patient: boolean;
+};
 
 const Caregivers: NextPage = () => {
+  const { register, handleSubmit } = useForm<FormValues>();
+  const onSubmit: SubmitHandler<FormValues> = (data) => console.log(data);
 
   return (
-    <div className='w-3/12	'>
-      <form className="flex flex-col gap-4">
-        <div>
-          <div className="mb-2 block">
-            <Label
-              htmlFor="email1"
-              value="Your email"
+    <>
+      <Header />
+      <div className="grid h-screen place-items-center">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="base" value="First Name" />
+            </div>
+            <TextInput type="text" sizing="md" {...register("firstName")} />
+          </div>
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="base" value="Last Name" />
+            </div>
+            <TextInput
+              id="base"
+              type="text"
+              sizing="md"
+              {...register("lastName")}
             />
           </div>
-          <TextInput
-            id="email1"
-            type="email"
-            placeholder="name@flowbite.com"
-            required={true}
-          />
-        </div>
 
-        <div>
-          <div className="mb-2 block">
-            <Label
-              htmlFor="password1"
-              value="Your password"
+          <div className="flex items-center gap-2">
+            <input
+              type="radio"
+              value="Yes"
+              {...register("caregiver", { required: false })}
             />
+            <Label htmlFor="base" value="Caregiver" />
           </div>
-          <TextInput
-            id="password1"
-            type="password"
-            required={true}
-          />
-        </div>
-
-        <div className="flex items-center gap-2">
-          <Checkbox id="remember" />
-          <Label htmlFor="remember">
-            Remember me
-          </Label>
-        </div>
-
-        <Button type="submit">
-          Submit
-        </Button>
-      </form>
-    </div>
-  )
+          <div className="flex items-center gap-2">
+            <input
+              type="radio"
+              value="Yes"
+              {...register("patient", { required: false })}
+            />
+            <Label htmlFor="base" value="Patient" />
+          </div>
+          <input type="submit" />
+        </form>
+      </div>
+    </>
+  );
 };
 
 export default Caregivers;
-
-
-  
-
-
-
-
-
 
 //NOTES:
 // import { trpc } from "../utils/trpc";
