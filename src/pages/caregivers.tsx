@@ -1,7 +1,7 @@
 import { type NextPage } from "next";
 import React from "react";
 import { Label, TextInput, Button, Checkbox } from "flowbite-react";
-import Header from "./components/header";
+import Header from "../components/header";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type FormValues = {
