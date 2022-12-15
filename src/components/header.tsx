@@ -12,7 +12,7 @@ const Header = () => {
       >
         <div className="flex justify-start">
           <Avatar
-            img={sessionData && sessionData.user?.image}
+            img={sessionData && sessionData.user?.image || ''}
             rounded={true}
           />
           <div className="flex items-center text-gray-800 dark:text-white pr-7 ml-11">
