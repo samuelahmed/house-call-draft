@@ -4,7 +4,6 @@ import { HiChartPie,HiViewBoards,HiInbox,HiUser,HiShoppingBag,HiArrowSmRight,HiT
 const SideNav = () => {
 
   return (
-    <div className="w-fit">
   <Sidebar aria-label="Sidebar with content separator example">
     <Sidebar.Items>
       <Sidebar.ItemGroup>
@@ -37,7 +36,6 @@ const SideNav = () => {
       </Sidebar.ItemGroup>
     </Sidebar.Items>
   </Sidebar>
-</div>
   );
 
 };
