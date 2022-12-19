@@ -6,7 +6,6 @@ const JobList = () => {
       <Table.Head>
         <Table.HeadCell>Patient Need</Table.HeadCell>
         <Table.HeadCell>Location</Table.HeadCell>
-        <Table.HeadCell>Special Needs</Table.HeadCell>
         <Table.HeadCell>Compensation</Table.HeadCell>
         <Table.HeadCell>
           <span className="sr-only">Edit</span>
@@ -15,10 +14,9 @@ const JobList = () => {
       <Table.Body className="divide-y">
         <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
           <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-            Conversation & Bathing
+            Companion Care
           </Table.Cell>
           <Table.Cell>San Jose</Table.Cell>
-          <Table.Cell>None</Table.Cell>
           <Table.Cell>$25 / hour</Table.Cell>
           <Table.Cell>
             <a
@@ -29,35 +27,147 @@ const JobList = () => {
             </a>
           </Table.Cell>
         </Table.Row>
+
         <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
           <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-            Microsoft Surface Pro
+            Mobility Support
           </Table.Cell>
-          <Table.Cell>White</Table.Cell>
-          <Table.Cell>Laptop PC</Table.Cell>
-          <Table.Cell>$1999</Table.Cell>
+          <Table.Cell>Milpitas</Table.Cell>
+          <Table.Cell>$35 / hour</Table.Cell>
           <Table.Cell>
             <a
               href="/tables"
               className="font-medium text-blue-600 hover:underline dark:text-blue-500"
             >
-              Edit
+              Learn More
             </a>
           </Table.Cell>
         </Table.Row>
+
         <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
           <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-            Magic Mouse 2
+            Personal Care
           </Table.Cell>
-          <Table.Cell>Black</Table.Cell>
-          <Table.Cell>Accessories</Table.Cell>
-          <Table.Cell>$99</Table.Cell>
+          <Table.Cell>Mountain View</Table.Cell>
+          <Table.Cell>$20 / hour</Table.Cell>
           <Table.Cell>
             <a
               href="/tables"
               className="font-medium text-blue-600 hover:underline dark:text-blue-500"
             >
-              Edit
+              Learn More
+            </a>
+          </Table.Cell>
+        </Table.Row>
+
+        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+            Nutrition Assistance
+          </Table.Cell>
+          <Table.Cell>Milpitas</Table.Cell>
+          <Table.Cell>$25 / hour</Table.Cell>
+          <Table.Cell>
+            <a
+              href="/tables"
+              className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+            >
+              Learn More
+            </a>
+          </Table.Cell>
+        </Table.Row>
+
+        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+            Conversation
+          </Table.Cell>
+          <Table.Cell>Santa Clara</Table.Cell>
+          <Table.Cell>$20 / hour</Table.Cell>
+          <Table.Cell>
+            <a
+              href="/tables"
+              className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+            >
+              Learn More
+            </a>
+          </Table.Cell>
+        </Table.Row>
+
+        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+            Personal Care Services
+          </Table.Cell>
+          <Table.Cell>San Jose</Table.Cell>
+          <Table.Cell>$40 / hour</Table.Cell>
+          <Table.Cell>
+            <a
+              href="/tables"
+              className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+            >
+              Learn More
+            </a>
+          </Table.Cell>
+        </Table.Row>
+
+        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+            Specialized Home Care
+          </Table.Cell>
+          <Table.Cell>San Jose</Table.Cell>
+          <Table.Cell>$50 / hour</Table.Cell>
+          <Table.Cell>
+            <a
+              href="/tables"
+              className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+            >
+              Learn More
+            </a>
+          </Table.Cell>
+        </Table.Row>
+
+        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+            Adult Day Care
+          </Table.Cell>
+          <Table.Cell>Palo Alto</Table.Cell>
+          <Table.Cell>$30 / hour</Table.Cell>
+          <Table.Cell>
+            <a
+              href="/tables"
+              className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+            >
+              Learn More
+            </a>
+          </Table.Cell>
+        </Table.Row>
+
+        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+            Respite Care
+          </Table.Cell>
+          <Table.Cell>San Jose</Table.Cell>
+          <Table.Cell>$45 / hour</Table.Cell>
+          <Table.Cell>
+            <a
+              href="/tables"
+              className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+            >
+              Learn More
+            </a>
+          </Table.Cell>
+        </Table.Row>
+
+        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+            Telephone Reassurance:
+          </Table.Cell>
+          <Table.Cell>Remote</Table.Cell>
+          <Table.Cell>$15 / hour</Table.Cell>
+          <Table.Cell>
+            <a
+              href="/tables"
+              className="font-medium text-blue-600 hover:underline dark:text-blue-500"
+            >
+              Learn More
             </a>
           </Table.Cell>
         </Table.Row>
