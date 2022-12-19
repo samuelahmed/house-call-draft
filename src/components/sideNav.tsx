@@ -1,9 +1,9 @@
 import { Sidebar } from "flowbite-react";
 import { HiChartPie, HiViewBoards, HiInbox, HiUser } from "react-icons/hi";
 
-const SideNav = ({ }) => {
-  return (
+const SideNav = ({ showNav }) => {
 
+  return (
     <div className="fixed w-64 shadow-sm z-30">
     <Sidebar aria-label="Sidebar with content separator example">
       <Sidebar.Items>
