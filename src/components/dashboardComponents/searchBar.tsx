@@ -1,11 +1,16 @@
 import { Label, TextInput, Button, Dropdown } from "flowbite-react";
 
 const SearchBar = () => {
+
+  console.log()
+
+
+
   return (
-<div className="flex flex-col gap-4 pb-4">
+<div className="flex flex-col gap-4 pb-4 items-center">
 <div className="flex gap-4 items-center">
 
-      <TextInput id="small" type="text" sizing="md" />
+<TextInput id="small" type="text" sizing="w-32" />
 
 
 
@@ -27,6 +32,8 @@ const SearchBar = () => {
         <Dropdown.Item>Saturday</Dropdown.Item>
         <Dropdown.Item>Sunday</Dropdown.Item>
       </Dropdown>
+
+
 
 
       <Button color="gray">Search</Button>

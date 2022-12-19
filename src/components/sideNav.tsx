@@ -1,7 +1,7 @@
 import { Sidebar } from "flowbite-react";
 import { HiChartPie, HiViewBoards, HiInbox, HiUser } from "react-icons/hi";
 
-const SideNav = ({ showNav }) => {
+const SideNav = () => {
 
   return (
     <div className="fixed w-64 shadow-sm z-30">

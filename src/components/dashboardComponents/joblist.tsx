@@ -140,37 +140,9 @@ const JobList = () => {
           </Table.Cell>
         </Table.Row>
 
-        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-            Respite Care
-          </Table.Cell>
-          <Table.Cell>San Jose</Table.Cell>
-          <Table.Cell>$45 / hour</Table.Cell>
-          <Table.Cell>
-            <a
-              href="/tables"
-              className="font-medium text-blue-600 hover:underline dark:text-blue-500"
-            >
-              Learn More
-            </a>
-          </Table.Cell>
-        </Table.Row>
+    
 
-        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-            Telephone Reassurance
-          </Table.Cell>
-          <Table.Cell>Remote</Table.Cell>
-          <Table.Cell>$15 / hour</Table.Cell>
-          <Table.Cell>
-            <a
-              href="/tables"
-              className="font-medium text-blue-600 hover:underline dark:text-blue-500"
-            >
-              Learn More
-            </a>
-          </Table.Cell>
-        </Table.Row>
+        
       </Table.Body>
     </Table>
   );
