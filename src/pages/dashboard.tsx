@@ -49,7 +49,7 @@ const Dashboard: NextPage = () => {
       <div className={`${showNav && !isMobile ? "" : "hidden"}`}>
         <SideNav showNav={showNav} />
       </div>
-      <div className="px-4 md:px-72">
+      <div className="px-4  md:px-72">
         <div className="justify-items-center md:grid">
           < SearchBar />
           < JobList />
