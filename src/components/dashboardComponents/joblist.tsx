@@ -158,7 +158,7 @@ const JobList = () => {
 
         <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
           <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-            Telephone Reassurance:
+            Telephone Reassurance
           </Table.Cell>
           <Table.Cell>Remote</Table.Cell>
           <Table.Cell>$15 / hour</Table.Cell>
