@@ -1,6 +1,9 @@
 const MessagePreview = () => {
   return (
     <>
+      {/* NOTE: SEND MESSAGE BUTTON DISSPEARS ON MOBILE */}
+
+  
       <div className="p:2 flex h-128 flex-1 flex-col justify-between sm:p-6">
         <div className="flex justify-between border-b-2 border-gray-200 py-3 sm:items-center">
           <div className="relative flex items-center space-x-4">

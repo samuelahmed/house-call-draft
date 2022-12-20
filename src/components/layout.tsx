@@ -1,0 +1,40 @@
+import { Sidebar } from "flowbite-react";
+import { HiChartPie, HiViewBoards, HiInbox, HiUser } from "react-icons/hi";
+import { useState, useEffect } from "react";
+import Header from "./header";
+import SideNav from "./sideNav";
+
+const Layout = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+
+  function handleResize() {
+    if (innerWidth <= 640) {
+      setIsMobile(true);
+      setShowNav(false);
+    } else {
+      setIsMobile(false);
+      setShowNav(true);
+    }
+  }
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      addEventListener("resize", handleResize);
+    }
+    return () => {
+      removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return (
+    <>
+      <Header showNav={showNav} setShowNav={setShowNav} />
+      <div className={`${showNav && !isMobile ? "" : "hidden"}`}>
+        <SideNav />
+      </div>
+    </>
+  );
+};
+
+export default Layout;

@@ -31,10 +31,9 @@ const JobModal = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={() => setShowModal(false)}>Schedule Session</Button>
-          <Button color="gray" onClick={() => setShowModal(false)}>
-            Close
-          </Button>
+        <Button color="success" onClick={() => setShowModal(false)}>Schedule Session</Button>
+          <Button color="failure" onClick={() => setShowModal(false)}>Report Post</Button>
+          <Button color="gray" onClick={() => setShowModal(false)}> Close </Button>
         </Modal.Footer>
       </Modal>
     </>
