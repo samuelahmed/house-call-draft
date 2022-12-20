@@ -2,8 +2,13 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { Navbar, Avatar } from "flowbite-react";
 import { Bars3CenterLeftIcon } from "@heroicons/react/24/solid";
 
-const Header = ({ showNav, setShowNav}: { showNav: boolean; setShowNav: any; }) => {
-
+const Header = ({
+  showNav,
+  setShowNav,
+}: {
+  showNav: boolean;
+  setShowNav: any;
+}) => {
   const { data: sessionData } = useSession();
 
   return (

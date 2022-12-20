@@ -7,7 +7,6 @@ import UpcomingJobs from "./caregiverDashboardComponents/upcomingJobs";
 import PastJobs from "./caregiverDashboardComponents/pastJobs";
 
 const CaregiverDashboard = () => {
-
   //empty function for pagination to prevent error until enabled.
   const onPageChange = () => ({});
 
@@ -18,7 +17,6 @@ const CaregiverDashboard = () => {
         aria-label="Tabs with icons"
         style="underline"
       >
-
         <Tabs.Item active={true} title="Find Patient" icon={HiUserCircle}>
           <div className="justify-items-center md:grid ">
             <SearchBar />

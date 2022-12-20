@@ -1,5 +1,3 @@
-import { Sidebar } from "flowbite-react";
-import { HiChartPie, HiViewBoards, HiInbox, HiUser } from "react-icons/hi";
 import { useState, useEffect } from "react";
 import Header from "./layoutComponents/header";
 import SideNav from "./layoutComponents/sideNav";

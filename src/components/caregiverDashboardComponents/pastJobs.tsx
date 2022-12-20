@@ -1,8 +1,7 @@
 import { Table } from "flowbite-react";
-import PastJobModal from './pastJobModal'
+import PastJobModal from "./pastJobModal";
 
 const PastJobs = () => {
-
   return (
     <div className="w-full	">
       <Table hoverable={true}>
@@ -12,7 +11,6 @@ const PastJobs = () => {
           <Table.HeadCell>Address</Table.HeadCell>
           <Table.HeadCell>Date</Table.HeadCell>
           <Table.HeadCell>Time</Table.HeadCell>
-
           <Table.HeadCell>
             <span className="sr-only">Edit</span>
           </Table.HeadCell>
@@ -40,10 +38,9 @@ const PastJobs = () => {
             <Table.Cell>Monday January 9, 2023</Table.Cell>
             <Table.Cell>3:00pm - 11:00pm</Table.Cell>
             <Table.Cell>
-            <PastJobModal />
+              <PastJobModal />
             </Table.Cell>
           </Table.Row>
-
         </Table.Body>
       </Table>
     </div>

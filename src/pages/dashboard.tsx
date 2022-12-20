@@ -1,7 +1,4 @@
 import { type NextPage } from "next";
-import { useState, useEffect } from "react";
-import Header from "../components/layoutComponents/header";
-import SideNav from "../components/layoutComponents/sideNav";
 import Layout from "../components/layout";
 import Head from "next/head";
 import CaregiverDashboard from "../components/caregiverDashboard";

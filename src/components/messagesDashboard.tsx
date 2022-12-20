@@ -13,8 +13,7 @@ const MessagesDashboard = () => {
         style="underline"
       >
         <Tabs.Item active={true} title="Message">
-        <MessagePreview />
-
+          <MessagePreview />
         </Tabs.Item>
         <Tabs.Item title="Connection List">
           <FriendListPreview />
