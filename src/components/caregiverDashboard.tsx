@@ -3,7 +3,7 @@ import SearchBar from "./dashboardComponents/searchBar";
 import { HiUserCircle } from "react-icons/hi";
 import { MdDashboard, MdHistory } from "react-icons/md";
 import { Pagination, Tabs } from "flowbite-react";
-
+import UpcomingJobs from "./dashboardComponents/upcomingJobs";
 
 const CaregiverDashboard = () => {
   //empty function for pagination
@@ -33,7 +33,7 @@ const CaregiverDashboard = () => {
               </div>
             </Tabs.Item>
             <Tabs.Item title="Scheduled Sessions" icon={MdDashboard}>
-              List of scheduled sessions here
+              < UpcomingJobs />
             </Tabs.Item>
             <Tabs.Item title="Past Sessions" icon={MdHistory}>
               Historical List of sessions here
