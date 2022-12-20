@@ -5,8 +5,8 @@ import { HiUserCircle } from "react-icons/hi";
 import { MdDashboard } from "react-icons/md";
 import { Pagination, Tabs } from "flowbite-react";
 
-const CaregiverDashboard: NextPage = () => {
 
+const CaregiverDashboard: NextPage = () => {
     //empty function for pagination
     const onPageChange = () => ({});
 

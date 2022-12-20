@@ -2,9 +2,13 @@ import { Sidebar } from "flowbite-react";
 import { HiChartPie, HiViewBoards, HiInbox, HiUser } from "react-icons/hi";
 
 
+// ISSUE 1: MENU BREAKS AFTER SCROLL ON REAL IPHONE TEST. NOT REPLICATED ON BROWSER PHONE MODE. RESOLVE ASAP
+  // PROBABLY HAS TO DO WITH THE MOBILE CHECKING IN PAGES BUT SINCE 4X PUTTING ISSUE HERE. 
+// ISSUE 2: NEED TO FIND SINGLE HOME FOR MOBILE CHECKING CODE AND NAV OPEN / CLOSE
+
+
+
 const SideNav = () => {
-
-
 
   return (
     <div className="fixed z-30 w-64 shadow-sm">
