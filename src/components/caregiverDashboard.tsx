@@ -6,15 +6,12 @@ import { MdDashboard } from "react-icons/md";
 import { Pagination, Tabs } from "flowbite-react";
 
 const CaregiverDashboard: NextPage = () => {
-  
+
     //empty function for pagination
     const onPageChange = () => ({});
 
   return (
     <>
-      <div className="px-4 md:px-72">
-        <div className="justify-items-center md:grid">
-          <div className="pb-6 text-2xl">Caretaker Dashboard</div>
 
           <Tabs.Group
             className="justify-center"
@@ -40,8 +37,7 @@ const CaregiverDashboard: NextPage = () => {
               List of scheduled sessions here
             </Tabs.Item>
           </Tabs.Group>
-        </div>
-      </div>
+
     </>
   );
 };

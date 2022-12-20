@@ -7,9 +7,6 @@ import CaregiverDashboard from "../components/caregiverDashboard";
 
 const Dashboard: NextPage = () => {
 
-  //empty function for pagination
-  const onPageChange = () => ({});
-  //mobile screen size management
   const [isMobile, setIsMobile] = useState(false);
   const [showNav, setShowNav] = useState(true);
 
@@ -41,8 +38,13 @@ const Dashboard: NextPage = () => {
       <div className={`${showNav && !isMobile ? "" : "hidden"}`}>
         <SideNav />
       </div>
+      <div className="px-4 md:px-72">
+        <div className="justify-items-center md:grid">
+          <div className="pb-6 text-2xl">Caretaker Dashboard</div>
+          < CaregiverDashboard />
 
- < CaregiverDashboard />
+        </div>
+      </div>
     </>
   );
 };
