@@ -6,7 +6,6 @@ const Header = ({ showNav, setShowNav}: { showNav: boolean; setShowNav: any; }) 
 
   const { data: sessionData } = useSession();
 
-
   return (
     <div className="sticky top-0 items-center">
       <Navbar fluid={true} rounded={true}>

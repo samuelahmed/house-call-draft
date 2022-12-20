@@ -1,5 +1,5 @@
 import { Table } from "flowbite-react";
-import UpcomingJobModal from "../dashboardComponents/upcomingJobModal";
+import UpcomingJobModal from "./upcomingJobModal";
 
 
 const UpcomingJobs = () => {

@@ -1,6 +1,6 @@
-import MessagePreview from "./dashboardComponents/messagePreview";
+import MessagePreview from "./messageDashboardComponents/messagePreview";
 import { Tabs } from "flowbite-react";
-import FriendListPreview from "./dashboardComponents/friendListPreview";
+import FriendListPreview from "./messageDashboardComponents/friendListPreview";
 
 //When closing screen the Sidebar Menu does not open / close anymore.
 

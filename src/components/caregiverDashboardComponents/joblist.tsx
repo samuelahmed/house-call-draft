@@ -1,5 +1,5 @@
 import { Table } from "flowbite-react";
-import JobModal from "../dashboardComponents/jobModal";
+import JobModal from "./jobModal";
 
 const JobList = () => {
 

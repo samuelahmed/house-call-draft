@@ -1,13 +1,14 @@
-import JobList from "./dashboardComponents/joblist";
-import SearchBar from "./dashboardComponents/searchBar";
+import JobList from "./caregiverDashboardComponents/joblist";
+import SearchBar from "./caregiverDashboardComponents/searchBar";
 import { HiUserCircle } from "react-icons/hi";
 import { MdDashboard, MdHistory } from "react-icons/md";
 import { Pagination, Tabs } from "flowbite-react";
-import UpcomingJobs from "./dashboardComponents/upcomingJobs";
-import PastJobs from "./dashboardComponents/pastJobs";
+import UpcomingJobs from "./caregiverDashboardComponents/upcomingJobs";
+import PastJobs from "./caregiverDashboardComponents/pastJobs";
 
 const CaregiverDashboard = () => {
-  //empty function for pagination
+
+  //empty function for pagination to prevent error until enabled.
   const onPageChange = () => ({});
 
   return (
@@ -17,6 +18,7 @@ const CaregiverDashboard = () => {
         aria-label="Tabs with icons"
         style="underline"
       >
+
         <Tabs.Item active={true} title="Find Patient" icon={HiUserCircle}>
           <div className="justify-items-center md:grid ">
             <SearchBar />
@@ -32,10 +34,10 @@ const CaregiverDashboard = () => {
             />
           </div>
         </Tabs.Item>
+
         <Tabs.Item title="Scheduled Sessions" icon={MdDashboard}>
           <div className="justify-items-center md:grid ">
             <SearchBar />
-
             <UpcomingJobs />
             <Pagination
               currentPage={1}
@@ -52,7 +54,6 @@ const CaregiverDashboard = () => {
         <Tabs.Item title="Past Sessions" icon={MdHistory}>
           <div className="justify-items-center md:grid ">
             <SearchBar />
-
             <PastJobs />
             <Pagination
               currentPage={1}
