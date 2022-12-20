@@ -1,13 +1,12 @@
-import { type NextPage } from "next";
 import JobList from "./dashboardComponents/joblist";
 import SearchBar from "./dashboardComponents/searchBar";
 import { HiUserCircle } from "react-icons/hi";
-import { MdDashboard } from "react-icons/md";
+import { MdDashboard, MdHistory } from "react-icons/md";
 import { Pagination, Tabs } from "flowbite-react";
 
 
-const CaregiverDashboard: NextPage = () => {
-    //empty function for pagination
+const CaregiverDashboard = () => {
+  //empty function for pagination
     const onPageChange = () => ({});
 
   return (
@@ -35,6 +34,9 @@ const CaregiverDashboard: NextPage = () => {
             </Tabs.Item>
             <Tabs.Item title="Scheduled Sessions" icon={MdDashboard}>
               List of scheduled sessions here
+            </Tabs.Item>
+            <Tabs.Item title="Past Sessions" icon={MdHistory}>
+              Historical List of sessions here
             </Tabs.Item>
           </Tabs.Group>
 

@@ -6,8 +6,6 @@ import { HiChartPie, HiViewBoards, HiInbox, HiUser } from "react-icons/hi";
   // PROBABLY HAS TO DO WITH THE MOBILE CHECKING IN PAGES BUT SINCE 4X PUTTING ISSUE HERE. 
 // ISSUE 2: NEED TO FIND SINGLE HOME FOR MOBILE CHECKING CODE AND NAV OPEN / CLOSE
 
-
-
 const SideNav = () => {
 
   return (
