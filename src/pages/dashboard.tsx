@@ -12,7 +12,7 @@ const Dashboard: NextPage = () => {
       <Layout />
       <div className="px-4 md:px-72">
         <div className="justify-items-center md:grid">
-          <div className="pb-6 text-2xl">Caretaker Dashboard</div>
+          <div className="pb-6 text-2xl">Caregiver Dashboard</div>
           <CaregiverDashboard />
         </div>
       </div>
