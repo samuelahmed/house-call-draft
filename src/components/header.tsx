@@ -1,9 +1,11 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Navbar, Avatar } from "flowbite-react";
 import { Bars3CenterLeftIcon } from "@heroicons/react/24/solid";
+ 
+const Header = ({ showNav, setShowNav}: { showNav: boolean; setShowNav: any; }) => {
 
-const Header = ({ showNav, setShowNav }) => {
   const { data: sessionData } = useSession();
+
   return (
     <div className="sticky top-0 items-center">
       <Navbar fluid={true} rounded={true}>
@@ -19,7 +21,7 @@ const Header = ({ showNav, setShowNav }) => {
             img={(sessionData && sessionData.user?.image) || ""}
             rounded={true}
           />
-          <div className="ml-4 flex items-center pr-4 text-gray-800 dark:text-white">
+          <div className="ml- flex items-center pr-4 text-gray-800 dark:text-white">
             {sessionData && <span>{sessionData.user?.name}</span>}
           </div>
         </div>

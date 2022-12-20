@@ -12,7 +12,6 @@ import { Pagination, Tabs } from "flowbite-react";
 const Dashboard: NextPage = () => {
   //empty function for pagination
   const onPageChange = () => ({});
-
   //mobile screen size management
   const [isMobile, setIsMobile] = useState(false);
   const [showNav, setShowNav] = useState(true);
@@ -36,10 +35,6 @@ const Dashboard: NextPage = () => {
     };
   }, []);
 
-  // if (isMobile === true) {
-  //   console.log('meow')
-  // }
-
   return (
     <>
       <Head>
@@ -49,19 +44,16 @@ const Dashboard: NextPage = () => {
       <div className={`${showNav && !isMobile ? "" : "hidden"}`}>
         <SideNav />
       </div>
-
       <div className="px-4 md:px-72">
         <div className="justify-items-center md:grid">
+          <div className="pb-6 text-2xl">Caretaker Dashboard</div>
 
-
-          <div className="text-2xl pb-6">
-            Caretaker Dashboard
-          </div>
-
-
-          <Tabs.Group className="justify-center" aria-label="Tabs with icons" style="underline">
+          <Tabs.Group
+            className="justify-center"
+            aria-label="Tabs with icons"
+            style="underline"
+          >
             <Tabs.Item active={true} title="Find Patient" icon={HiUserCircle}>
-              
               <div className="justify-items-center md:grid">
                 <SearchBar />
                 <JobList />
@@ -77,10 +69,7 @@ const Dashboard: NextPage = () => {
               </div>
             </Tabs.Item>
             <Tabs.Item title="Scheduled Sessions" icon={MdDashboard}>
-
-                List of scheduled sessions here
-
-
+              List of scheduled sessions here
             </Tabs.Item>
           </Tabs.Group>
         </div>

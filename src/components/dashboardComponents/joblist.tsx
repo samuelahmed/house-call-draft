@@ -139,10 +139,6 @@ const JobList = () => {
             </a>
           </Table.Cell>
         </Table.Row>
-
-    
-
-        
       </Table.Body>
     </Table>
   );
