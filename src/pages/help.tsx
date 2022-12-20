@@ -4,10 +4,7 @@ import SideNav from "../components/sideNav";
 import Head from "next/head";
 import { useState, useEffect } from "react";
 
-
 const Help: NextPage = () => {
-
-
   const [isMobile, setIsMobile] = useState(false);
   const [showNav, setShowNav] = useState(true);
 
@@ -30,10 +27,9 @@ const Help: NextPage = () => {
     };
   }, []);
 
-
   return (
     <>
-      <Header showNav={showNav} setShowNav={setShowNav}  />
+      <Header showNav={showNav} setShowNav={setShowNav} />
       <div className={`${showNav && !isMobile ? "" : "hidden"}`}>
         <SideNav />
       </div>
@@ -43,9 +39,10 @@ const Help: NextPage = () => {
       <div className="px-4 md:px-72">
         <div className="justify-items-center md:grid">
           <div className="pb-6 text-2xl">Help</div>
-            Help Information and Tools 
+          Help Information and Tools
         </div>
-      </div>    </>
+      </div>{" "}
+    </>
   );
 };
 

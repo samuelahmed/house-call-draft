@@ -5,7 +5,6 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 
 const Account: NextPage = () => {
-
   const [isMobile, setIsMobile] = useState(false);
   const [showNav, setShowNav] = useState(true);
 
@@ -26,20 +25,24 @@ const Account: NextPage = () => {
     return () => {
       removeEventListener("resize", handleResize);
     };
-  }, []);  return (
+  }, []);
+  
+  return (
     <>
       <Header showNav={showNav} setShowNav={setShowNav} />
-     <div className={`${showNav && !isMobile ? "" : "hidden"}`}>
+      <div className={`${showNav && !isMobile ? "" : "hidden"}`}>
         <SideNav />
-      </div>      <Head>
+      </div>{" "}
+      <Head>
         <title>Account</title>
       </Head>
       <div className="px-4 md:px-72">
         <div className="justify-items-center md:grid">
           <div className="pb-6 text-2xl">My Account</div>
-Account Managent here
+          Account Managent here
         </div>
-      </div>    </>
+      </div>{" "}
+    </>
   );
 };
 

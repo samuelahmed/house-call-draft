@@ -2,11 +2,31 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Header from "../components/header";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import SideNav from "../components/sideNav";
 
 const Home: NextPage = () => {
-  const [showNav, setShowNav] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+  const [showNav, setShowNav] = useState(false);
 
+  function handleResize() {
+    if (innerWidth <= 640) {
+      setIsMobile(true);
+      setShowNav(false);
+    } else {
+      setIsMobile(false);
+      setShowNav(true);
+    }
+  }
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      addEventListener("resize", handleResize);
+    }
+    return () => {
+      removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       <Head>
@@ -15,6 +35,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header showNav={showNav} setShowNav={setShowNav} />
+      <div className={`${showNav && !isMobile ? "" : "hidden"}`}>
+        <SideNav />
+      </div>{" "}
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
