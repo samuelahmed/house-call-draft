@@ -1,9 +1,7 @@
 import { Table } from "flowbite-react";
 import UpcomingJobModal from "./upcomingJobModal";
 
-
 const UpcomingJobs = () => {
-
   return (
     <div className="w-full	">
       <Table hoverable={true}>
@@ -41,10 +39,9 @@ const UpcomingJobs = () => {
             <Table.Cell>Monday January 9, 2023</Table.Cell>
             <Table.Cell>3:00pm - 11:00pm</Table.Cell>
             <Table.Cell>
-            <UpcomingJobModal />
+              <UpcomingJobModal />
             </Table.Cell>
           </Table.Row>
-
         </Table.Body>
       </Table>
     </div>
