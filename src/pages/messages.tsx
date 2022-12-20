@@ -36,12 +36,13 @@ const Messages: NextPage = () => {
       <div className={`${showNav && !isMobile ? "" : "hidden"}`}>
         <SideNav />
       </div>
-            <div className="px-4 md:px-72">
+      <div className="px-4 md:px-72">
         <div className="justify-items-center md:grid">
           <div className="pb-6 text-2xl">Messages</div>
-Messages
+          Messages
         </div>
-      </div>    </>
+      </div>{" "}
+    </>
   );
 };
 
