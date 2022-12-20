@@ -4,12 +4,14 @@ import JobModal from "../dashboardComponents/jobModal";
 const JobList = () => {
 
   return (
-    <>
+    <div className="w-full">
       <Table hoverable={true}>
         <Table.Head>
           <Table.HeadCell>Patient Need</Table.HeadCell>
           <Table.HeadCell>Location</Table.HeadCell>
           <Table.HeadCell>Compensation</Table.HeadCell>
+          <Table.HeadCell>Date</Table.HeadCell>
+          <Table.HeadCell>Time</Table.HeadCell>
           <Table.HeadCell>
             <span className="sr-only">Edit</span>
           </Table.HeadCell>
@@ -21,6 +23,8 @@ const JobList = () => {
             </Table.Cell>
             <Table.Cell>San Jose</Table.Cell>
             <Table.Cell>$25 / hour</Table.Cell>
+            <Table.Cell>Saturday January 7, 2023</Table.Cell>
+            <Table.Cell>11:00am - 5:00pm</Table.Cell>
             <Table.Cell>
               <JobModal />
             </Table.Cell>
@@ -32,6 +36,8 @@ const JobList = () => {
             </Table.Cell>
             <Table.Cell>Milpitas</Table.Cell>
             <Table.Cell>$35 / hour</Table.Cell>
+            <Table.Cell>Saturday January 7, 2023</Table.Cell>
+            <Table.Cell>11:00am - 5:00pm</Table.Cell>
             <Table.Cell>
               <JobModal />
             </Table.Cell>
@@ -43,6 +49,8 @@ const JobList = () => {
             </Table.Cell>
             <Table.Cell>Mountain View</Table.Cell>
             <Table.Cell>$20 / hour</Table.Cell>
+            <Table.Cell>Saturday January 7, 2023</Table.Cell>
+            <Table.Cell>11:00am - 5:00pm</Table.Cell>
             <Table.Cell>
               <JobModal />
             </Table.Cell>
@@ -54,6 +62,8 @@ const JobList = () => {
             </Table.Cell>
             <Table.Cell>Milpitas</Table.Cell>
             <Table.Cell>$25 / hour</Table.Cell>
+            <Table.Cell>Saturday January 7, 2023</Table.Cell>
+            <Table.Cell>11:00am - 5:00pm</Table.Cell>
             <Table.Cell>
               <JobModal />
             </Table.Cell>
@@ -65,6 +75,8 @@ const JobList = () => {
             </Table.Cell>
             <Table.Cell>Santa Clara</Table.Cell>
             <Table.Cell>$20 / hour</Table.Cell>
+            <Table.Cell>Saturday January 7, 2023</Table.Cell>
+            <Table.Cell>11:00am - 5:00pm</Table.Cell>
             <Table.Cell>
               <JobModal />
             </Table.Cell>
@@ -76,6 +88,8 @@ const JobList = () => {
             </Table.Cell>
             <Table.Cell>San Jose</Table.Cell>
             <Table.Cell>$40 / hour</Table.Cell>
+            <Table.Cell>Saturday January 7, 2023</Table.Cell>
+            <Table.Cell>11:00am - 5:00pm</Table.Cell>
             <Table.Cell>
               <JobModal />
             </Table.Cell>
@@ -106,7 +120,7 @@ const JobList = () => {
         </Table.Row> */}
         </Table.Body>
       </Table>
-    </>
+    </div>
   );
 };
 
