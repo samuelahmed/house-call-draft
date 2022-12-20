@@ -5,14 +5,13 @@ import Head from "next/head";
 import { useState } from "react";
 
 const Messages: NextPage = () => {
-  const [showNav, setShowNav] = useState(true);
 
   return (
     <>
       <Head>
         <title>Messages</title>
       </Head>
-      <Header showNav={showNav} setShowNav={setShowNav} />
+      <Header />
       <SideNav />
       <div>Messages here</div>
     </>
