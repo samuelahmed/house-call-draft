@@ -1,5 +1,7 @@
 import { Tabs } from "flowbite-react";
 import ContactUs from "./helpDashboardComponents/contactUs";
+import SupportDocumentation from "./helpDashboardComponents/supportDocumentation";
+import Forums from "./helpDashboardComponents/forums";
 
 const HelpDashboard = () => {
 
@@ -12,7 +14,7 @@ const HelpDashboard = () => {
       >
         <Tabs.Item active={true} title="Support Documentation" >
           <div className="justify-items-center md:grid ">
-            Support Documentation Page
+              < SupportDocumentation />
           </div> 
         </Tabs.Item>
 
@@ -24,7 +26,7 @@ const HelpDashboard = () => {
 
         <Tabs.Item title="Community Forums" >
           <div className="justify-items-center md:grid ">
-            Community Forums page
+            < Forums />
           </div>
         </Tabs.Item>
       </Tabs.Group>
