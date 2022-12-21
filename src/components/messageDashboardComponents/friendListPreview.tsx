@@ -2,39 +2,24 @@ import { ListGroup, Avatar } from "flowbite-react";
 
 const FriendListPreview = () => {
   return (
-<div className="w-64">
-  <ListGroup>
-    <ListGroup.Item>
-    <Avatar
-    img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-    status="online"
-  /> 
-  Stephanie
-    </ListGroup.Item>
-    <ListGroup.Item>
-    <Avatar
-    img="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
-    status="offline"
-  /> 
-      Suzan
-    </ListGroup.Item>
-    <ListGroup.Item>
-    <Avatar
-    img="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
-    status="busy"
-  /> 
-      Joe
-    </ListGroup.Item>
-    <ListGroup.Item>
-    <Avatar
-    img="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
-    status="away"
-  /> 
-      Bill
-    </ListGroup.Item>
-  </ListGroup>
-</div>
 
+
+    
+<div className="drawer drawer-mobile">
+  <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+  <div className="drawer-content flex flex-col items-center justify-center">
+    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+  
+  </div> 
+  <div className="drawer-side">
+    <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
+    <ul className="menu p-4 w-80 bg-base-100 text-base-content">
+      <li><a>Sidebar Item 1</a></li>
+      <li><a>Sidebar Item 2</a></li>
+    </ul>
+  
+  </div>
+</div>
 
   );
 };

@@ -1,6 +1,8 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Navbar, Avatar } from "flowbite-react";
 import { Bars3CenterLeftIcon } from "@heroicons/react/24/solid";
+import { useEffect } from "react";
+import { themeChange } from "theme-change";
 
 const Header = ({
   showNav,
@@ -10,6 +12,10 @@ const Header = ({
   setShowNav: any;
 }) => {
   const { data: sessionData } = useSession();
+
+  useEffect(() => {
+    themeChange(false);
+  }, []);
 
   return (
     <div className="sticky top-0 items-center">
@@ -32,6 +38,19 @@ const Header = ({
         </div>
         <div className="flex justify-end">
           <AuthShowcase />
+          <div className="dropdown-end dropdown pr-10">
+            <div className="m-5">
+              <select
+                data-choose-theme
+                className="h-10 rounded-full border-0 px-3 focus:outline-none"
+              >
+                <option value="">Default</option>
+                <option value="dark">Dark</option>
+                <option value="cupcake">Cupcake</option>
+                <option value="cyberpunk">Cyberpunk</option>
+              </select>
+            </div>
+          </div>
         </div>
       </Navbar>
     </div>
