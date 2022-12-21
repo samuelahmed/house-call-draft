@@ -4,15 +4,15 @@ import SideNav from "./layoutComponents/sideNav";
 
 const Layout = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [showNav, setShowNav] = useState(true);
+  const [showNav, setShowNav] = useState(false);
 
   function handleResize() {
     if (innerWidth <= 640) {
       setIsMobile(true);
-      setShowNav(false);
+      // setShowNav(false);
     } else {
       setIsMobile(false);
-      setShowNav(true);
+      // setShowNav(true);
     }
   }
 
