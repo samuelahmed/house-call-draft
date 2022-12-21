@@ -1,6 +1,6 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Navbar, Avatar } from "flowbite-react";
-import { Bars3CenterLeftIcon } from "@heroicons/react/24/solid";
+import { Bars3CenterLeftIcon, BeakerIcon } from "@heroicons/react/24/solid";
 import { useEffect } from "react";
 import { themeChange } from "theme-change";
 
@@ -19,8 +19,8 @@ const Header = ({
 
   return (
     <div className="sticky top-0 items-center">
-      <Navbar fluid={true} rounded={true}>
-        <div className="flex justify-start">
+      <Navbar className="bg-primary" fluid={true} rounded={true}>
+        <div className="flex justify-start ">
           <div className="pl-4 md:pl-0">
             <Bars3CenterLeftIcon
               className="h-8 w-8 cursor-pointer text-gray-700"
@@ -28,6 +28,7 @@ const Header = ({
             />
           </div>
           <Avatar
+          
             className="pl-4"
             img={(sessionData && sessionData.user?.image) || ""}
             rounded={true}
@@ -38,19 +39,7 @@ const Header = ({
         </div>
         <div className="flex justify-end">
           <AuthShowcase />
-          <div className="dropdown-end dropdown pr-10">
-            <div className="m-5">
-              <select
-                data-choose-theme
-                className="h-10 rounded-full border-0 px-3 focus:outline-none"
-              >
-                <option value="">Default</option>
-                <option value="dark">Dark</option>
-                <option value="cupcake">Cupcake</option>
-                <option value="cyberpunk">Cyberpunk</option>
-              </select>
-            </div>
-          </div>
+
         </div>
       </Navbar>
     </div>
