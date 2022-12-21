@@ -28,7 +28,7 @@ const Layout = () => {
   return (
     <>
       <Header showNav={showNav} setShowNav={setShowNav} />
-      <div className={`${showNav && !isMobile ? "" : "hidden"}`}>
+      <div className={`${showNav ? "" : "hidden"}`}>
         <SideNav />
       </div>
     </>
