@@ -12,9 +12,6 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
       {/* TABS */}
       <div className="grid w-11/12 grid-rows-1 items-stretch justify-items-center bg-gray-300">
         <div className="items grid w-full grid-cols-3 justify-items-start gap-0 text-center">
-
-
-
           <a
             className={
               "h-16 w-full " +
@@ -30,7 +27,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
             href="#link1"
             role="tablist"
           >
-            <div className="pb-4 pt-4 text-md md:text-xl">
+            <div className="text-md pb-4 pt-4 md:text-xl">
               <h1>Find Patient</h1>
             </div>
           </a>
@@ -49,14 +46,10 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
             href="#link2"
             role="tablist"
           >
-            <div className="pb-4 pt-4 text-md md:text-xl">
+            <div className="text-md pb-4 pt-4 md:text-xl">
               <h1>Scheduled Sessions</h1>
             </div>
           </a>
-
-
-
-
           <a
             className={
               "h-16 w-full " +
@@ -72,15 +65,14 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
             href="#link3"
             role="tablist"
           >
-            <div className="pb-4 pt-4 text-md md:text-xl">
+            <div className="text-md pb-4 pt-4 md:text-xl">
               <h1>History</h1>
             </div>
           </a>
-
-
         </div>
       </div>
 
+      {/* TAB CONTAINERS - CONTAINER 1 */}
       <div
         className={
           openTab === 1 ? "block grid w-full justify-items-center" : "hidden"
@@ -88,8 +80,11 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
         id="link1"
       >
         {/* SEARCH */}
-        <div className="grid w-11/12 grid-rows-1 items-stretch justify-items-center bg-gray-300 ">
-          <div className="h-14 w-full text-center">Search</div>
+        <div className="flex w-11/12 justify-around bg-gray-300 ">
+          <div className="h-14 text-center">Search</div>
+          <button className="mt-4 rounded border border-blue-500 bg-transparent py-2 px-4 font-semibold text-blue-700 hover:border-transparent hover:bg-blue-500 hover:text-white">
+            Button
+          </button>
         </div>
 
         {/* MAIN SECTION */}
@@ -110,9 +105,6 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
                 <div className="h-44 w-9/12 bg-yellow-200"> card 1</div>
                 <div className="h-44 w-9/12 bg-yellow-200"> card 1</div>
                 <div className="h-44 w-9/12 bg-yellow-200"> card 1</div>
-
-  
-
               </div>
             </div>
 
@@ -126,6 +118,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
         </div>
       </div>
 
+      {/* TAB CONTAINERS - CONTAINER 2 */}
       <div className={openTab === 2 ? "block" : "hidden"} id="link2">
         <p>
           Completely synergize resource taxing relationships via premier niche
@@ -137,6 +130,8 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
           the art customer service.
         </p>
       </div>
+
+      {/* TAB CONTAINERS - CONTAINER 3 */}
       <div className={openTab === 3 ? "block" : "hidden"} id="link3">
         <p>
           Efficiently unleash cross-media information without cross-media value.
