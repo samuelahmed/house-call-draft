@@ -12,6 +12,9 @@ const SideNav = () => {
             <Sidebar.Item href="/dashboard" icon={HiChartPie}>
               Dashboard
             </Sidebar.Item>
+            <Sidebar.Item href="/caregiver" icon={HiChartPie}>
+              Caregiver Dashboard
+            </Sidebar.Item>
             <Sidebar.Item href="/messages" icon={HiInbox}>
               Messages
             </Sidebar.Item>
