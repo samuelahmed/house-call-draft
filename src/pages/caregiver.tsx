@@ -12,7 +12,7 @@ const Caregiver: NextPage = () => {
       </Head>
       <Layout />
       <div className="grid justify-items-center">
-        <CaregiverDashboardCustom />
+        <CaregiverDashboardCustom color={undefined} />
       </div>
     </>
   );
