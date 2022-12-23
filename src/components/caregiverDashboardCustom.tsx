@@ -175,8 +175,8 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
                 >
                   <div className="flex items-center justify-around text-sm">
                     <p className="leading-none text-gray-900">Milpitas</p>
-                    <p className="text-gray-900">Saturday January 7, 2023</p>
-                    <p className="text-gray-900">11:00am - 5:00pm</p>
+                    <p className="text-gray-900">Saturday January 3, 2023</p>
+                    <p className="text-gray-900">6:00am - 11:00pm</p>
                     <p className="text-gray-900">$35 / hour </p>
                   </div>
                   <div className="mb-8">
@@ -184,10 +184,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
                       Mobility Support
                     </div>
                     <p className="text-base text-gray-700">
-                      Overview: Hi, I am stephanie, it would help a lot to have
-                      someone visit and talk a few times a week. My
-                      grandchildren moved away and I spend a lot of time alone
-                      now.
+                      Overview: I need help walking around and taking walks to the park to stay active
                     </p>
                   </div>
                 </div>
@@ -201,8 +198,8 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
                 >
                   <div className="flex items-center justify-around text-sm">
                     <p className="leading-none text-gray-900">Mountain View</p>
-                    <p className="text-gray-900">Saturday January 7, 2023</p>
-                    <p className="text-gray-900">11:00am - 5:00pm</p>
+                    <p className="text-gray-900">Saturday January 4, 2023</p>
+                    <p className="text-gray-900">9:00am - 5:00pm</p>
                     <p className="text-gray-900">$20 / hour</p>
                   </div>
                   <div className="mb-8">
@@ -210,10 +207,8 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
                       Personal Care
                     </div>
                     <p className="text-base text-gray-700">
-                      Overview: Hi, I am stephanie, it would help a lot to have
-                      someone visit and talk a few times a week. My
-                      grandchildren moved away and I spend a lot of time alone
-                      now.
+                      Overview: Need support throughout the day with general activities
+
                     </p>
                   </div>
                 </div>
