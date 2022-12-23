@@ -133,13 +133,18 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
         className={openTab === 1 ? "block h-128 w-11/12 rounded" : "hidden"}
         id="link1"
       >
+
+
         {/* MAIN SECTION */}
         <div className=" grid w-full grid-rows-1 items-stretch rounded-b  bg-gray-100 px-4">
           <div className="grid grid-cols-1 pt-2 pb-2 md:grid-cols-2">
-            {/* Job Session Card */}
 
-            <div className="h-128 overflow-scroll pr-2">
+
+            {/* Job Session Card */}
+            <div className="h-80 md:h-128 overflow-scroll pr-2">
               <div className="grid justify-items-center gap-4 rounded bg-gray-200 pt-6 pb-6">
+
+
                 <div className="flex w-11/12  flex-col  justify-between rounded border border-gray-400 bg-white p-2 leading-normal">
                   <div className="flex items-center justify-around text-sm">
                     <p className="leading-none text-gray-900">San Jose</p>
@@ -243,11 +248,58 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
             </div>
 
             {/* Job Session Details Card */}
-            <div className="grid  content-center overflow-scroll pl-2">
-              <div className="grid grid-rows-1 justify-items-center gap-6 bg-red-200 pt-4 pb-6 ">
-                <div className="h-96 w-9/12 bg-yellow-200"> card 1</div>
+
+
+
+            <div className="h-80 md:h-128 overflow-scroll pr-2">
+              <div className="grid justify-items-center h-128   gap-4 rounded bg-gray-200 pt-6 pb-6">
+
+                
+              <div className="flex w-11/12 h-11/12  flex-col  justify-between rounded border border-gray-400 bg-white p-2 leading-normal">
+                  {/* <div className="flex items-center justify-around text-sm">
+                    <p className="leading-none text-gray-900">San Jose</p>
+                    <p className="text-gray-900">Saturday January 7, 2023</p>
+                    <p className="text-gray-900">11:00am - 5:00pm</p>
+                    <p className="text-gray-900">$25 / hour</p>
+                  </div>
+                  <div className="mb-8">
+                    <div className="mb-2 p-4 text-center text-xl font-bold text-gray-800">
+                      Companion Care
+                    </div>
+                    <p className="text-base text-gray-700">
+                      Overview: Hi, I am stephanie, it would help a lot to have
+                      someone visit and talk a few times a week. My
+                      grandchildren moved away and I spend a lot of time alone
+                      now.
+                
+                    </p>
+                  </div> */}
+                </div>
               </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           </div>
         </div>
       </div>
