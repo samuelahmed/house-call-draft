@@ -73,10 +73,10 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
       </div>
 
       {/* SEARCH */}
-      <div className="flex w-11/12 justify-end  bg-gray-100 pt-2">
+      <div className="flex w-11/12 justify-center  bg-gray-100 pt-2 pr-2 pl-1">
         {/* <div className="h-14 text-center">Search</div> */}
 
-        <div className="mb-6 w-full px-3 md:mb-0 md:w-1/3">
+        <div className="hidden md:block lg:block mb-6 w-full px-3 md:mb-0 md:w-1/3">
           <div className="relative">
             <select
               className="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
@@ -93,7 +93,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
           </div>
         </div>
 
-        <div className=" mb-6 justify-items-center px-3 md:mb-0 md:w-1/3">
+        <div className="hidden md:block lg:block  mb-6 justify-items-center px-3 md:mb-0 md:w-1/3">
           {/* <label className="block text-center uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
                       City
                     </label> */}
@@ -307,7 +307,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
       {/* TAB CONTAINERS - CONTAINER 2 */}
       <div
         className={
-          openTab === 2 ? "block h-128 w-11/12 rounded bg-gray-300" : "hidden"
+          openTab === 2 ? "block h-128 w-11/12 rounded bg-gray-100" : "hidden"
         }
         id="link2"
       ></div>
@@ -315,7 +315,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
       {/* TAB CONTAINERS - CONTAINER 3 */}
       <div
         className={
-          openTab === 3 ? "block h-128 w-11/12 rounded bg-gray-300 " : "hidden"
+          openTab === 3 ? "block h-128 w-11/12 rounded bg-gray-100 " : "hidden"
         }
         id="link3"
       ></div>
