@@ -10,7 +10,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
       </div>
 
       {/* TABS */}
-      <div className="grid w-11/12 grid-rows-1 items-stretch justify-items-center bg-gray-300">
+      <div className="grid w-11/12 grid-rows-1 items-stretch justify-items-center rounded-t bg-gray-100">
         <div className="items grid w-full grid-cols-3 justify-items-start gap-0 text-center">
           <a
             className={
@@ -72,46 +72,180 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
         </div>
       </div>
 
-      {/* TAB CONTAINERS - CONTAINER 1 */}
-      <div
-        className={
-          openTab === 1 ? "block grid w-full justify-items-center" : "hidden"
-        }
-        id="link1"
-      >
-        {/* SEARCH */}
-        <div className="flex w-11/12 justify-around bg-gray-300 ">
-          <div className="h-14 text-center">Search</div>
-          <button className="mt-4 rounded border border-blue-500 bg-transparent py-2 px-4 font-semibold text-blue-700 hover:border-transparent hover:bg-blue-500 hover:text-white">
-            Button
-          </button>
+      {/* SEARCH */}
+      <div className="flex w-11/12 justify-end  bg-gray-100 pt-2">
+        {/* <div className="h-14 text-center">Search</div> */}
+
+        <div className="mb-6 w-full px-3 md:mb-0 md:w-1/3">
+          <div className="relative">
+            <select
+              className="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+              id="grid-state"
+            >
+              <option>All Care Types</option>
+              <option>Companion Care</option>
+              <option>Mobility Support</option>
+              <option>Personal Care</option>
+              <option>Nutrition Assistance</option>
+              <option>Conversation</option>
+              <option>Personal Care Services</option>
+            </select>
+          </div>
         </div>
 
+        <div className=" mb-6 justify-items-center px-3 md:mb-0 md:w-1/3">
+          {/* <label className="block text-center uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+                      City
+                    </label> */}
+          <input
+            className="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+            id="grid-city"
+            type="text"
+            placeholder="City"
+          />
+        </div>
+
+        <div className=" mb-6 justify-items-center px-3 md:mb-0 md:w-1/3">
+          {/* <label className="block text-center uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+                      City
+                    </label> */}
+          <input
+            className="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+            id="grid-city"
+            type="text"
+            placeholder="Search"
+          />
+        </div>
+
+        <div className="shrink pr-4 ">
+          {/* <label className="block text-center uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+                              Confirm Search
+                            </label>                   */}
+
+          <button className="hover:bg-grey-200 h-10 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-blue-700 hover:text-blue-700">
+            Search
+          </button>
+        </div>
+      </div>
+
+      {/* TAB CONTAINERS - CONTAINER 1 */}
+      <div
+        className={openTab === 1 ? "block h-128 w-11/12 rounded" : "hidden"}
+        id="link1"
+      >
         {/* MAIN SECTION */}
-        <div className="grid w-11/12 grid-rows-1 items-stretch  bg-gray-300 px-4 py-4">
-          <div className="grid h-128 grid-cols-1 md:grid-cols-2">
+        <div className=" grid w-full grid-rows-1 items-stretch rounded-b  bg-gray-100 px-4">
+          <div className="grid grid-cols-1 pt-2 pb-2 md:grid-cols-2">
             {/* Job Session Card */}
+
             <div className="h-128 overflow-scroll pr-2">
-              <div className="grid grid-rows-3 justify-items-center gap-6 bg-red-200 pt-4 pb-6">
-                <div className="h-44 w-9/12 bg-yellow-200"> card 1</div>
-                <div className="h-44 w-9/12 bg-yellow-200"> card 1</div>
-                <div className="h-44 w-9/12 bg-yellow-200"> card 1</div>
-                <div className="h-44 w-9/12 bg-yellow-200"> card 1</div>
-                <div className="h-44 w-9/12 bg-yellow-200"> card 1</div>
-                <div className="h-44 w-9/12 bg-yellow-200"> card 1</div>
-                <div className="h-44 w-9/12 bg-yellow-200"> card 1</div>
-                <div className="h-44 w-9/12 bg-yellow-200"> card 1</div>
-                <div className="h-44 w-9/12 bg-yellow-200"> card 1</div>
-                <div className="h-44 w-9/12 bg-yellow-200"> card 1</div>
-                <div className="h-44 w-9/12 bg-yellow-200"> card 1</div>
-                <div className="h-44 w-9/12 bg-yellow-200"> card 1</div>
+              <div className="grid justify-items-center gap-4 rounded bg-gray-200 pt-6 pb-6">
+                <div className="flex w-11/12  flex-col  justify-between rounded border border-gray-400 bg-white p-2 leading-normal">
+                  <div className="flex items-center justify-around text-sm">
+                    <p className="leading-none text-gray-900">San Jose</p>
+                    <p className="text-gray-900">Saturday January 7, 2023</p>
+                    <p className="text-gray-900">11:00am - 5:00pm</p>
+                    <p className="text-gray-900">$25 / hour</p>
+                  </div>
+                  <div className="mb-8">
+                    <div className="mb-2 p-4 text-center text-xl font-bold text-gray-800">
+                      Companion Care
+                    </div>
+                    <p className="text-base text-gray-700">
+                      Overview: Hi, I am stephanie, it would help a lot to have
+                      someone visit and talk a few times a week. My
+                      grandchildren moved away and I spend a lot of time alone
+                      now.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex w-11/12  flex-col  justify-between rounded border border-gray-400 bg-white p-2 leading-normal">
+                  <div className="flex items-center justify-around text-sm">
+                    <p className="leading-none text-gray-900">Milpitas</p>
+                    <p className="text-gray-900">Saturday January 7, 2023</p>
+                    <p className="text-gray-900">11:00am - 5:00pm</p>
+                    <p className="text-gray-900">$35 / hour </p>
+                  </div>
+                  <div className="mb-8">
+                    <div className="mb-2 p-4 text-center text-xl font-bold text-gray-800">
+                      Mobility Support
+                    </div>
+                    <p className="text-base text-gray-700">
+                      Overview: Hi, I am stephanie, it would help a lot to have
+                      someone visit and talk a few times a week. My
+                      grandchildren moved away and I spend a lot of time alone
+                      now.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex w-11/12  flex-col  justify-between rounded border border-gray-400 bg-white p-2 leading-normal">
+                  <div className="flex items-center justify-around text-sm">
+                    <p className="leading-none text-gray-900">Mountain View</p>
+                    <p className="text-gray-900">Saturday January 7, 2023</p>
+                    <p className="text-gray-900">11:00am - 5:00pm</p>
+                    <p className="text-gray-900">$20 / hour</p>
+                  </div>
+                  <div className="mb-8">
+                    <div className="mb-2 p-4 text-center text-xl font-bold text-gray-800">
+                      Personal Care
+                    </div>
+                    <p className="text-base text-gray-700">
+                      Overview: Hi, I am stephanie, it would help a lot to have
+                      someone visit and talk a few times a week. My
+                      grandchildren moved away and I spend a lot of time alone
+                      now.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex w-11/12  flex-col  justify-between rounded border border-gray-400 bg-white p-2 leading-normal">
+                  <div className="flex items-center justify-around text-sm">
+                    <p className="leading-none text-gray-900">San Jose</p>
+                    <p className="text-gray-900">Saturday January 7, 2023</p>
+                    <p className="text-gray-900">11:00am - 5:00pm</p>
+                    <p className="text-gray-900">$25 / hour</p>
+                  </div>
+                  <div className="mb-8">
+                    <div className="mb-2 p-4 text-center text-xl font-bold text-gray-800">
+                      Companion Care
+                    </div>
+                    <p className="text-base text-gray-700">
+                      Overview: Hi, I am stephanie, it would help a lot to have
+                      someone visit and talk a few times a week. My
+                      grandchildren moved away and I spend a lot of time alone
+                      now.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex w-11/12  flex-col  justify-between rounded border border-gray-400 bg-white p-2 leading-normal">
+                  <div className="flex items-center justify-around text-sm">
+                    <p className="leading-none text-gray-900">San Jose</p>
+                    <p className="text-gray-900">Saturday January 7, 2023</p>
+                    <p className="text-gray-900">11:00am - 5:00pm</p>
+                    <p className="text-gray-900">$25 / hour</p>
+                  </div>
+                  <div className="mb-8">
+                    <div className="mb-2 p-4 text-center text-xl font-bold text-gray-800">
+                      Nutrition Assistance
+                    </div>
+                    <p className="text-base text-gray-700">
+                      Overview: Hi, I am stephanie, it would help a lot to have
+                      someone visit and talk a few times a week. My
+                      grandchildren moved away and I spend a lot of time alone
+                      now.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Job Session Details Card */}
-            <div className="h-128 overflow-scroll pl-2">
-              <div className="grid h-128 grid-rows-1 justify-items-center gap-6 bg-red-200 pt-4 pb-6 ">
-                <div className="w-9/12 bg-yellow-200"> card 1</div>
+            <div className="grid  content-center overflow-scroll pl-2">
+              <div className="grid grid-rows-1 justify-items-center gap-6 bg-red-200 pt-4 pb-6 ">
+                <div className="h-96 w-9/12 bg-yellow-200"> card 1</div>
               </div>
             </div>
           </div>
@@ -119,28 +253,20 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
       </div>
 
       {/* TAB CONTAINERS - CONTAINER 2 */}
-      <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-        <p>
-          Completely synergize resource taxing relationships via premier niche
-          markets. Professionally cultivate one-to-one customer service with
-          robust ideas.
-          <br />
-          <br />
-          Dynamically innovate resource-leveling customer service for state of
-          the art customer service.
-        </p>
-      </div>
+      <div
+        className={
+          openTab === 2 ? "block h-128 w-11/12 rounded bg-gray-300" : "hidden"
+        }
+        id="link2"
+      ></div>
 
       {/* TAB CONTAINERS - CONTAINER 3 */}
-      <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-        <p>
-          Efficiently unleash cross-media information without cross-media value.
-          Quickly maximize timely deliverables for real-time schemas.
-          <br />
-          <br /> Dramatically maintain clicks-and-mortar solutions without
-          functional solutions.
-        </p>
-      </div>
+      <div
+        className={
+          openTab === 3 ? "block h-128 w-11/12 rounded bg-gray-300 " : "hidden"
+        }
+        id="link3"
+      ></div>
     </>
   );
 };
