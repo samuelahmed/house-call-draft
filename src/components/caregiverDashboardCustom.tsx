@@ -176,7 +176,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
                   <div className="flex items-center justify-around text-sm">
                     <p className="leading-none text-gray-900">Milpitas</p>
                     <p className="text-gray-900">Saturday January 3, 2023</p>
-                    <p className="text-gray-900">6:00am - 11:00pm</p>
+                    <p className="text-gray-900">6:00am - 11:00am</p>
                     <p className="text-gray-900">$35 / hour </p>
                   </div>
                   <div className="mb-8">
