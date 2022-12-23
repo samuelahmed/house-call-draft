@@ -10,7 +10,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
       </div>
 
       {/* TABS */}
-      <div className="grid w-11/12 grid-rows-1 items-stretch justify-items-center rounded-t bg-gray-100">
+      <div className="grid w-11/12 grid-rows-1 items-stretch justify-items-center rounded bg-gray-100">
         <div className="items grid w-full grid-cols-3 justify-items-start gap-0 text-center">
           <a
             className={
@@ -73,7 +73,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
       </div>
 
       {/* SEARCH */}
-      <div className="flex w-11/12 justify-center  bg-gray-100 pt-2 pr-2 pl-1">
+      <div className="rounded flex w-11/12 justify-center  bg-gray-100 pt-2 pr-2 pl-1">
         {/* <div className="h-14 text-center">Search</div> */}
 
         <div className="hidden md:block lg:block mb-6 w-full px-3 md:mb-0 md:w-1/3">
@@ -145,7 +145,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
               <div className="grid justify-items-center gap-4 rounded bg-gray-200 pt-6 pb-6">
 
 
-                <div className="flex w-11/12  flex-col  justify-between rounded border border-gray-400 bg-white p-2 leading-normal">
+                <div className="cursor-pointer hover:bg-gray-100 flex w-11/12  flex-col  justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal">
                   <div className="flex items-center justify-around text-sm">
                     <p className="leading-none text-gray-900">San Jose</p>
                     <p className="text-gray-900">Saturday January 7, 2023</p>
@@ -153,7 +153,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
                     <p className="text-gray-900">$25 / hour</p>
                   </div>
                   <div className="mb-8">
-                    <div className="mb-2 p-4 text-center text-xl font-bold text-gray-800">
+                    <div className="mb-2 p-4 text-center text-xl text-gray-800">
                       Companion Care
                     </div>
                     <p className="text-base text-gray-700">
@@ -165,7 +165,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
                   </div>
                 </div>
 
-                <div className="flex w-11/12  flex-col  justify-between rounded border border-gray-400 bg-white p-2 leading-normal">
+                <div className="cursor-pointer hover:bg-gray-100 flex w-11/12  flex-col  justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal">
                   <div className="flex items-center justify-around text-sm">
                     <p className="leading-none text-gray-900">Milpitas</p>
                     <p className="text-gray-900">Saturday January 7, 2023</p>
@@ -173,7 +173,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
                     <p className="text-gray-900">$35 / hour </p>
                   </div>
                   <div className="mb-8">
-                    <div className="mb-2 p-4 text-center text-xl font-bold text-gray-800">
+                    <div className="mb-2 p-4 text-center text-xl text-gray-800">
                       Mobility Support
                     </div>
                     <p className="text-base text-gray-700">
@@ -185,7 +185,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
                   </div>
                 </div>
 
-                <div className="flex w-11/12  flex-col  justify-between rounded border border-gray-400 bg-white p-2 leading-normal">
+                <div className="cursor-pointer hover:bg-gray-100 flex w-11/12  flex-col  justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal">
                   <div className="flex items-center justify-around text-sm">
                     <p className="leading-none text-gray-900">Mountain View</p>
                     <p className="text-gray-900">Saturday January 7, 2023</p>
@@ -193,7 +193,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
                     <p className="text-gray-900">$20 / hour</p>
                   </div>
                   <div className="mb-8">
-                    <div className="mb-2 p-4 text-center text-xl font-bold text-gray-800">
+                    <div className="mb-2 p-4 text-center text-xl  text-gray-800">
                       Personal Care
                     </div>
                     <p className="text-base text-gray-700">
@@ -205,7 +205,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
                   </div>
                 </div>
 
-                <div className="flex w-11/12  flex-col  justify-between rounded border border-gray-400 bg-white p-2 leading-normal">
+                <div className="cursor-pointer hover:bg-gray-100 flex w-11/12  flex-col  justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal">
                   <div className="flex items-center justify-around text-sm">
                     <p className="leading-none text-gray-900">San Jose</p>
                     <p className="text-gray-900">Saturday January 7, 2023</p>
@@ -213,7 +213,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
                     <p className="text-gray-900">$25 / hour</p>
                   </div>
                   <div className="mb-8">
-                    <div className="mb-2 p-4 text-center text-xl font-bold text-gray-800">
+                    <div className="mb-2 p-4 text-center text-xl  text-gray-800">
                       Companion Care
                     </div>
                     <p className="text-base text-gray-700">
@@ -225,7 +225,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
                   </div>
                 </div>
 
-                <div className="flex w-11/12  flex-col  justify-between rounded border border-gray-400 bg-white p-2 leading-normal">
+                <div className="cursor-pointer hover:bg-gray-100 flex w-11/12  flex-col  justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal">
                   <div className="flex items-center justify-around text-sm">
                     <p className="leading-none text-gray-900">San Jose</p>
                     <p className="text-gray-900">Saturday January 7, 2023</p>
@@ -233,7 +233,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
                     <p className="text-gray-900">$25 / hour</p>
                   </div>
                   <div className="mb-8">
-                    <div className="mb-2 p-4 text-center text-xl font-bold text-gray-800">
+                    <div className="mb-2 p-4 text-center text-xl  text-gray-800">
                       Nutrition Assistance
                     </div>
                     <p className="text-base text-gray-700">
