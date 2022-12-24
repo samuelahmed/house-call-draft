@@ -34,11 +34,12 @@ const Header = ({
           </div>
         </div>
         <div className="flex justify-end">
+        < ThemeManager />
+
           <AuthShowcase />
         </div>
 
 
-        < ThemeManager />
 
       </Navbar>
     </div>
