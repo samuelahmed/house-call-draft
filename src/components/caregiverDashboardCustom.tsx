@@ -1,22 +1,16 @@
 import { useState } from "react";
 
-
-
 const CaregiverDashboardCustom = ({ color }: { color: any }) => {
   const [openTab, setOpenTab] = useState(1);
   const [rightCard, setRightCard] = useState(1);
   const [showModal, setShowModal] = useState(false);
-  
 
   return (
     <>
-
       <div className="pb-4 pt-4 text-3xl dark:pb-11 dark:text-white">
         <h1>Caregiver Dashboard</h1>
-
       </div>
 
-      
       {/* MODAL */}
       {showModal ? (
         <>
@@ -117,14 +111,14 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
       ) : null}
 
       {/* TABS */}
-      <div className="grid w-11/12 grid-rows-1 items-stretch justify-items-center rounded bg-gray-100">
+      <div className="grid w-11/12 grid-rows-1 items-stretch justify-items-center rounded bg-gray-100 dark:bg-gray-900">
         <div className="items grid w-full grid-cols-3 justify-items-start gap-0 text-center">
           <a
             className={
               "h-16 w-full " +
               (openTab === 1
                 ? "bg- text-white" + color + "-600"
-                : "text-" + color + "-600 bg-white")
+                : "text-" + color + "-600 bg-white dark:bg-gray-800")
             }
             onClick={(e) => {
               e.preventDefault();
@@ -143,7 +137,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
               "h-16 w-full " +
               (openTab === 2
                 ? "bg- text-white" + color + "-600"
-                : "text-" + color + "-600 bg-white")
+                : "text-" + color + "-600 bg-white dark:bg-gray-800")
             }
             onClick={(e) => {
               e.preventDefault();
@@ -162,7 +156,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
               "h-16 w-full " +
               (openTab === 3
                 ? "bg- text-white" + color + "-600"
-                : "text-" + color + "-600 bg-white")
+                : "text-" + color + "-600 bg-white dark:bg-gray-800")
             }
             onClick={(e) => {
               e.preventDefault();
@@ -180,11 +174,11 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
       </div>
 
       {/* SEARCH */}
-      <div className="flex w-11/12 justify-center rounded  bg-gray-100 pt-2 pr-2 pl-1">
+      <div className="flex w-11/12 justify-center rounded  bg-gray-100 dark:bg-gray-900 pt-2 pr-2 pl-1 ">
         <div className="mb-6 hidden w-full px-3 md:mb-0 md:block md:w-1/3 lg:block">
           <div className="relative">
             <select
-              className="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+              className="block w-full appearance-none rounded border border-gray-200 bg-gray-200 dark:bg-gray-900 dark:text-white dark:border-white py-3 px-4 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
               id="grid-state"
             >
               <option>All Care Types</option>
@@ -199,7 +193,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
         </div>
         <div className="mb-6 hidden justify-items-center  px-3 md:mb-0 md:block md:w-1/3 lg:block">
           <input
-            className="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+            className="block w-full appearance-none rounded border border-gray-200 bg-gray-200  dark:bg-gray-900 dark:text-white dark:border-white py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
             id="grid-city"
             type="text"
             placeholder="City"
@@ -207,14 +201,14 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
         </div>
         <div className=" mb-6 justify-items-center px-3 md:mb-0 md:w-1/3">
           <input
-            className="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+            className="block w-full appearance-none rounded border border-gray-200 bg-gray-200  dark:bg-gray-900 dark:text-white dark:border-white py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
             id="grid-city"
             type="text"
             placeholder="Search"
           />
         </div>
         <div className="shrink pr-4 ">
-          <button className="hover:bg-grey-200 h-10 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-blue-700 hover:text-blue-700">
+          <button className="hover:bg-grey-200 h-10 rounded border border-gray-500 bg-transparent  dark:bg-gray-900 dark:text-white dark:border-white px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-blue-700 hover:text-blue-700 dark:hover:text-blue-200 dark:hover:border-blue-200">
             Search
           </button>
         </div>
@@ -226,13 +220,13 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
         id="link1"
       >
         {/* MAIN SECTION */}
-        <div className=" grid w-full grid-rows-1 items-stretch rounded-b  bg-gray-100 px-4">
+        <div className=" grid w-full grid-rows-1 items-stretch rounded-b  bg-gray-100  dark:bg-gray-900 px-4">
           <div className="grid grid-cols-1 pt-2 pb-2 md:grid-cols-2">
             {/* Job Session Card */}
             <div className="h-128 overflow-scroll pr-2 md:h-128 lg:h-128">
-              <div className="grid justify-items-center gap-4 rounded bg-gray-200 pt-6 pb-6">
+              <div className="grid justify-items-center gap-4 rounded bg-gray-200 dark:bg-slate-900 pt-6 pb-6">
                 <div
-                  className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100"
+                  className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
                   onClick={(e) => {
                     e.preventDefault();
                     setRightCard(1);
@@ -661,7 +655,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
       {/* TAB CONTAINERS - CONTAINER 2 */}
       <div
         className={
-          openTab === 2 ? "block h-128 w-11/12 rounded bg-gray-100" : "hidden"
+          openTab === 2 ? "block h-128 w-11/12 rounded bg-gray-100  dark:bg-gray-900" : "hidden"
         }
         id="link2"
       ></div>
@@ -669,7 +663,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
       {/* TAB CONTAINERS - CONTAINER 3 */}
       <div
         className={
-          openTab === 3 ? "block h-128 w-11/12 rounded bg-gray-100 " : "hidden"
+          openTab === 3 ? "block h-128 w-11/12 rounded bg-gray-100  dark:bg-gray-900" : "hidden"
         }
         id="link3"
       ></div>

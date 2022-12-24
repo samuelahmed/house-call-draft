@@ -11,7 +11,7 @@ const Caregiver: NextPage = () => {
         <title>Dashboard</title>
       </Head>
       <Layout />
-      <div className="grid justify-items-center">
+      <div className="dark:bg-gray-800 grid justify-items-center min-h-screen">
         <CaregiverDashboardCustom color={undefined} />
       </div>
     </>
