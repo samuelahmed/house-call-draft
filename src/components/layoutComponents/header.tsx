@@ -1,8 +1,7 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Navbar, Avatar } from "flowbite-react";
-import { Bars3CenterLeftIcon, BeakerIcon } from "@heroicons/react/24/solid";
-import { useEffect } from "react";
-import { themeChange } from "theme-change";
+import { Bars3CenterLeftIcon } from "@heroicons/react/24/solid";
+import ThemeManager from "../themeManager";
 
 const Header = ({
   showNav,
@@ -13,9 +12,6 @@ const Header = ({
 }) => {
   const { data: sessionData } = useSession();
 
-  useEffect(() => {
-    themeChange(false);
-  }, []);
 
   return (
     <div className="sticky top-0 items-center">
@@ -39,8 +35,11 @@ const Header = ({
         </div>
         <div className="flex justify-end">
           <AuthShowcase />
-
         </div>
+
+
+        < ThemeManager />
+
       </Navbar>
     </div>
   );

@@ -7,12 +7,7 @@ const AccountDashboard = () => {
 
   return (
 
-
-
-
         < AccountInformation />
-  
-
 
   );
 };

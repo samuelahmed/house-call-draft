@@ -1,16 +1,22 @@
 import { useState } from "react";
 
+
+
 const CaregiverDashboardCustom = ({ color }: { color: any }) => {
   const [openTab, setOpenTab] = useState(1);
   const [rightCard, setRightCard] = useState(1);
   const [showModal, setShowModal] = useState(false);
+  
 
   return (
     <>
-      <div className="pb-4 pt-4 text-3xl">
+
+      <div className="pb-4 pt-4 text-3xl dark:pb-11 dark:text-red-500">
         <h1>Caregiver Dashboard</h1>
+
       </div>
 
+      
       {/* MODAL */}
       {showModal ? (
         <>
