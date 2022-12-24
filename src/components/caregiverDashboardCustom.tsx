@@ -14,98 +14,98 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
       {/* MODAL */}
       {showModal ? (
         <>
-      <div className="grid h-screen place-items-center fixed z-50">
-          <div className="  w-11/12 justify-items-center rounded border-2 border-gray-300 outline-none focus:outline-none">
-            <div className=" relative mx-auto ">
-              <div className=" relative flex flex-col bg-white  shadow-lg outline-none focus:outline-none">
-                <div className="h-128 rounded-t border-gray-300 ">
-                  <div className="w- mt-4 flex items-center justify-around text-sm">
-                    <p className="text-gray-900">Milpitas</p>
-                    <p className="text-gray-900">Saturday January 3, 2023</p>
-                    <p className="text-gray-900">6:00am - 11:00am</p>
-                    <p className="text-gray-900">$35 / hour</p>
-                  </div>
-                  <div className="mb-4 mr-4 ml-4">
-                    <div className="mb-2 p-4 text-center text-xl  text-gray-800">
-                      Mobility Support
+          <div className="fixed z-50 grid h-screen place-items-center">
+            <div className="  w-11/12 justify-items-center rounded border-2 border-gray-300 outline-none focus:outline-none">
+              <div className=" relative mx-auto ">
+                <div className=" relative flex flex-col bg-white  shadow-lg outline-none focus:outline-none">
+                  <div className="h-128 rounded-t border-gray-300 ">
+                    <div className="w- mt-4 flex items-center justify-around text-sm">
+                      <p className="text-gray-900">Milpitas</p>
+                      <p className="text-gray-900">Saturday January 3, 2023</p>
+                      <p className="text-gray-900">6:00am - 11:00am</p>
+                      <p className="text-gray-900">$35 / hour</p>
                     </div>
+                    <div className="mb-4 mr-4 ml-4">
+                      <div className="mb-2 p-4 text-center text-xl  text-gray-800">
+                        Mobility Support
+                      </div>
 
-                    <div className="text-sm">
-                      <p className="text-gray-900">
+                      <div className="text-sm">
+                        <p className="text-gray-900">
+                          <span className="font-semibold text-gray-900">
+                            Pay per Hour:&nbsp;
+                          </span>
+                          $35
+                        </p>
+                        <p className="text-gray-900">
+                          <span className="font-semibold text-gray-900">
+                            Total Compensation:&nbsp;
+                          </span>
+                          $175
+                        </p>
+                        <p className="text-gray-900">
+                          <span className="font-semibold text-gray-900">
+                            Date:&nbsp;
+                          </span>
+                          Friday January 3, 2023
+                        </p>
+                        <p className="text-gray-900">
+                          <span className="font-semibold text-gray-900">
+                            Time:&nbsp;
+                          </span>
+                          6:00am - 11:00am
+                        </p>
+                        <p className="text-gray-900">
+                          <span className="font-semibold text-gray-900">
+                            Total Hours:&nbsp;
+                          </span>
+                          5
+                        </p>
+                        <p className="text-gray-900">
+                          <span className="font-semibold text-gray-900">
+                            Address:&nbsp;
+                          </span>
+                          343 Bay Drive, Milpitas
+                        </p>
+                        <p className="text-gray-900">
+                          <span className="font-semibold text-gray-900">
+                            Age:&nbsp;
+                          </span>
+                          66
+                        </p>
+                        <p className="text-gray-900">
+                          <span className="font-semibold text-gray-900">
+                            Medical Notes:&nbsp;
+                          </span>
+                          Broke Wrist earlier this year
+                        </p>
+                      </div>
+                      <p className="pt-4 text-base text-gray-800">
                         <span className="font-semibold text-gray-900">
-                          Pay per Hour:&nbsp;
+                          Overview:&nbsp;
                         </span>
-                        $35
-                      </p>
-                      <p className="text-gray-900">
-                        <span className="font-semibold text-gray-900">
-                          Total Compensation:&nbsp;
-                        </span>
-                        $175
-                      </p>
-                      <p className="text-gray-900">
-                        <span className="font-semibold text-gray-900">
-                          Date:&nbsp;
-                        </span>
-                        Friday January 3, 2023
-                      </p>
-                      <p className="text-gray-900">
-                        <span className="font-semibold text-gray-900">
-                          Time:&nbsp;
-                        </span>
-                        6:00am - 11:00am
-                      </p>
-                      <p className="text-gray-900">
-                        <span className="font-semibold text-gray-900">
-                          Total Hours:&nbsp;
-                        </span>
-                        5
-                      </p>
-                      <p className="text-gray-900">
-                        <span className="font-semibold text-gray-900">
-                          Address:&nbsp;
-                        </span>
-                        343 Bay Drive, Milpitas
-                      </p>
-                      <p className="text-gray-900">
-                        <span className="font-semibold text-gray-900">
-                          Age:&nbsp;
-                        </span>
-                        66
-                      </p>
-                      <p className="text-gray-900">
-                        <span className="font-semibold text-gray-900">
-                          Medical Notes:&nbsp;
-                        </span>
-                        Broke Wrist earlier this year
+                        I need help walking around and taking walks to the park
+                        to stay active
                       </p>
                     </div>
-                    <p className="pt-4 text-base text-gray-800">
-                      <span className="font-semibold text-gray-900">
-                        Overview:&nbsp;
-                      </span>
-                      I need help walking around and taking walks to the park to
-                      stay active
-                    </p>
-                  </div>
-                  <div className="mb-4 mt-4 flex justify-around">
-                    <button
-                      onClick={() => setShowModal(false)}
-                      className="h-10 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-emerald-200 hover:text-black"
-                    >
-                      Schedule Session
-                    </button>
-                    <button
-                      onClick={() => setShowModal(false)}
-                      className="h-10 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-red-200 hover:text-black"
-                    >
-                      Close
-                    </button>
+                    <div className="mb-4 mt-4 flex justify-around">
+                      <button
+                        onClick={() => setShowModal(false)}
+                        className="h-10 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-emerald-200 hover:text-black"
+                      >
+                        Schedule Session
+                      </button>
+                      <button
+                        onClick={() => setShowModal(false)}
+                        className="h-10 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-red-200 hover:text-black"
+                      >
+                        Close
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
           </div>
         </>
       ) : null}
@@ -175,8 +175,6 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
 
       {/* SEARCH */}
       <div className="flex w-11/12 justify-center rounded  bg-gray-100 pt-2 pr-2 pl-1">
-        {/* <div className="h-14 text-center">Search</div> */}
-
         <div className="mb-6 hidden w-full px-3 md:mb-0 md:block md:w-1/3 lg:block">
           <div className="relative">
             <select
@@ -193,11 +191,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
             </select>
           </div>
         </div>
-
         <div className="mb-6 hidden justify-items-center  px-3 md:mb-0 md:block md:w-1/3 lg:block">
-          {/* <label className="block text-center uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-                      City
-                    </label> */}
           <input
             className="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
             id="grid-city"
@@ -205,11 +199,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
             placeholder="City"
           />
         </div>
-
         <div className=" mb-6 justify-items-center px-3 md:mb-0 md:w-1/3">
-          {/* <label className="block text-center uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-                      City
-                    </label> */}
           <input
             className="block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
             id="grid-city"
@@ -217,12 +207,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
             placeholder="Search"
           />
         </div>
-
         <div className="shrink pr-4 ">
-          {/* <label className="block text-center uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-                              Confirm Search
-                            </label>                   */}
-
           <button className="hover:bg-grey-200 h-10 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-blue-700 hover:text-blue-700">
             Search
           </button>
