@@ -11,7 +11,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
   return (
     <>
 
-      <div className="pb-4 pt-4 text-3xl dark:pb-11 dark:text-red-500">
+      <div className="pb-4 pt-4 text-3xl dark:pb-11 dark:text-white">
         <h1>Caregiver Dashboard</h1>
 
       </div>
