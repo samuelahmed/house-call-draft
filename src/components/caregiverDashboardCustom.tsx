@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const CaregiverDashboardCustom = ({ color }: { color: any }) => {
   const [openTab, setOpenTab] = useState(1);
@@ -14,7 +14,8 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
       {/* MODAL */}
       {showModal ? (
         <>
-          <div className="fixed z-50 w-11/12 justify-items-center rounded border-2 border-gray-300 outline-none focus:outline-none">
+      <div className="grid h-screen place-items-center fixed z-50">
+          <div className="  w-11/12 justify-items-center rounded border-2 border-gray-300 outline-none focus:outline-none">
             <div className=" relative mx-auto ">
               <div className=" relative flex flex-col bg-white  shadow-lg outline-none focus:outline-none">
                 <div className="h-128 rounded-t border-gray-300 ">
@@ -104,6 +105,7 @@ const CaregiverDashboardCustom = ({ color }: { color: any }) => {
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </>
       ) : null}
