@@ -4,19 +4,17 @@ const MobileFindSessionModal = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    
     <>
       <button
-        className="h-10 w-1/2 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-emerald-200 hover:text-black dark:text-white"
+        className="h-10 w-1/2 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-emerald-200 hover:text-black dark:text-white md:hidden lg:hidden"
         onClick={() => setShowModal(true)}
       >
         Learn More
       </button>
 
-
       {showModal ? (
         <>
-          <div className="fixed z-50 grid h-screen place-items-center">
+          <div className="fixed z-50 flex h-screen items-center justify-center">
             <div className="w-11/12 justify-items-center rounded border-2 border-gray-300 outline-none focus:outline-none">
               <div className="relative mx-auto ">
                 <div className=" relative flex flex-col bg-white  shadow-lg outline-none focus:outline-none">
