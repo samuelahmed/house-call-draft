@@ -13,11 +13,11 @@ const FindPatientTab = () => {
   return (
     <>
       {/* MAIN SECTION */}
-      <div className=" grid w-full grid-rows-1 items-stretch rounded-b  bg-gray-100  px-4 dark:bg-gray-900">
+      <div className="grid grid-rows-1  rounded-b  bg-gray-100  px-4 dark:bg-gray-900">
         <div className="grid grid-cols-1 pt-2 pb-2 md:grid-cols-2">
 
           {/* Job Session Cards */}
-          <div className="h-128 overflow-scroll pr-2 md:h-128 lg:h-128">
+          <div className="h-full overflow-scroll pr-2 md:max-h-screen lg:max-h-screen ">
             <div className="grid justify-items-center gap-4 rounded bg-gray-200 pt-6 pb-6 dark:bg-slate-900">
               <div
                 className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
@@ -90,9 +90,9 @@ const FindPatientTab = () => {
           </div>
 
           {/* Job Details Cards */}
-          <div className="hidden h-80 overflow-scroll pr-2 md:block md:h-128 lg:block">
-            <div className="grid h-128 justify-items-center   gap-4 rounded bg-gray-200 pt-6 pb-6 dark:bg-slate-900">
-              <div className="h-11/12 flex w-11/12  flex-col  justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal dark:bg-sky-900">
+          <div className="hidden h-full overflow-scroll pr-2 md:block md:h-full lg:block">
+            <div className="grid h-full justify-items-center   gap-4 rounded bg-gray-200 pt-6 pb-6 dark:bg-slate-900">
+              <div className="h-128  flex w-11/12  flex-col  justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal dark:bg-sky-900">
                 <div className={rightCard === 1 ? "" : "hidden"}>
                   <DemoSessionDetailsOne />
                 </div>

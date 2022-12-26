@@ -7,7 +7,7 @@ const TabsEngine = () => {
 
   return (
     <>
-      <div className="grid w-11/12 grid-rows-1 items-stretch justify-items-center rounded bg-gray-100 dark:bg-gray-900 mt-6">
+      <div className="w-11/12 grid-rows-1 rounded bg-gray-100 dark:bg-gray-900">
         <div className="items grid w-full grid-cols-3 justify-items-start gap-0 text-center">
           <a
             className={
@@ -69,11 +69,11 @@ const TabsEngine = () => {
         </div>
       </div>
 
-      {/* NOTE: SHOULD STRUCTURE BE REBUILT SO SEARCH ENGINE IS NOT EMBEDDED HERE?  */}
+      {/* NOTE: SHOULD STRUCTURE BE REBUILT SO SEARCH ENGINE IS NOT EMBEDED HERE?  */}
       <SearchEngine />
 
       <div
-        className={openTab === 1 ? "block h-128 w-11/12 rounded" : "hidden"}
+        className={openTab === 1 ? "block min-h-screen w-11/12 rounded  bg-gray-100  dark:bg-gray-900" : "hidden"}
         id="link1"
       >
         <FindPatientTab />
@@ -82,11 +82,14 @@ const TabsEngine = () => {
       <div
         className={
           openTab === 2
-            ? "block h-128 w-11/12 rounded bg-gray-100  dark:bg-gray-900"
+            ? "block min-h-full w-11/12 rounded bg-gray-100  dark:bg-gray-900"
             : "hidden"
         }
         id="link2"
-      ></div>
+      >
+                <FindPatientTab />
+
+      </div>
 
       <div
         className={
