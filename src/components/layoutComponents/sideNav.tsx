@@ -9,9 +9,9 @@ const SideNav = () => {
       <Sidebar aria-label="Sidebar with content separator example">
         <Sidebar.Items>
           <Sidebar.ItemGroup>
-            <Sidebar.Item href="/dashboard" icon={HiChartPie}>
+            {/* <Sidebar.Item href="/dashboard" icon={HiChartPie}>
               Dashboard
-            </Sidebar.Item>
+            </Sidebar.Item> */}
             <Sidebar.Item href="/caregiver" icon={HiChartPie}>
               Caregiver Dashboard
             </Sidebar.Item>
