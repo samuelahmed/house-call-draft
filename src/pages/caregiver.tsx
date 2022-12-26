@@ -2,7 +2,6 @@ import { type NextPage } from "next";
 import Layout from "../components/layout";
 import Head from "next/head";
 import CaregiverDashboardCustom from "../components/caregiverDashboardCustom";
-import TabsRender from "../components/dashboardBuildingBlocks/tabs";
 
 const Caregiver: NextPage = () => {
   return (
@@ -12,7 +11,7 @@ const Caregiver: NextPage = () => {
       </Head>
       <Layout />
       <div className="dark:bg-gray-800 grid justify-items-center min-h-screen">
-        <CaregiverDashboardCustom color={undefined} />
+        <CaregiverDashboardCustom />
       </div>
     </>
   );
