@@ -7,7 +7,7 @@ const TabsEngine = () => {
 
   return (
     <>
-      <div className="grid w-11/12 grid-rows-1 items-stretch justify-items-center rounded bg-gray-100 dark:bg-gray-900">
+      <div className="grid w-11/12 grid-rows-1 items-stretch justify-items-center rounded bg-gray-100 dark:bg-gray-900 mt-6">
         <div className="items grid w-full grid-cols-3 justify-items-start gap-0 text-center">
           <a
             className={
