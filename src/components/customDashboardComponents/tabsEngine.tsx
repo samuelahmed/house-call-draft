@@ -68,18 +68,16 @@ const TabsEngine = () => {
           </a>
         </div>
       </div>
-
+      
+      {/* NOTE: SHOULD STRUCTURE BE REBUILT SO SEARCH ENGINE IS NOT EMBEDED HERE?  */}
       <SearchEngine />
 
       <div
         className={openTab === 1 ? "block h-128 w-11/12 rounded" : "hidden"}
         id="link1"
       >
-
-
-    < FindPatientTab />
+        <FindPatientTab />
       </div>
-
 
       {/* TAB CONTAINERS - CONTAINER 2 */}
       <div
@@ -89,10 +87,7 @@ const TabsEngine = () => {
             : "hidden"
         }
         id="link2"
-      >
-
-
-      </div>
+      ></div>
 
       {/* TAB CONTAINERS - CONTAINER 3 */}
       <div
