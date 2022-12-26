@@ -68,8 +68,8 @@ const TabsEngine = () => {
           </a>
         </div>
       </div>
-      
-      {/* NOTE: SHOULD STRUCTURE BE REBUILT SO SEARCH ENGINE IS NOT EMBEDED HERE?  */}
+
+      {/* NOTE: SHOULD STRUCTURE BE REBUILT SO SEARCH ENGINE IS NOT EMBEDDED HERE?  */}
       <SearchEngine />
 
       <div
@@ -79,7 +79,6 @@ const TabsEngine = () => {
         <FindPatientTab />
       </div>
 
-      {/* TAB CONTAINERS - CONTAINER 2 */}
       <div
         className={
           openTab === 2
@@ -89,7 +88,6 @@ const TabsEngine = () => {
         id="link2"
       ></div>
 
-      {/* TAB CONTAINERS - CONTAINER 3 */}
       <div
         className={
           openTab === 3
