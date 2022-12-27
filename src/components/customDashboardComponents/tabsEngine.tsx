@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SearchEngine from "./searchEngine";
 import FindPatientTab from "./findPatientTab";
+import ScheduledSessionTab from "./scheduledSessionsTab";
 
 const TabsEngine = () => {
   const [openTab, setOpenTab] = useState(1);
@@ -87,7 +88,7 @@ const TabsEngine = () => {
         }
         id="link2"
       >
-                <FindPatientTab />
+                <ScheduledSessionTab />
 
       </div>
 

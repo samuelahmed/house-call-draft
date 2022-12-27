@@ -20,7 +20,7 @@ const FindPatientTab = () => {
           <div className="h-full overflow-scroll pr-2 md:max-h-screen lg:max-h-screen ">
             <div className="grid justify-items-center gap-4 rounded bg-gray-200 pt-6 pb-6 dark:bg-slate-900">
               <div
-                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
+                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal md:md:hover:bg-gray-100 lg:hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
                 onClick={(e) => {
                   e.preventDefault();
                   setRightCard(1);
@@ -33,7 +33,7 @@ const FindPatientTab = () => {
               </div>
 
               <div
-                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
+                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal md:hover:bg-gray-100 lg:hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
                 onClick={(e) => {
                   e.preventDefault();
                   setRightCard(2);
@@ -46,7 +46,7 @@ const FindPatientTab = () => {
               </div>
 
               <div
-                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
+                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal md:hover:bg-gray-100 lg:hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
                 onClick={(e) => {
                   e.preventDefault();
                   setRightCard(3);
@@ -64,7 +64,7 @@ const FindPatientTab = () => {
                   e.preventDefault();
                   setRightCard(4);
                 }}
-                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
+                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal md:hover:bg-gray-100 lg:hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
               >
                 <DemoSessionOverviewOne />
 
@@ -78,7 +78,7 @@ const FindPatientTab = () => {
                   e.preventDefault();
                   setRightCard(5);
                 }}
-                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
+                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal md:hover:bg-gray-100 lg:hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
               >
                 <DemoSessionOverviewOne />
 
