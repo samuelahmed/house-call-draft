@@ -16,11 +16,12 @@ const FindPatientTab = () => {
       <div className="grid grid-rows-1  rounded-b  bg-gray-100  px-4 dark:bg-gray-900">
         <div className="grid grid-cols-1 pt-2 pb-2 md:grid-cols-2">
 
-          {/* Job Session Cards */}
+          {/* POTENTIAL SESSION CARDS */}
           <div className="h-full overflow-scroll pr-2 md:max-h-screen lg:max-h-screen ">
             <div className="grid justify-items-center gap-4 rounded bg-gray-200 pt-6 pb-6 dark:bg-slate-900">
+
               <div
-                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal md:md:hover:bg-gray-100 lg:hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
+                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal dark:bg-sky-900 dark:hover:bg-sky-800 hover:bg-gray-100"
                 onClick={(e) => {
                   e.preventDefault();
                   setRightCard(1);
@@ -33,7 +34,7 @@ const FindPatientTab = () => {
               </div>
 
               <div
-                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal md:hover:bg-gray-100 lg:hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
+                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal dark:bg-sky-900 dark:hover:bg-sky-800 hover:bg-gray-100"
                 onClick={(e) => {
                   e.preventDefault();
                   setRightCard(2);
@@ -46,7 +47,7 @@ const FindPatientTab = () => {
               </div>
 
               <div
-                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal md:hover:bg-gray-100 lg:hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
+                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal dark:bg-sky-900 dark:hover:bg-sky-800 hover:bg-gray-100"
                 onClick={(e) => {
                   e.preventDefault();
                   setRightCard(3);
@@ -64,7 +65,7 @@ const FindPatientTab = () => {
                   e.preventDefault();
                   setRightCard(4);
                 }}
-                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal md:hover:bg-gray-100 lg:hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
+                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal dark:bg-sky-900 dark:hover:bg-sky-800 hover:bg-gray-100"
               >
                 <DemoSessionOverviewOne />
 
@@ -78,7 +79,7 @@ const FindPatientTab = () => {
                   e.preventDefault();
                   setRightCard(5);
                 }}
-                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal md:hover:bg-gray-100 lg:hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800"
+                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal dark:bg-sky-900 dark:hover:bg-sky-800 hover:bg-gray-100"
               >
                 <DemoSessionOverviewOne />
 
@@ -86,13 +87,14 @@ const FindPatientTab = () => {
                   <MobileFindSessionModal />
                 </div>
               </div>
+
             </div>
           </div>
 
           {/* Job Details Cards */}
           <div className="hidden h-full overflow-scroll pr-2 md:block md:h-full lg:block">
             <div className="grid h-full justify-items-center   gap-4 rounded bg-gray-200 pt-6 pb-6 dark:bg-slate-900">
-              <div className="h-128  flex w-11/12  flex-col  justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal dark:bg-sky-900">
+              <div className="flex  h-128 w-11/12  flex-col  justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal dark:bg-sky-900">
                 <div className={rightCard === 1 ? "" : "hidden"}>
                   <DemoSessionDetailsOne />
                 </div>

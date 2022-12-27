@@ -2,6 +2,7 @@ import { useState } from "react";
 import SearchEngine from "./searchEngine";
 import FindPatientTab from "./findPatientTab";
 import ScheduledSessionTab from "./scheduledSessionsTab";
+import HistoryTab from "./historyTab";
 
 const TabsEngine = () => {
   const [openTab, setOpenTab] = useState(1);
@@ -95,11 +96,13 @@ const TabsEngine = () => {
       <div
         className={
           openTab === 3
-            ? "block h-128 w-11/12 rounded bg-gray-100  dark:bg-gray-900"
+            ? "block min-h-full w-11/12 rounded bg-gray-100  dark:bg-gray-900"
             : "hidden"
         }
         id="link3"
-      ></div>
+      >
+        < HistoryTab />
+      </div>
     </>
   );
 };

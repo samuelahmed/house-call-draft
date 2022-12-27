@@ -1,5 +1,4 @@
 import AccountInformation from "./accountDashboardComponents/accountInformation";
-import { Tabs } from "flowbite-react"
 
 const AccountDashboard = () => {
 
