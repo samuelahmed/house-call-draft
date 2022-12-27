@@ -113,7 +113,7 @@ const HistoryModal = () => {
                             onClick={() => setShowModal(false)}
                             className="h-10 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-red-200 hover:text-black dark:text-white"
                           >
-                            Cancel Session
+                            Report Session
                           </button>
                         </div>
 
