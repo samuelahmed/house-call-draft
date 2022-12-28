@@ -1,16 +1,18 @@
+import Image from "next/image";
+
 const MessagesPageEngine = () => {
   return (
     <>
       <div className="w-11/12 grid-rows-1 rounded bg-gray-100 dark:bg-gray-900">
         <div className="grid  w-full grid-cols-3 gap-0 rounded">
           <div className="rounded bg-yellow-50">
-            <div className="flex  h-24 md:h-16 lg:h-16 w-full flex-wrap items-center justify-around bg-blue-100">
+            <div className="flex  h-24 w-full flex-wrap items-center justify-around bg-blue-100 md:h-16 lg:h-16">
               <div>
                 <input
                   className="block w-full appearance-none rounded border border-gray-200 bg-gray-200  py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none dark:border-white dark:bg-gray-900 dark:text-white"
                   id="grid-city"
                   type="text"
-                  placeholder="Search"
+                  placeholder="Search all Conversations"
                 />
               </div>
               <div>
@@ -20,8 +22,36 @@ const MessagesPageEngine = () => {
               </div>
             </div>
 
-            <div className="block min-h-screen w-full bg-pink-300">
-              bottom left
+            <div className="flex min-h-screen w-full justify-center bg-pink-300">
+              <div className="my-4 h-screen w-11/12 bg-red-100">
+
+                <div className="grid grid-rows-1 md:grid-rows-2 lg:grid-rows-2 content-center my-1 mx-1 h-16 rounded-xl border bg-white px-1 py-1 hover:bg-gray-100">
+
+                  <div className="flex h-16 w-full items-center justify-around md:h-16 lg:h-16">
+
+                    <div className="flex justify-start">
+                      <img
+                        className="hidden rounded md:block lg:block"
+                        alt=""
+                        width={50}
+                        height={50}
+                        src={
+                          "https://lh3.googleusercontent.com/a/AEdFTp6NaZTShvMSBO0d5G5dr63_Mi7uQ37nSrxP4Bca=s96-c"
+                        }
+                      />
+                    </div>
+
+                    <div className="flex justify-end ">
+                      <div className="grid grid-rows-2 ">
+                        <div>Samuel Duval</div>
+                        <div className="hidden md:block lg:block text-sm text-gray-500">preview of last message sent in conver...</div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
             </div>
           </div>
 
@@ -31,21 +61,20 @@ const MessagesPageEngine = () => {
             </div>
 
             <div className="block min-h-screen w-full bg-orange-300">
-              <div className="flex h-24 md:h-16 lg:h-16 w-full flex-wrap items-center justify-around bg-pink-100">
+              <div className="flex h-24 w-full flex-wrap items-center justify-around bg-pink-100 md:h-16 lg:h-16">
                 <div className="flex justify-start">
                   <div>
                     <input
                       className="block w-full appearance-none rounded border border-gray-200 bg-gray-200  py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none dark:border-white dark:bg-gray-900 dark:text-white"
                       id="grid-city"
                       type="text"
-                      placeholder="Search"
+                      placeholder="Search this Conversation"
                     />
                   </div>
                   <div>
-                  <button className="h-10  rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-green-200 hover:text-black dark:text-white">
-                    Search
-                  </button>
-
+                    <button className="h-10  rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-green-200 hover:text-black dark:text-white">
+                      Search
+                    </button>
                   </div>
                 </div>
 
