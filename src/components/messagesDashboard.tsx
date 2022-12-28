@@ -1,11 +1,10 @@
-import TabsEngine from "./customDashboardComponents/tabsEngine";
-
+import MessagesPageEngine from "./messagesCustomDashboardComponents/messagesPageEngine";
 //When closing screen the Sidebar Menu does not open / close anymore.
 
 const MessagesDashboard = () => {
   return (
     <>
-      <TabsEngine />
+      <MessagesPageEngine />
 
     </>
   );

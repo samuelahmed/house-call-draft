@@ -2,7 +2,6 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import MessagesDashboard from "../components/messagesDashboard";
 import Layout from "../components/layout";
-import CaregiverDashboardCustom from "../components/caregiverDashboardCustom";
 
 const Messages: NextPage = () => {
   return (
@@ -12,7 +11,7 @@ const Messages: NextPage = () => {
       </Head>
       <Layout />
       <div className="dark:bg-gray-800 grid justify-items-center min-h-screen">
-        <CaregiverDashboardCustom />
+        <MessagesDashboard />
       </div>
     </>
   );
