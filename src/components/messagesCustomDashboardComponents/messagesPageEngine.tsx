@@ -24,14 +24,11 @@ const MessagesPageEngine = () => {
 
             <div className="flex min-h-screen w-full justify-center bg-pink-300">
               <div className="my-4 h-screen w-11/12 bg-red-100">
-
-                <div className="grid grid-rows-1 md:grid-rows-2 lg:grid-rows-2 content-center my-1 mx-1 h-16 rounded-xl border bg-white px-1 py-1 hover:bg-gray-100">
-
+                <div className="my-1 mx-1 grid h-16 grid-rows-1 content-center rounded-xl border bg-white px-1 py-1 hover:bg-gray-100 md:grid-rows-2 lg:grid-rows-2">
                   <div className="flex h-16 w-full items-center justify-around md:h-16 lg:h-16">
-
                     <div className="flex justify-start">
                       <img
-                        className="hidden rounded md:block lg:block"
+                        className="hidden rounded md:inline lg:inline"
                         alt=""
                         width={50}
                         height={50}
@@ -42,14 +39,14 @@ const MessagesPageEngine = () => {
                     </div>
 
                     <div className="flex justify-end ">
-                      <div className="grid grid-rows-2 ">
+                      <div className="grid grid-rows-1 md:grid-rows-2 lg:grid-rows-2 ">
                         <div>Samuel Duval</div>
-                        <div className="hidden md:block lg:block text-sm text-gray-500">preview of last message sent in conver...</div>
+                        <div className="hidden text-sm text-gray-500 md:inline lg:inline">
+                          preview of last message sent in conver...
+                        </div>
                       </div>
                     </div>
                   </div>
-
-
                 </div>
               </div>
             </div>
@@ -80,10 +77,10 @@ const MessagesPageEngine = () => {
 
                 <div className="flex justify-end">
                   <button className="h-10  rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-green-200 hover:text-black dark:text-white">
-                    Request Session
+                    Request <span className="hidden md:inline lg:inline">Session</span>
                   </button>
                   <button className="h-10  rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-red-200 hover:text-black dark:text-white">
-                    Remove Contact
+                    Remove <span className="hidden md:inline lg:inline">Contact</span>
                   </button>
                 </div>
               </div>
