@@ -1,7 +1,6 @@
 const MessageDashboardConnectionCard = () => {
   return (
     <>
-      <div className="my-2 mx-1 grid h-16 grid-rows-1 content-center overflow-hidden rounded-xl border bg-white dark:bg-sky-900 px-1 py-1 hover:bg-gray-100 md:grid-rows-2 lg:grid-rows-2 ">
         <div className="flex h-16 w-full items-center justify-around md:h-16 lg:h-16 ">
           <div className="flex justify-start">
             <img
@@ -24,7 +23,6 @@ const MessageDashboardConnectionCard = () => {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 };
