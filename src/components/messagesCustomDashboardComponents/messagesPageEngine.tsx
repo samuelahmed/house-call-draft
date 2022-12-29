@@ -1,6 +1,8 @@
 import Image from "next/image";
 import MessageDashboardConnectionCard from "./messageDashboardConnectionCard";
 import { useState } from "react";
+import DemoConversation from "./demoConversation";
+import DemoConversationTwo from "./demoConversationTwo";
 
 const MessagesPageEngine = () => {
   const [openChat, setOpenChat] = useState(1);
@@ -16,7 +18,7 @@ const MessagesPageEngine = () => {
                   className="block w-full appearance-none rounded border border-gray-200 bg-gray-200  py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none dark:border-white dark:bg-gray-900 dark:text-white"
                   id="grid-city"
                   type="text"
-                  placeholder="Search all Conversations"
+                  placeholder="Search"
                 />
               </div>
               <div>
@@ -84,60 +86,26 @@ const MessagesPageEngine = () => {
                 : "hidden"
             }
           >
-            <div className="flex h-16 w-full items-center justify-around  ">
-              <div className="text-center text-xl font-semibold">
-                Samuel Duval
-              </div>
-            </div>
+            < DemoConversation />
+           </div>
+
+          <div className={openChat === 2 ? "col-span-2 bg-gray-100 dark:bg-gray-800" : "hidden"}>
+          < DemoConversationTwo />
           </div>
 
-          <div className={openChat === 2 ? "" : "hidden"}>
-            <div className="col-span-2 rounded">
-              <div className="flex h-16 w-full items-center justify-around bg-white dark:bg-gray-800 ">
-                <div className="text-xl  font-semibold">Contact #2</div>
-              </div>
-
-              <div className="block min-h-screen w-full rounded">top right</div>
-
-              <div className="bg-red-500">bottom Right</div>
-            </div>
+          <div className={openChat === 3 ? "col-span-2 bg-gray-100 dark:bg-gray-800" : "hidden"}>
+          < DemoConversation />
           </div>
 
-          <div className={openChat === 3 ? "" : "hidden"}>
-            <div className="col-span-2 rounded">
-              <div className="flex h-16 w-full items-center justify-around bg-white dark:bg-gray-800 ">
-                <div className="text-xl  font-semibold">Contact #3</div>
-              </div>
-
-              <div className="block min-h-screen w-full rounded">top right</div>
-
-              <div className="bg-red-500">bottom Right</div>
-            </div>
+          <div className={openChat === 4 ? "col-span-2 bg-gray-100 dark:bg-gray-800" : "hidden"}>
+          < DemoConversationTwo />
           </div>
 
-          <div className={openChat === 4 ? "" : "hidden"}>
-            <div className="col-span-2 rounded">
-              <div className="flex h-16 w-full items-center justify-around bg-white dark:bg-gray-800 ">
-                <div className="text-xl  font-semibold">Contact #4</div>
-              </div>
 
-              <div className="block min-h-screen w-full rounded">top right</div>
-
-              <div className="bg-red-500">bottom Right</div>
-            </div>
+          <div className={openChat === 5 ? "col-span-2 bg-gray-100 dark:bg-gray-800" : "hidden"}>
+          < DemoConversation />
           </div>
 
-          <div className={openChat === 5 ? "" : "hidden"}>
-            <div className="col-span-2 rounded">
-              <div className="flex h-16 w-full items-center justify-around bg-white dark:bg-gray-800 ">
-                <div className="text-xl  font-semibold">Contact #5</div>
-              </div>
-
-              <div className="block min-h-screen w-full rounded">top right</div>
-
-              <div className="bg-red-500">bottom Right</div>
-            </div>
-          </div>
         </div>
       </div>
     </>
