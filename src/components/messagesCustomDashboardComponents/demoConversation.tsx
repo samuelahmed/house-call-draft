@@ -4,7 +4,7 @@ const DemoConversation = () => {
       <div className="flex h-16 w-full items-center justify-around rounded ">
         <div className="text-center text-xl font-semibold">Samuel Duval</div>
       </div>
-      <div className="my-4 h-screen w-11/12 overflow-scroll rounded bg-gray-200 dark:bg-slate-800">
+      <div className="my-4 h-full w-11/12 overflow-scroll rounded bg-gray-200 dark:bg-slate-800">
         <div className="my-2 mx-2 h-full bg-white dark:bg-slate-900 rounded">
           <div className="mx-2 my-2 grid grid-cols-1 bg-white py-2 dark:bg-slate-900 rounded">
             <div className="grid grid-cols-3 gap-4">
