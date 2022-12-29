@@ -29,7 +29,7 @@ const MessagesPageEngine = () => {
             </div>
 
             <div className="flex min-h-screen w-full justify-center rounded bg-gray-100 dark:bg-gray-900">
-              <div className="my-4 h-screen w-11/12 overflow-scroll rounded bg-gray-200 dark:bg-slate-900">
+              <div className="my-4 h-screen w-11/12 overflow-scroll rounded bg-gray-200 dark:bg-slate-800">
                 <div
                   onClick={(e) => {
                     e.preventDefault();
@@ -82,27 +82,27 @@ const MessagesPageEngine = () => {
           <div
             className={
               openChat === 1
-                ? "col-span-2 bg-gray-100 dark:bg-gray-800"
+                ? "col-span-2 bg-gray-100 dark:bg-gray-900 rounded"
                 : "hidden"
             }
           >
             < DemoConversation />
            </div>
 
-          <div className={openChat === 2 ? "col-span-2 bg-gray-100 dark:bg-gray-800" : "hidden"}>
+          <div className={openChat === 2 ? "col-span-2 bg-gray-100 dark:bg-gray-900 rounded" : "hidden"}>
           < DemoConversationTwo />
           </div>
 
-          <div className={openChat === 3 ? "col-span-2 bg-gray-100 dark:bg-gray-800" : "hidden"}>
+          <div className={openChat === 3 ? "col-span-2 bg-gray-100 dark:bg-gray-900 rounded" : "hidden"}>
           < DemoConversation />
           </div>
 
-          <div className={openChat === 4 ? "col-span-2 bg-gray-100 dark:bg-gray-800" : "hidden"}>
+          <div className={openChat === 4 ? "col-span-2 bg-gray-100 dark:bg-gray-900 rounded" : "hidden"}>
           < DemoConversationTwo />
           </div>
 
 
-          <div className={openChat === 5 ? "col-span-2 bg-gray-100 dark:bg-gray-800" : "hidden"}>
+          <div className={openChat === 5 ? "col-span-2 bg-gray-100 dark:bg-gray-900 rounded" : "hidden"}>
           < DemoConversation />
           </div>
 
