@@ -1,19 +1,14 @@
-import { z } from "zod";
-
 import { router, publicProcedure } from "../trpc";
 
 export const exampleRouter = router({
-  hello: publicProcedure
-    .input(z.object({ text: z.string().nullish() }).nullish())
-    .query(({ input }) => {
-      return {
-        //where is this input.text coming from????
-        greeting: `Welcome to  Hello ${input?.text ?? "world"}`,
-        meow: "Welcome to HouseCall",
-        date: new Date(),
-      };
-    }),
-  getAll: publicProcedure.query(({ ctx }) => {
-    return ctx.prisma.example.findMany();
+
+  getOne: publicProcedure.query(({ ctx }) => {
+    return ctx.prisma.user.findFirst({
+      where: {
+        id: "clbmqwysx0000uqn19zbyi9h1",
+      },
+    });
   }),
+
+  
 });

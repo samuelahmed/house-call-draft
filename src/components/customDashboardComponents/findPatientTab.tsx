@@ -79,7 +79,7 @@ const FindPatientTab = () => {
                   e.preventDefault();
                   setRightCard(5);
                 }}
-                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal dark:bg-sky-900 dark:hover:bg-sky-800 hover:bg-gray-100"
+                className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal dark:bg-sky-900 dark:hover:bg-sky-800 md:hover:bg-gray-100"
               >
                 <DemoSessionOverviewOne />
 

@@ -75,7 +75,11 @@ const TabsEngine = () => {
       <SearchEngine />
 
       <div
-        className={openTab === 1 ? "block min-h-screen w-11/12 rounded  bg-gray-100  dark:bg-gray-900" : "hidden"}
+        className={
+          openTab === 1
+            ? "block min-h-screen w-11/12 rounded  bg-gray-100  dark:bg-gray-900"
+            : "hidden"
+        }
         id="link1"
       >
         <FindPatientTab />
@@ -89,8 +93,7 @@ const TabsEngine = () => {
         }
         id="link2"
       >
-                <ScheduledSessionTab />
-
+        <ScheduledSessionTab />
       </div>
 
       <div
@@ -101,7 +104,7 @@ const TabsEngine = () => {
         }
         id="link3"
       >
-        < HistoryTab />
+        <HistoryTab />
       </div>
     </>
   );
