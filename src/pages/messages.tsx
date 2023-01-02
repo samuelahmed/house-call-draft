@@ -15,7 +15,7 @@ const Messages: NextPage = () => {
       <Layout />
       <div className="grid min-h-screen justify-items-center dark:bg-gray-800">
 
-        <p className="text-2xl text-white">
+        {/* <p className="text-2xl text-white">
           email: {dbTest.data ? dbTest.data.email : "error"}
         </p>
         <p className="text-2xl text-white">
@@ -23,7 +23,7 @@ const Messages: NextPage = () => {
         </p>
         <p className="text-2xl text-white">
           name: {dbTest.data ? dbTest.data.name : "error "}
-        </p>
+        </p> */}
 
         <MessagesDashboard />
       </div>

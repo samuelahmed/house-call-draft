@@ -79,8 +79,6 @@ const MessagesPageEngine = () => {
             </div>
           </div>
 
-
-
           <div
             className={
               openChat === 1
@@ -88,30 +86,20 @@ const MessagesPageEngine = () => {
                 : "hidden"
             }
           >
-
-<div>
-
-<div className="h-screen ">
-              <DemoConversation />
-            </div>
-<div className="flex justify-items-center">
-<div className="w-9/12 ">
-              <input className="px-3 py-4 placeholder-slate-300 text-slate-600  bg-white bg-white rounded text-base border-0 shadow outline-none focus:outline-none focus:ring w-full " />
-            </div>
-            <button className="h-10  rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-green-200 hover:text-black dark:text-white">
+            <div>
+              <div className="h-screen ">
+                <DemoConversation />
+              </div>
+              <div className="flex justify-items-center">
+                <div className="w-9/12 ">
+                  <input className="w-full rounded border-0 bg-white  bg-white px-3 py-4 text-base text-slate-600 placeholder-slate-300 shadow outline-none focus:outline-none focus:ring " />
+                </div>
+                <button className="h-10  rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-green-200 hover:text-black dark:text-white">
                   Reply
                 </button>
-
-</div>
-
-
-</div>
- 
-
-
+              </div>
+            </div>
           </div>
-
-
 
           <div
             className={
