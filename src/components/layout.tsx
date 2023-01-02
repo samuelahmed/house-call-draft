@@ -3,7 +3,6 @@ import Header from "./layoutComponents/header";
 import SideNav from "./layoutComponents/sideNav";
 
 const Layout = () => {
-
   const [showNav, setShowNav] = useState(false);
 
   return (

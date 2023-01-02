@@ -12,7 +12,6 @@ const Header = ({
 }) => {
   const { data: sessionData } = useSession();
 
-
   return (
     <div className="sticky top-0 items-center">
       <Navbar className="bg-primary" fluid={true} rounded={true}>
@@ -24,7 +23,6 @@ const Header = ({
             />
           </div>
           <Avatar
-          
             className="pl-4"
             img={(sessionData && sessionData.user?.image) || ""}
             rounded={true}
@@ -34,13 +32,10 @@ const Header = ({
           </div>
         </div>
         <div className="flex justify-end">
-        < ThemeManager />
+          <ThemeManager />
 
           <AuthShowcase />
         </div>
-
-
-
       </Navbar>
     </div>
   );

@@ -4,7 +4,6 @@ import SupportDocumentation from "./helpDashboardComponents/supportDocumentation
 import Forums from "./helpDashboardComponents/forums";
 
 const HelpDashboard = () => {
-
   return (
     <div className="">
       <Tabs.Group
@@ -12,21 +11,21 @@ const HelpDashboard = () => {
         aria-label="Tabs with icons"
         style="underline"
       >
-        <Tabs.Item active={true} title="Support Documentation" >
+        <Tabs.Item active={true} title="Support Documentation">
           <div className="justify-items-center md:grid ">
-              < SupportDocumentation />
-          </div> 
-        </Tabs.Item>
-
-        <Tabs.Item title="Contact Support" >
-          <div className="justify-items-center md:grid ">
-            < ContactUs />
+            <SupportDocumentation />
           </div>
         </Tabs.Item>
 
-        <Tabs.Item title="Community Forums" >
+        <Tabs.Item title="Contact Support">
           <div className="justify-items-center md:grid ">
-            < Forums />
+            <ContactUs />
+          </div>
+        </Tabs.Item>
+
+        <Tabs.Item title="Community Forums">
+          <div className="justify-items-center md:grid ">
+            <Forums />
           </div>
         </Tabs.Item>
       </Tabs.Group>
