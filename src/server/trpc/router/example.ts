@@ -35,7 +35,7 @@ export const exampleRouter = router({
   }),
 
   updateName: publicProcedure
-  .input(z.object({ role: z.string() }))
+  .input(z.object({ name: z.string() }))
   .mutation(async ({ ctx, input }) => {
     const { name } = input;
     const card = await ctx.prisma.user.upsert({
@@ -46,7 +46,7 @@ export const exampleRouter = router({
         name,
       },
       where: {
-        id: "clcfgio530000uqvlmgq98nad",
+        id: "clcfivw160000uq68ewibgufg",
       },
     });
     return card;
