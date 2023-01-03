@@ -28,7 +28,7 @@ export const exampleRouter = router({
         role,
       },
       where: {
-        id: "clcfgio530000uqvlmgq98nad",
+        id: "clcfivw160000uq68ewibgufg",
       },
     });
     return card;
