@@ -10,6 +10,7 @@ const Header = ({
   showNav: boolean;
   setShowNav: any;
 }) => {
+  
   const { data: sessionData } = useSession();
 
   return (
