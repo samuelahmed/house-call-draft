@@ -38,7 +38,7 @@ const Account: NextPage = () => {
           />
           <div className="grid grid-cols-6 gap-6 py-10">
             <div className="... col-span-4 col-start-2">
-              {/* NOTE: NAME CHANGE WILL OVERWRITE THE INPUT FROM GOOGLE AUTH AND WILL REMAIN OVERWRITTEN EVEN AFTER LOGOUT / LOGIN */}
+              {/* NOTE: NAME CHANGE WILL OVERWRITE THE INPUT FROM GOOGLE AUTH AND WILL REMAIN OVERWRITTEN EVEN AFTER LOGOUT or LOGIN */}
               Name: {dbTest.data ? dbTest.data.name : "error"}
               <input
                 value={inputs.name}
