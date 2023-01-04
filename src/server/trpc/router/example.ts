@@ -1,5 +1,6 @@
 import { router, publicProcedure } from "../trpc";
 import { string, z } from "zod";
+import { userAgent } from "next/server";
 
 
 
@@ -17,7 +18,10 @@ export const exampleRouter = router({
   }),
 
   dbWrite: publicProcedure
-  .input(z.object({ role: z.string() }))
+  .input(z.object({ 
+    role: z.string(),
+    id: z.string()
+  }))
   .mutation(async ({ ctx, input }) => {
     const { role } = input;
     const card = await ctx.prisma.user.upsert({
@@ -28,7 +32,7 @@ export const exampleRouter = router({
         role,
       },
       where: {
-        id: "clcfivw160000uq68ewibgufg",
+        id: ctx.session?.user?.id
       },
     });
     return card;
@@ -46,7 +50,7 @@ export const exampleRouter = router({
         name,
       },
       where: {
-        id: "clcfivw160000uq68ewibgufg",
+        id: ctx.session?.user?.id
       },
     });
     return card;

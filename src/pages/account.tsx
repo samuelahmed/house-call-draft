@@ -17,7 +17,9 @@ const Account: NextPage = () => {
   const { mutate } = trpc.example.updateName.useMutation({});
   // const { mutate } = trpc.example.dbWrite.useMutation({});
 
+  //add onSuccess to reload page or something so user does not have to refresh
   const publish = () => mutate(inputs);
+
   const { data: sessionData } = useSession();
 
   if (!sessionData)
@@ -42,7 +44,7 @@ const Account: NextPage = () => {
         <div className="w-11/12 grid-rows-1 rounded bg-gray-100 dark:bg-gray-900">
           <img
             className="ml-20 mt-20 rounded"
-            src={(dbTest.data && dbTest.data.image) || ""}
+            src={(sessionData.user && sessionData.user?.image) || ""}
             alt="meow"
             width={200}
             height={200}
@@ -50,7 +52,7 @@ const Account: NextPage = () => {
           <div className="grid grid-cols-6 gap-6 py-10">
             <div className="... col-span-4 col-start-2">
               {/* NOTE: NAME CHANGE WILL OVERWRITE THE INPUT FROM GOOGLE AUTH AND WILL REMAIN OVERWRITTEN EVEN AFTER LOGOUT or LOGIN */}
-              Name: {dbTest.data ? dbTest.data.name : "error"}
+              Name: {(sessionData.user && sessionData.user?.name) || "error"}
               <input
                 value={inputs.name}
                 onChange={(e) =>
@@ -69,7 +71,7 @@ const Account: NextPage = () => {
               </button>
             </div>
             <div className="... col-span-4 col-start-2">
-              Email: {dbTest.data ? dbTest.data.email : "error"}{" "}
+              Email: {(sessionData.user && sessionData.user?.email) || "error"}
             </div>
 
             <div className="... col-span-4 col-start-2">
