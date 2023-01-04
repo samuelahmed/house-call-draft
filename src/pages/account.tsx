@@ -50,7 +50,7 @@ const Account: NextPage = () => {
                 }
                 type="text"
                 name="text"
-                className="ml-6 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className="ml-6 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:text-black"
                 placeholder=""
               />
               <button onClick={publish} className="ml-6 rounded border-2 ">
