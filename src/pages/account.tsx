@@ -2,9 +2,8 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Layout from "../components/layout";
 import { trpc } from "../utils/trpc";
-import { Avatar } from "flowbite-react";
-import Image from "next/image";
 import { useState } from "react";
+import { useSession } from "next-auth/react";
 
 const Account: NextPage = () => {
   const dbTest = trpc.example.getOne.useQuery();
@@ -19,6 +18,18 @@ const Account: NextPage = () => {
   // const { mutate } = trpc.example.dbWrite.useMutation({});
 
   const publish = () => mutate(inputs);
+  const { data: sessionData } = useSession();
+
+  if (!sessionData)
+    return (
+      <>
+        <Head>
+          <title>Account</title>
+        </Head>
+        <Layout />
+        <div>Login to see account page</div>
+      </> 
+    );
 
   return (
     <>
@@ -50,7 +61,7 @@ const Account: NextPage = () => {
                 }
                 type="text"
                 name="text"
-                className="ml-6 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:text-black"
+                className="ml-6 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:text-black sm:text-sm"
                 placeholder=""
               />
               <button onClick={publish} className="ml-6 rounded border-2 ">
