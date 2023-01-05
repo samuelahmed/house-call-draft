@@ -2,6 +2,7 @@ import { useTheme } from "next-themes";
 
 // Do NOT use this! It will throw a hydration mismatch error.
 //Fix hydration error?
+//Jan 4 2023 - make sure to look into possible hydration error.
 
 const ThemeManager = () => {
   const { theme, setTheme } = useTheme();
