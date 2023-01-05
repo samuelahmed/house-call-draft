@@ -1,19 +1,32 @@
+
+
 import { type NextPage } from "next";
 import Head from "next/head";
 import Layout from "../components/layout";
 import { trpc } from "../utils/trpc";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
+
 
 const Account: NextPage = () => {
   
   const dbTest = trpc.example.getOne.useQuery();
   const { data: sessionData } = useSession();
 
+
   const [inputs, setInputs] = useState({
     role: "",
     name: "",
   });
+
+  useEffect(() => {
+    if (dbTest.data) {
+      setInputs({
+        role: dbTest.data.role || '',
+        name: dbTest.data.name || '',
+      });
+    }
+  }, [dbTest.data]);
 
   const { mutate } = trpc.example.updateName.useMutation({
     onSuccess() {
@@ -57,13 +70,13 @@ const Account: NextPage = () => {
             <div className="... col-span-4 col-start-2">
               Name: {(sessionData.user && sessionData.user?.name) || "error"}
               <input
-                defaultValue={(sessionData.user && sessionData.user?.name) || inputs.name}
-                onChange={(e) =>
-                  setInputs((prev) => ({
-                    ...prev,
-                    name: e.target.value,
-                  }))
-                }
+  value={inputs.name}
+  onChange={(e) =>
+    setInputs((prev) => ({
+      ...prev,
+      name: e.target.value,
+    }))
+  }
                 type="text"
                 name="text"
                 className="ml-6 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:text-black sm:text-sm"
