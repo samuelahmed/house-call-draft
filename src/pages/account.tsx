@@ -6,14 +6,11 @@ import { useState } from "react";
 import { useSession } from "next-auth/react";
 
 const Account: NextPage = () => {
-  //How do have multiple mutations activate at the same time?
-
+  
   const dbTest = trpc.example.getOne.useQuery();
   const { data: sessionData } = useSession();
-
   const [inputs, setInputs] = useState({
     role: "",
-    // text: "",
     name: "",
   });
 

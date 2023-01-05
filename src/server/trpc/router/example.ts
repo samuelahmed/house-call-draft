@@ -1,6 +1,5 @@
 import { router, publicProcedure } from "../trpc";
-import { string, z } from "zod";
-import { userAgent } from "next/server";
+import { z } from "zod";
 
 export const exampleRouter = router({
 
