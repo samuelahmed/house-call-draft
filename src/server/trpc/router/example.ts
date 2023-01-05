@@ -16,18 +16,21 @@ export const exampleRouter = router({
       z.object({
         name: z.string(),
         role: z.string(),
+        email: z.string(),
       })
     )
     .mutation(async ({ ctx, input }) => {
-      const { name, role } = input;
+      const { name, role, email } = input;
       const card = await ctx.prisma.user.upsert({
         create: {
           name,
           role,
+          email,
         },
         update: {
           name,
           role,
+          email,
         },
         where: {
           id: ctx.session?.user?.id,
