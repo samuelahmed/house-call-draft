@@ -19,7 +19,7 @@ const Header = ({
         <div className="flex justify-start ">
           <div className="pl-4 md:pl-0">
             <Bars3CenterLeftIcon
-              className="h-8 w-8 cursor-pointer text-gray-700"
+              className="h-8 w-8 cursor-pointer text-gray-700 dark:text-white"
               onClick={() => setShowNav(!showNav)}
             />
           </div>

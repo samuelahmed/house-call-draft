@@ -5,6 +5,7 @@ import { trpc } from "../utils/trpc";
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { z } from "zod";
+import { signIn } from "next-auth/react";
 
 const Account: NextPage = () => {
   const dbTest = trpc.example.getOne.useQuery();
@@ -47,7 +48,15 @@ const Account: NextPage = () => {
           <title>Account</title>
         </Head>
         <Layout />
-        <div>Login to see account page</div>
+        <div className="flex h-screen flex-col flex-wrap items-center justify-center">
+          <p>Login to see account page</p>
+          <button
+            className="h-10  rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-green-200 hover:text-black dark:text-white"
+            onClick={() => signIn()}
+          >
+            sign in
+          </button>
+        </div>
       </>
     );
 
