@@ -8,9 +8,9 @@ import { signIn } from "next-auth/react";
 import Image from "next/image";
 
 const Account: NextPage = () => {
+
   const dbTest = trpc.example.getOne.useQuery();
   const { data: sessionData } = useSession();
-  // const [sessionData, setSessionData] = useState(useSession().data);
 
   const [inputs, setInputs] = useState({
     role: "",
@@ -28,13 +28,8 @@ const Account: NextPage = () => {
 
   const { mutate } = trpc.example.updateName.useMutation({
     onSuccess() {
-      // Display a modal or notification to the user
       alert("Account information updated!");
-
-      // Refresh the data in the component
-      // dbTest.refetch();
       window.location.reload();
-      // dbTest.refetch();
     },
   });
 
@@ -67,6 +62,25 @@ const Account: NextPage = () => {
           <title>Account</title>
         </Head>
         <Layout />
+
+        {/* START EDIT ACCOUNT MODAL */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {/* END EDIT ACCOUNT MODAL */}
 
         <div className="grid min-h-screen justify-items-center dark:bg-gray-800">
           <div className="w-11/12 grid-rows-1 rounded bg-gray-100 dark:bg-gray-900">
