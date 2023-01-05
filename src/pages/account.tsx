@@ -6,21 +6,27 @@ import { useState } from "react";
 import { useSession } from "next-auth/react";
 
 const Account: NextPage = () => {
+  //How do have multiple mutations activate at the same time?
+
   const dbTest = trpc.example.getOne.useQuery();
+  const { data: sessionData } = useSession();
+
   const [inputs, setInputs] = useState({
     role: "",
     // text: "",
     name: "",
   });
 
-  //How do have multiple mutations activate at the same time?
-  const { mutate } = trpc.example.updateName.useMutation({});
-  // const { Othermutate } = trpc.example.dbWrite.useMutation({});
+  const { mutate } = trpc.example.updateName.useMutation({
+    onSuccess() {
+      //Replace with useState to reload only necessary state.
+      window.location.reload();
+    },
+  });
 
-  //add onSuccess to reload page or something so user does not have to refresh
-  const publish = () => mutate(inputs);
-
-  const { data: sessionData } = useSession();
+  const publish = () => {
+    mutate(inputs);
+  };
 
   if (!sessionData)
     return (
@@ -30,7 +36,7 @@ const Account: NextPage = () => {
         </Head>
         <Layout />
         <div>Login to see account page</div>
-      </> 
+      </>
     );
 
   return (
@@ -51,7 +57,6 @@ const Account: NextPage = () => {
           />
           <div className="grid grid-cols-6 gap-6 py-10">
             <div className="... col-span-4 col-start-2">
-              {/* NOTE: NAME CHANGE WILL OVERWRITE THE INPUT FROM GOOGLE AUTH AND WILL REMAIN OVERWRITTEN EVEN AFTER LOGOUT or LOGIN */}
               Name: {(sessionData.user && sessionData.user?.name) || "error"}
               <input
                 value={inputs.name}
@@ -83,16 +88,14 @@ const Account: NextPage = () => {
                 }
                 type="text"
                 name="text"
-                className="ml-6 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:text-black"
+                className="ml-6 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:text-black sm:text-sm"
                 placeholder=""
               />
-
             </div>
-
           </div>
           <button onClick={publish} className="ml-6 rounded border-2 ">
-                Update Account Information
-              </button>
+            Update Account Information
+          </button>
         </div>
       </div>
     </>
