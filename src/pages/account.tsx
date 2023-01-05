@@ -1,18 +1,15 @@
-
-
 import { type NextPage } from "next";
 import Head from "next/head";
 import Layout from "../components/layout";
 import { trpc } from "../utils/trpc";
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
-
+import { z } from "zod";
 
 const Account: NextPage = () => {
-  
   const dbTest = trpc.example.getOne.useQuery();
   const { data: sessionData } = useSession();
-
+  // const [sessionData, setSessionData] = useState(useSession().data);
 
   const [inputs, setInputs] = useState({
     role: "",
@@ -22,15 +19,19 @@ const Account: NextPage = () => {
   useEffect(() => {
     if (dbTest.data) {
       setInputs({
-        role: dbTest.data.role || '',
-        name: dbTest.data.name || '',
+        role: dbTest.data.role || "",
+        name: dbTest.data.name || "",
       });
     }
   }, [dbTest.data]);
 
   const { mutate } = trpc.example.updateName.useMutation({
     onSuccess() {
-      //Replace with useState to reload only necessary state.
+      // Display a modal or notification to the user
+      alert("Account information updated!");
+
+      // Refresh the data in the component
+      // dbTest.refetch();
       window.location.reload();
     },
   });
@@ -70,13 +71,13 @@ const Account: NextPage = () => {
             <div className="... col-span-4 col-start-2">
               Name: {(sessionData.user && sessionData.user?.name) || "error"}
               <input
-  value={inputs.name}
-  onChange={(e) =>
-    setInputs((prev) => ({
-      ...prev,
-      name: e.target.value,
-    }))
-  }
+                value={inputs.name}
+                onChange={(e) =>
+                  setInputs((prev) => ({
+                    ...prev,
+                    name: e.target.value,
+                  }))
+                }
                 type="text"
                 name="text"
                 className="ml-6 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:text-black sm:text-sm"
