@@ -37,6 +37,7 @@ const Account: NextPage = () => {
     mutate(inputs);
   };
 
+  //Any issue with wrapping all return in a big if{}else{}?
   if (!sessionData) {
     return (
       <>
@@ -55,7 +56,7 @@ const Account: NextPage = () => {
         </div>
       </>
     );
-  } else {
+  } else if (sessionData) {
     return (
       <>
         <Head>

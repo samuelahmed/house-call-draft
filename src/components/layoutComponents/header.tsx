@@ -28,7 +28,7 @@ const Header = ({
             img={(sessionData && sessionData.user?.image) || ""}
             rounded={true}
           />
-          <div className="ml- flex items-center pr-4 text-gray-800 dark:text-white">
+          <div className="ml-4 flex items-center pr-4 text-gray-800 dark:text-white">
             {sessionData && <span>{sessionData.user?.name}</span>}
           </div>
         </div>
