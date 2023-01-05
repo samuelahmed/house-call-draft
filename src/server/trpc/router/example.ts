@@ -11,9 +11,9 @@ export const exampleRouter = router({
 
   getOne: publicProcedure.query(({ ctx }) => {
     return ctx.prisma.user.findFirst({
-      // where: {
-      //   id: "clbmqwysx0000uqn19zbyi9h1",
-      // },
+      where: {
+        id: ctx.session?.user?.id
+      },
     });
   }),
 
@@ -22,6 +22,8 @@ export const exampleRouter = router({
     role: z.string(),
     id: z.string()
   }))
+
+  
   .mutation(async ({ ctx, input }) => {
     const { role } = input;
     const card = await ctx.prisma.user.upsert({
@@ -39,15 +41,22 @@ export const exampleRouter = router({
   }),
 
   updateName: publicProcedure
-  .input(z.object({ name: z.string() }))
+  .input(z.object({ 
+    name: z.string(),
+    role: z.string(),
+  }))
+
+
   .mutation(async ({ ctx, input }) => {
-    const { name } = input;
+    const { name, role } = input;
     const card = await ctx.prisma.user.upsert({
       create: {
         name,
+        role,
       },
       update: {
         name,
+        role
       },
       where: {
         id: ctx.session?.user?.id

@@ -15,7 +15,7 @@ const Account: NextPage = () => {
 
   //How do have multiple mutations activate at the same time?
   const { mutate } = trpc.example.updateName.useMutation({});
-  // const { mutate } = trpc.example.dbWrite.useMutation({});
+  // const { Othermutate } = trpc.example.dbWrite.useMutation({});
 
   //add onSuccess to reload page or something so user does not have to refresh
   const publish = () => mutate(inputs);
@@ -66,9 +66,6 @@ const Account: NextPage = () => {
                 className="ml-6 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:text-black sm:text-sm"
                 placeholder=""
               />
-              <button onClick={publish} className="ml-6 rounded border-2 ">
-                Update Name in Database
-              </button>
             </div>
             <div className="... col-span-4 col-start-2">
               Email: {(sessionData.user && sessionData.user?.email) || "error"}
@@ -86,14 +83,16 @@ const Account: NextPage = () => {
                 }
                 type="text"
                 name="text"
-                className="ml-6 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                className="ml-6 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:text-black"
                 placeholder=""
               />
-              <button onClick={publish} className="ml-6 rounded border-2 ">
-                Update Role in Database
-              </button>
+
             </div>
+
           </div>
+          <button onClick={publish} className="ml-6 rounded border-2 ">
+                Update Account Information
+              </button>
         </div>
       </div>
     </>
