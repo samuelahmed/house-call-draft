@@ -1,21 +1,20 @@
 import { useState } from "react";
-import { useSession } from "next-auth/react";
 import { useEffect } from "react";
 import { trpc } from "../../utils/trpc";
 
 const AccountEditModal = () => {
   const [showModal, setShowModal] = useState(false);
-  const [selectedRole, setSelectedRole] = useState("");
-
   const dbTest = trpc.example.getOne.useQuery();
-  const { data: sessionData } = useSession();
 
   const [inputs, setInputs] = useState({
     role: "Caregiver" || "Patient" || "Caregiver & Patient",
     name: "",
     email: "",
+    address: "",
   });
+
   const roles = ["Caregiver", "Patient", "Caregiver & Patient"];
+  const [selectedRole, setSelectedRole] = useState(inputs.role);
 
   useEffect(() => {
     if (dbTest.data) {
@@ -23,6 +22,7 @@ const AccountEditModal = () => {
         role: dbTest.data.role || "",
         name: dbTest.data.name || "",
         email: dbTest.data.email || "",
+        address: dbTest.data.address || "",
       });
     }
   }, [dbTest.data]);
@@ -95,11 +95,11 @@ const AccountEditModal = () => {
                       <div className="mt-2 flex flex-row items-center px-2 text-gray-900 dark:text-white">
                         <p className="mr-2 w-28 text-lg"> Address </p>
                         <input
-                          value={inputs.email}
+                          value={inputs.address}
                           onChange={(e) =>
                             setInputs((prev) => ({
                               ...prev,
-                              email: e.target.value,
+                              address: e.target.value,
                             }))
                           }
                           type="text"
@@ -114,10 +114,14 @@ const AccountEditModal = () => {
                         <p className="mr-2 w-28 text-lg"> Role </p>
                         <select
                           className="block w-full appearance-none rounded border border-gray-200 bg-gray-200  py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none dark:border-white dark:bg-gray-900 dark:text-white"
-                          value={selectedRole}
-                          onChange={(event) =>
-                            setSelectedRole(event.target.value)
-                          }
+                          value={inputs.role || selectedRole}
+                          onChange={(e) => {
+                            setSelectedRole(e.target.value);
+                            setInputs((prev) => ({
+                              ...prev,
+                              role: e.target.value,
+                            }));
+                          }}
                         >
                           {roles.map((role) => (
                             <option value={role} key={role}>
@@ -139,7 +143,6 @@ const AccountEditModal = () => {
                             Update Account
                           </button>
                         </div>
-
                         <div className="flex justify-end">
                           <button
                             onClick={() => setShowModal(false)}
