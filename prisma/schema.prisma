@@ -1,13 +1,10 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-
-
 //added   previewFeatures = ["referentialIntegrity"] to see if it fix bug in google signin.
 
-
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
   previewFeatures = ["referentialIntegrity"]
 }
 
@@ -57,7 +54,7 @@ model User {
   emailVerified DateTime?
   image         String?
   role          String?
-  address String?
+  address       String?
   accounts      Account[]
   sessions      Session[]
 }
