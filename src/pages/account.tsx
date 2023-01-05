@@ -9,6 +9,7 @@ const Account: NextPage = () => {
   
   const dbTest = trpc.example.getOne.useQuery();
   const { data: sessionData } = useSession();
+
   const [inputs, setInputs] = useState({
     role: "",
     name: "",
@@ -56,7 +57,7 @@ const Account: NextPage = () => {
             <div className="... col-span-4 col-start-2">
               Name: {(sessionData.user && sessionData.user?.name) || "error"}
               <input
-                value={inputs.name}
+                defaultValue={(sessionData.user && sessionData.user?.name) || inputs.name}
                 onChange={(e) =>
                   setInputs((prev) => ({
                     ...prev,
