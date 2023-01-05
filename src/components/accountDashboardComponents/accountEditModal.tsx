@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { trpc } from "../../utils/trpc";
 
 const AccountEditModal = () => {
+
   const [showModal, setShowModal] = useState(false);
   const dbTest = trpc.example.getOne.useQuery();
 
@@ -16,17 +17,6 @@ const AccountEditModal = () => {
   const roles = ["Caregiver", "Patient", "Caregiver & Patient"];
   const [selectedRole, setSelectedRole] = useState(inputs.role);
 
-  useEffect(() => {
-    if (dbTest.data) {
-      setInputs({
-        role: dbTest.data.role || "",
-        name: dbTest.data.name || "",
-        email: dbTest.data.email || "",
-        address: dbTest.data.address || "",
-      });
-    }
-  }, [dbTest.data]);
-
   const { mutate } = trpc.example.updateName.useMutation({
     onSuccess() {
       alert("Account information updated!");
@@ -37,6 +27,17 @@ const AccountEditModal = () => {
   const publish = () => {
     mutate(inputs);
   };
+
+  useEffect(() => {
+    if (dbTest.data) {
+      setInputs({
+        role: dbTest.data.role || "",
+        name: dbTest.data.name || "",
+        email: dbTest.data.email || "",
+        address: dbTest.data.address || "",
+      });
+    }
+  }, [dbTest.data]);
 
   return (
     <>
@@ -55,6 +56,7 @@ const AccountEditModal = () => {
                 <div className=" relative flex flex-col bg-white  shadow-lg outline-none focus:outline-none dark:bg-sky-900">
                   <div className="h-128 rounded-t border-gray-300 ">
                     <div className="mx-4 mt-4 flex w-3/6 flex-col ">
+                      
                       {/* NAME */}
                       <div className="mt-2 flex flex-row items-center px-2 text-gray-900 dark:text-white">
                         <p className="mr-2 w-28 text-lg"> Name </p>
