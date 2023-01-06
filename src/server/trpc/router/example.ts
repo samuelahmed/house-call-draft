@@ -11,12 +11,13 @@ export const exampleRouter = router({
     });
   }),
 
+  //If not proper email it will not update HOWEVER THE USER IS STILL ABLE TO HIT SUBMIT THIS SHOULD BE FIXED ON THE FRONTEND.
   updateName: publicProcedure
     .input(
       z.object({
         name: z.string(),
         role: z.string(),
-        email: z.string(),
+        email: z.string().email(),
         address: z.string(),
       })
     )

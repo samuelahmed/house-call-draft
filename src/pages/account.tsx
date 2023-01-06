@@ -53,8 +53,7 @@ const Account: NextPage = () => {
                 Name: {(sessionData.user && sessionData.user?.name) || "error"}
               </div>
               <div className="col-span-4 col-start-2">
-                Email:{" "}
-                {(sessionData.user && sessionData.user?.email) || "error"}
+                Email: {(sessionData.user && sessionData.user?.email) || "error"}
               </div>
               <div className="col-span-4 col-start-2">
                 Address: {dbTest.data ? dbTest.data.address : "error"}
