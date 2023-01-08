@@ -1,7 +1,7 @@
 import { type NextPage } from "next";
 import Layout from "../components/layout/layout";
 import Head from "next/head";
-import CaregiverDashboardCustom from "../components/caregiverDashboardCustom";
+import CaregiverDashboardCustom from "../components/caregiverDashboard/caregiverDashboardCustom";
 
 const Caregiver: NextPage = () => {
   return (
