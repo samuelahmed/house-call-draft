@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 import HelpDashboard from "../components/helpDashboard";
 
 const Help: NextPage = () => {

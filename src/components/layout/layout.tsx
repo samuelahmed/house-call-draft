@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Header from "./layoutComponents/header";
-import SideNav from "./layoutComponents/sideNav";
+import Header from "./header";
+import SideNav from "./sideNav";
 
 const Layout = () => {
   const [showNav, setShowNav] = useState(false);
