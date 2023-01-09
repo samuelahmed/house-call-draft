@@ -5,7 +5,7 @@ import Layout from "../components/layout/layout";
 import { trpc } from "../utils/trpc";
 
 const Messages: NextPage = () => {
-  const dbTest = trpc.example.getOne.useQuery();
+  const dbTest = trpc.updateAccount.getOne.useQuery();
 
   return (
     <>
