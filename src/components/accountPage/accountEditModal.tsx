@@ -5,7 +5,7 @@ import { trpc } from "../../utils/trpc";
 const AccountEditModal = () => {
 
   const [showModal, setShowModal] = useState(false);
-  const dbTest = trpc.example.getOne.useQuery();
+  const dbTest = trpc.updateAccount.getOne.useQuery();
 
   const [inputs, setInputs] = useState({
     role: "Caregiver" || "Patient" || "Caregiver & Patient",
@@ -17,7 +17,7 @@ const AccountEditModal = () => {
   const roles = ["Caregiver", "Patient", "Caregiver & Patient"];
   const [selectedRole, setSelectedRole] = useState(inputs.role);
 
-  const { mutate } = trpc.example.updateName.useMutation({
+  const { mutate } = trpc.updateAccount.updateName.useMutation({
     onSuccess() {
       alert("Account information updated!");
       window.location.reload();

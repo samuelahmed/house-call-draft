@@ -1,7 +1,7 @@
 import { router, publicProcedure } from "../trpc";
 import { z } from "zod";
 
-export const exampleRouter = router({
+export const updateAccountRouter = router({
 
   getOne: publicProcedure.query(({ ctx }) => {
     return ctx.prisma.user.findFirst({

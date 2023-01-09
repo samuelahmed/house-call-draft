@@ -8,7 +8,7 @@ import Image from "next/image";
 import AccountEditModal from "../components/accountPage/accountEditModal";
 
 const Account: NextPage = () => {
-  const dbTest = trpc.example.getOne.useQuery();
+  const dbTest = trpc.updateAccount.getOne.useQuery();
   const { data: sessionData } = useSession();
 
   //Any issue with wrapping all return in a big if{}else{}?
