@@ -1,6 +1,6 @@
 ```
-
 📦src
+
  ┣ 📂components
  ┃ ┣ 📂accountPage
  ┃ ┃ ┗ 📜accountEditModal.tsx
@@ -73,7 +73,7 @@
  ┃ ┃ ┣ 📂router
  ┃ ┃ ┃ ┣ 📜_app.ts
  ┃ ┃ ┃ ┣ 📜auth.ts
- ┃ ┃ ┃ ┗ 📜example.ts
+ ┃ ┃ ┃ ┗ 📜updateAccount.ts
  ┃ ┃ ┣ 📜context.ts
  ┃ ┃ ┗ 📜trpc.ts
 
