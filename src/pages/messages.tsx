@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import MessagesDashboard from "../components/messagesDashboard";
+import MessagesDashboard from "../components/messagesPage/messagesDashboard";
 import Layout from "../components/layout/layout";
 import { trpc } from "../utils/trpc";
 

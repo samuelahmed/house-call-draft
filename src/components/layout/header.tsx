@@ -1,7 +1,7 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Navbar, Avatar } from "flowbite-react";
 import { Bars3CenterLeftIcon } from "@heroicons/react/24/solid";
-import ThemeManager from "../themeManager";
+import ThemeManager from "./themeManager";
 
 const Header = ({
   showNav,

@@ -1,7 +1,7 @@
 import { Tabs } from "flowbite-react";
-import ContactUs from "./helpDashboardComponents/contactUs";
-import SupportDocumentation from "./helpDashboardComponents/supportDocumentation";
-import Forums from "./helpDashboardComponents/forums";
+import ContactUs from "./contactUs";
+import SupportDocumentation from "./supportDocumentation";
+import Forums from "./forums";
 
 const HelpDashboard = () => {
   return (

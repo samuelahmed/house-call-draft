@@ -5,7 +5,7 @@ import { trpc } from "../utils/trpc";
 import { useSession } from "next-auth/react";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
-import AccountEditModal from "../components/accountDashboardComponents/accountEditModal";
+import AccountEditModal from "../components/accountPage/accountEditModal";
 
 const Account: NextPage = () => {
   const dbTest = trpc.example.getOne.useQuery();
