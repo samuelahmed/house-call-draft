@@ -5,32 +5,25 @@
  ┃ ┣ 📂accountPage
  ┃ ┃ ┗ 📜accountEditModal.tsx
  ┃ ┣ 📂caregiverDashboard
- ┃ ┃ ┣ 📂customDashboardComponents
- ┃ ┃ ┃ ┣ 📂historyComponents
- ┃ ┃ ┃ ┃ ┣ 📜historyModal.tsx
- ┃ ┃ ┃ ┃ ┗ 📜historyOverview.tsx
- ┃ ┃ ┃ ┣ 📂scheduledSessionsOverview
- ┃ ┃ ┃ ┃ ┣ 📜scheduledSessionModal.tsx
- ┃ ┃ ┃ ┃ ┗ 📜scheduledSessionOverviewOne.tsx
- ┃ ┃ ┃ ┣ 📂sessionDetailCards
- ┃ ┃ ┃ ┃ ┣ 📜demoSessionDetailsOne.tsx
- ┃ ┃ ┃ ┃ ┣ 📜demoSessionDetailsThree.tsx
- ┃ ┃ ┃ ┃ ┗ 📜demoSessionDetailsTwo.tsx
- ┃ ┃ ┃ ┣ 📂sessionOverview
- ┃ ┃ ┃ ┃ ┣ 📜demoSessionOverviewOne.tsx
- ┃ ┃ ┃ ┃ ┣ 📜demoSessionOverviewThree.tsx
- ┃ ┃ ┃ ┃ ┗ 📜demoSessionOverviewTwo.tsx
- ┃ ┃ ┃ ┣ 📜findPatientTab.tsx
- ┃ ┃ ┃ ┣ 📜historyTab.tsx
- ┃ ┃ ┃ ┣ 📜mobileFindSessionModal.tsx
- ┃ ┃ ┃ ┣ 📜scheduledSessionsTab.tsx
- ┃ ┃ ┃ ┣ 📜searchEngine.tsx
- ┃ ┃ ┃ ┗ 📜tabsEngine.tsx
- ┃ ┃ ┗ 📜caregiverDashboardCustom.tsx
+ ┃ ┃ ┣ 📂demoComponents
+ ┃ ┃ ┃ ┣ 📜demoSessionDetailsOne.tsx
+ ┃ ┃ ┃ ┣ 📜demoSessionDetailsThree.tsx
+ ┃ ┃ ┃ ┣ 📜demoSessionDetailsTwo.tsx
+ ┃ ┃ ┃ ┣ 📜demoSessionOverviewOne.tsx
+ ┃ ┃ ┃ ┣ 📜demoSessionOverviewThree.tsx
+ ┃ ┃ ┃ ┣ 📜demoSessionOverviewTwo.tsx
+ ┃ ┃ ┃ ┣ 📜historyOverview.tsx
+ ┃ ┃ ┃ ┗ 📜scheduledSessionOverviewOne.tsx
+ ┃ ┃ ┣ 📜findPatientTab.tsx
+ ┃ ┃ ┣ 📜historyModal.tsx
+ ┃ ┃ ┣ 📜historyTab.tsx
+ ┃ ┃ ┣ 📜mobileFindSessionModal.tsx
+ ┃ ┃ ┣ 📜scheduledSessionModal.tsx
+ ┃ ┃ ┣ 📜scheduledSessionsTab.tsx
+ ┃ ┃ ┣ 📜searchEngine.tsx
+ ┃ ┃ ┗ 📜tabsEngine.tsx
  ┃ ┣ 📂helpPage
  ┃ ┃ ┣ 📜contactUs.tsx
- ┃ ┃ ┣ 📜forums.tsx
- ┃ ┃ ┣ 📜helpDashboard.tsx
  ┃ ┃ ┗ 📜supportDocumentation.tsx
  ┃ ┣ 📂layout
  ┃ ┃ ┣ 📜header.tsx
@@ -41,7 +34,6 @@
  ┃ ┃ ┣ 📜demoConversation.tsx
  ┃ ┃ ┣ 📜demoConversationTwo.tsx
  ┃ ┃ ┣ 📜messageDashboardConnectionCard.tsx
- ┃ ┃ ┣ 📜messagesDashboard.tsx
  ┃ ┃ ┗ 📜messagesPageEngine.tsx
 
  ┣ 📂env
@@ -82,8 +74,8 @@
 
  ┣ 📂types
  ┃ ┗ 📜next-auth.d.ts
- 
+
  ┗ 📂utils
  ┃ ┗ 📜trpc.ts
- 
+
  ```
