@@ -1,4 +1,3 @@
-import Image from "next/image";
 import MessageDashboardConnectionCard from "./messageDashboardConnectionCard";
 import { useState } from "react";
 import DemoConversation from "./demoConversation";
@@ -6,7 +5,6 @@ import DemoConversationTwo from "./demoConversationTwo";
 
 const MessagesPageEngine = () => {
   const [openChat, setOpenChat] = useState(1);
-
   return (
     <>
       <div className="w-11/12 grid-rows-1 rounded bg-gray-100 dark:bg-gray-900">
@@ -27,7 +25,6 @@ const MessagesPageEngine = () => {
                 </button>
               </div>
             </div>
-
             <div className="flex min-h-screen w-full justify-center rounded bg-gray-100 dark:bg-gray-900">
               <div className="my-4 h-screen w-11/12 overflow-scroll rounded bg-gray-200 dark:bg-slate-800">
                 <div
@@ -78,7 +75,6 @@ const MessagesPageEngine = () => {
               </div>
             </div>
           </div>
-
           <div
             className={
               openChat === 1
@@ -100,7 +96,6 @@ const MessagesPageEngine = () => {
               </div>
             </div>
           </div>
-
           <div
             className={
               openChat === 2
@@ -110,7 +105,6 @@ const MessagesPageEngine = () => {
           >
             <DemoConversationTwo />
           </div>
-
           <div
             className={
               openChat === 3
@@ -120,7 +114,6 @@ const MessagesPageEngine = () => {
           >
             <DemoConversation />
           </div>
-
           <div
             className={
               openChat === 4
@@ -130,7 +123,6 @@ const MessagesPageEngine = () => {
           >
             <DemoConversationTwo />
           </div>
-
           <div
             className={
               openChat === 5
