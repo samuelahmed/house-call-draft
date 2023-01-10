@@ -1,13 +1,11 @@
-import HistoryOverviewCard from "./historyComponents/historyOverview";
-import HistoryModal from "./historyComponents/historyModal";
-import ScheduledSessionOverviewOne from "./scheduledSessionsOverview/scheduledSessionOverviewOne";
-import ScheduledSessionModal from "./scheduledSessionsOverview/scheduledSessionModal";
+import HistoryOverviewCard from "./demoComponents/historyOverview";
+import HistoryModal from "./historyModal";
 
 const HistoryTab = () => {
   return (
     <>
       {/* MAIN SECTION */}
-      <div className="grid grid-rows-1  rounded-b  bg-gray-100  px-4 dark:bg-gray-900">
+      <div className="grid grid-rows-1 rounded-b bg-gray-100 px-4 dark:bg-gray-900">
         <div className="grid grid-cols-1 pt-2 pb-2 md:grid-cols-1">
           {/* Job Session Cards */}
           <div className="h-full overflow-scroll pr-2 md:max-h-screen lg:max-h-screen ">
@@ -20,8 +18,7 @@ const HistoryTab = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
+              <div className="flex w-11/12 cursor-pointer flex-col justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
                 <div className="items-baseline md:flex md:justify-around ">
                   <HistoryOverviewCard />
                   <div className="flex justify-center">
@@ -29,8 +26,7 @@ const HistoryTab = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
+              <div className="flex w-11/12 cursor-pointer flex-col justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
                 <div className="items-baseline md:flex md:justify-around ">
                   <HistoryOverviewCard />
                   <div className="flex justify-center">
@@ -38,8 +34,7 @@ const HistoryTab = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
+              <div className="flex w-11/12 cursor-pointer flex-col justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
                 <div className="items-baseline md:flex md:justify-around ">
                   <HistoryOverviewCard />
                   <div className="flex justify-center">
@@ -47,8 +42,7 @@ const HistoryTab = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
+              <div className="flex w-11/12 cursor-pointer flex-col justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
                 <div className="items-baseline md:flex md:justify-around ">
                   <HistoryOverviewCard />
                   <div className="flex justify-center">
@@ -56,8 +50,7 @@ const HistoryTab = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
+              <div className="flex w-11/12 cursor-pointer flex-col justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
                 <div className="items-baseline md:flex md:justify-around ">
                   <HistoryOverviewCard />
                   <div className="flex justify-center">
@@ -65,8 +58,7 @@ const HistoryTab = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
+              <div className="flex w-11/12 cursor-pointer flex-col justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
                 <div className="items-baseline md:flex md:justify-around ">
                   <HistoryOverviewCard />
                   <div className="flex justify-center">
@@ -74,8 +66,7 @@ const HistoryTab = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
+              <div className="flex w-11/12 cursor-pointer flex-col justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
                 <div className="items-baseline md:flex md:justify-around ">
                   <HistoryOverviewCard />
                   <div className="flex justify-center">
@@ -83,8 +74,7 @@ const HistoryTab = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
+              <div className="flex w-11/12 cursor-pointer flex-col justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
                 <div className="items-baseline md:flex md:justify-around ">
                   <HistoryOverviewCard />
                   <div className="flex justify-center">
@@ -92,8 +82,7 @@ const HistoryTab = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
+              <div className="flex w-11/12 cursor-pointer flex-col justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
                 <div className="items-baseline md:flex md:justify-around ">
                   <HistoryOverviewCard />
                   <div className="flex justify-center">
@@ -101,8 +90,7 @@ const HistoryTab = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
+              <div className="flex w-11/12 cursor-pointer flex-col justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
                 <div className="items-baseline md:flex md:justify-around ">
                   <HistoryOverviewCard />
                   <div className="flex justify-center">
@@ -110,8 +98,7 @@ const HistoryTab = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="flex w-11/12 cursor-pointer flex-col  justify-between  rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
+              <div className="flex w-11/12 cursor-pointer flex-col justify-between rounded-xl border border-gray-400 bg-white p-2 leading-normal hover:bg-gray-100 dark:bg-sky-900 dark:hover:bg-sky-800">
                 <div className="items-baseline md:flex md:justify-around ">
                   <HistoryOverviewCard />
                   <div className="flex justify-center">

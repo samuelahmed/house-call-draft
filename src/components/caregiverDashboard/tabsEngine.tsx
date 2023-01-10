@@ -6,7 +6,6 @@ import HistoryTab from "./historyTab";
 
 const TabsEngine = () => {
   const [openTab, setOpenTab] = useState(1);
-
   return (
     <>
       <div className="w-11/12 grid-rows-1 rounded bg-gray-100 dark:bg-gray-900">
@@ -70,10 +69,8 @@ const TabsEngine = () => {
           </a>
         </div>
       </div>
-
-      {/* NOTE: SHOULD STRUCTURE BE REBUILT SO SEARCH ENGINE IS NOT EMBEDED HERE?  */}
+      {/* NOTE: SHOULD STRUCTURE BE REBUILT SO SEARCH ENGINE IS NOT EMBEDDED HERE?  */}
       <SearchEngine />
-
       <div
         className={
           openTab === 1
@@ -84,7 +81,6 @@ const TabsEngine = () => {
       >
         <FindPatientTab />
       </div>
-
       <div
         className={
           openTab === 2
@@ -95,7 +91,6 @@ const TabsEngine = () => {
       >
         <ScheduledSessionTab />
       </div>
-
       <div
         className={
           openTab === 3

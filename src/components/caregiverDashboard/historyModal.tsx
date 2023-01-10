@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ScheduledSessionModal = () => {
+const HistoryModal = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ const ScheduledSessionModal = () => {
           <div className="fixed inset-0 z-50 grid h-screen place-items-center backdrop-brightness-50">
             <div className="w-11/12 justify-items-center rounded border-2 border-gray-300 outline-none focus:outline-none ">
               <div className="relative mx-auto">
-                <div className=" relative flex flex-col bg-white  shadow-lg outline-none focus:outline-none dark:bg-sky-900">
+                <div className=" relative flex flex-col bg-white shadow-lg outline-none focus:outline-none dark:bg-sky-900">
                   <div className="h-128 rounded-t border-gray-300 ">
                     <div className="mx-4 mt-4 flex items-center justify-around text-sm">
                       <p className="px-2 text-gray-900 dark:text-white">
@@ -34,7 +34,7 @@ const ScheduledSessionModal = () => {
                       </p>
                     </div>
                     <div className="mb-4 mr-4 ml-4">
-                      <div className="mb-2 p-4 text-center text-xl  text-gray-800 dark:text-white">
+                      <div className="mb-2 p-4 text-center text-xl text-gray-800 dark:text-white">
                         Mobility Support
                       </div>
 
@@ -79,7 +79,8 @@ const ScheduledSessionModal = () => {
                           <span className="font-semibold text-gray-900 dark:text-white">
                             Location Notes:&nbsp;
                           </span>
-                          Gate code is 3820 you can call if you have any issues getting inside.
+                          Gate code is 3820 you can call if you have any issues
+                          getting inside.
                         </p>
                         <p className="text-gray-900 dark:text-white">
                           <span className="font-semibold text-gray-900 dark:text-white">
@@ -113,7 +114,7 @@ const ScheduledSessionModal = () => {
                             onClick={() => setShowModal(false)}
                             className="h-10 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-red-200 hover:text-black dark:text-white"
                           >
-                            Cancel Session
+                            Report Session
                           </button>
                         </div>
 
@@ -138,4 +139,4 @@ const ScheduledSessionModal = () => {
   );
 };
 
-export default ScheduledSessionModal;
+export default HistoryModal;

@@ -5,7 +5,7 @@ import { trpc } from "../../utils/trpc";
 const AccountEditModal = () => {
   const [showModal, setShowModal] = useState(false);
   const dbTest = trpc.updateAccount.getOne.useQuery();
-
+  const roles = ["Caregiver", "Patient", "Caregiver & Patient"];
   const [inputs, setInputs] = useState({
     role: "Caregiver" || "Patient" || "Caregiver & Patient",
     name: "",
@@ -13,9 +13,7 @@ const AccountEditModal = () => {
     address: "",
   });
 
-  const roles = ["Caregiver", "Patient", "Caregiver & Patient"];
   const [selectedRole, setSelectedRole] = useState(inputs.role);
-
   const { mutate } = trpc.updateAccount.updateName.useMutation({
     onSuccess() {
       alert("Account information updated!");
@@ -46,7 +44,6 @@ const AccountEditModal = () => {
       >
         Edit Account
       </button>
-
       {showModal ? (
         <>
           <div className="fixed inset-0 z-50 grid h-screen place-items-center backdrop-brightness-50">
@@ -72,7 +69,6 @@ const AccountEditModal = () => {
                           placeholder=""
                         />
                       </div>
-
                       {/* EMAIL */}
                       <div className="mt-2 flex flex-row items-center px-2 text-gray-900 dark:text-white">
                         <p className="mr-2 w-28 text-lg"> Email </p>
@@ -90,7 +86,6 @@ const AccountEditModal = () => {
                           placeholder=""
                         />
                       </div>
-
                       {/* ADDRESS */}
                       <div className="mt-2 flex flex-row items-center px-2 text-gray-900 dark:text-white">
                         <p className="mr-2 w-28 text-lg"> Address </p>
@@ -108,7 +103,6 @@ const AccountEditModal = () => {
                           placeholder=""
                         />
                       </div>
-
                       {/* ROLE */}
                       <div className="mt-2 flex flex-row items-center px-2 text-gray-900 dark:text-white">
                         <p className="mr-2 w-28 text-lg"> Role </p>
@@ -130,7 +124,6 @@ const AccountEditModal = () => {
                           ))}
                         </select>
                       </div>
-
                       <div className="grid grid-flow-col grid-rows-1 gap-4 pt-4">
                         <div className="flex justify-start">
                           <button

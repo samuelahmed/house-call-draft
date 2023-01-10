@@ -1,15 +1,14 @@
 import { useState } from "react";
 
-const MobileFindSessionModal = () => {
+const ScheduledSessionModal = () => {
   const [showModal, setShowModal] = useState(false);
-
   return (
     <>
       <button
-        className="h-10 w-1/2 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-emerald-200 hover:text-black dark:text-white"
+        className="h-10 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-emerald-200 hover:text-black dark:text-white"
         onClick={() => setShowModal(true)}
       >
-        Learn More
+        Details
       </button>
 
       {showModal ? (
@@ -20,12 +19,18 @@ const MobileFindSessionModal = () => {
                 <div className=" relative flex flex-col bg-white  shadow-lg outline-none focus:outline-none dark:bg-sky-900">
                   <div className="h-128 rounded-t border-gray-300 ">
                     <div className="mx-4 mt-4 flex items-center justify-around text-sm">
-                      <p className="px-2 text-gray-900 dark:text-white">Milpitas</p>
+                      <p className="px-2 text-gray-900 dark:text-white">
+                        Milpitas
+                      </p>
                       <p className="px-2 text-gray-900 dark:text-white">
                         Saturday January 3, 2023
                       </p>
-                      <p className="px-2 text-gray-900 dark:text-white">6:00am - 11:00am</p>
-                      <p className="px-2 text-gray-900 dark:text-white">$35 / hour</p>
+                      <p className="px-2 text-gray-900 dark:text-white">
+                        6:00am - 11:00am
+                      </p>
+                      <p className="px-2 text-gray-900 dark:text-white">
+                        $35 / hour
+                      </p>
                     </div>
                     <div className="mb-4 mr-4 ml-4">
                       <div className="mb-2 p-4 text-center text-xl  text-gray-800 dark:text-white">
@@ -71,6 +76,12 @@ const MobileFindSessionModal = () => {
                         </p>
                         <p className="text-gray-900 dark:text-white">
                           <span className="font-semibold text-gray-900 dark:text-white">
+                            Location Notes:&nbsp;
+                          </span>
+                          Gate code is 3820 you can call if you have any issues getting inside.
+                        </p>
+                        <p className="text-gray-900 dark:text-white">
+                          <span className="font-semibold text-gray-900 dark:text-white">
                             Age:&nbsp;
                           </span>
                           66
@@ -89,20 +100,31 @@ const MobileFindSessionModal = () => {
                         I need help walking around and taking walks to the park
                         to stay active
                       </p>
-                    </div>
-                    <div className="mb-4 mt-4 flex justify-around">
-                      <button
-                        onClick={() => setShowModal(false)}
-                        className="h-10 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 dark:text-white hover:border-gray-700 hover:bg-emerald-200 hover:text-black"
-                      >
-                        Schedule Session
-                      </button>
-                      <button
-                        onClick={() => setShowModal(false)}
-                        className="h-10 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 dark:text-white hover:border-gray-700 hover:bg-red-200 hover:text-black"
-                      >
-                        Close
-                      </button>
+                      <div className="grid grid-flow-col grid-rows-1 gap-4 pt-4">
+                        <div className="flex justify-start">
+                          <button
+                            onClick={() => setShowModal(false)}
+                            className="h-10 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-emerald-200 hover:text-black dark:text-white"
+                          >
+                            Contact Patient
+                          </button>
+                          <button
+                            onClick={() => setShowModal(false)}
+                            className="h-10 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-red-200 hover:text-black dark:text-white"
+                          >
+                            Cancel Session
+                          </button>
+                        </div>
+
+                        <div className="flex justify-end">
+                          <button
+                            onClick={() => setShowModal(false)}
+                            className="h-10 rounded border border-gray-500 bg-transparent px-4 pt-2 pb-8 font-semibold text-gray-700 hover:border-gray-700 hover:bg-red-200 hover:text-black dark:text-white"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -115,4 +137,4 @@ const MobileFindSessionModal = () => {
   );
 };
 
-export default MobileFindSessionModal;
+export default ScheduledSessionModal;

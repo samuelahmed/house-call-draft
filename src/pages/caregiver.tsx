@@ -1,7 +1,7 @@
 import { type NextPage } from "next";
 import Layout from "../components/layout/layout";
 import Head from "next/head";
-import CaregiverDashboardCustom from "../components/caregiverDashboard/caregiverDashboardCustom";
+import TabsEngine from "../components/caregiverDashboard/tabsEngine";
 
 const Caregiver: NextPage = () => {
   return (
@@ -11,7 +11,7 @@ const Caregiver: NextPage = () => {
       </Head>
       <Layout />
       <div className="dark:bg-gray-800 grid justify-items-center min-h-screen">
-        <CaregiverDashboardCustom />
+        < TabsEngine />
       </div>
     </>
   );

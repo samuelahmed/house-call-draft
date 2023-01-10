@@ -7,7 +7,6 @@ import SupportDocumentation from "../components/helpPage/supportDocumentation";
 
 const Help: NextPage = () => {
   const [openTab, setOpenTab] = useState(1);
-
   return (
     <>
       <Head>
@@ -56,7 +55,6 @@ const Help: NextPage = () => {
               </div>
             </a>
           </div>
-
           <div
             className={
               openTab === 1
@@ -67,7 +65,6 @@ const Help: NextPage = () => {
           >
             <SupportDocumentation />
           </div>
-
           <div
             className={
               openTab === 2
