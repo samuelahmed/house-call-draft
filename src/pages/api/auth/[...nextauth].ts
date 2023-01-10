@@ -7,7 +7,7 @@ import GoogleProvider from "next-auth/providers/google";
 
 export const authOptions: NextAuthOptions = {
   // Include user.id on session
-  debug: true,
+  // debug: true,
   callbacks: {
     session({ session, user }) {
       if (session.user) {
@@ -15,6 +15,12 @@ export const authOptions: NextAuthOptions = {
       }
       return session;
     },
+
+    signIn() {
+      return true;
+    }
+
+    
   },
   // Configure one or more authentication providers
   adapter: PrismaAdapter(prisma),
