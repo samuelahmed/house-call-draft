@@ -16,9 +16,9 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
 
-    signIn() {
-      return true;
-    }
+    // signIn() {
+    //   return true;
+    // }
 
     
   },
@@ -44,6 +44,10 @@ export const authOptions: NextAuthOptions = {
     // ...add more providers here
   ],
   // secret: process.env.JWT_SECRET,
+  session: {
+    maxAge: 60 * 60 * 24 * 1, // 1 day
+    updateAge: 60 * 60 * 12, // 12 hours
+  },
 
 };
 
