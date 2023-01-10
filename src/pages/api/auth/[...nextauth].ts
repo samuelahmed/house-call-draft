@@ -22,10 +22,10 @@ export const authOptions: NextAuthOptions = {
         username: { label: "Username", type: "text ", placeholder: "jsmith" },
         password: { label: "Password", type: "password" },
       },
-
       authorize(credentials, req) {
-        throw new Error("Not implemented");
-      },
+        //currently routes to: http://localhost:3000/api/auth/error?error=Not%20implemented%2C%20meow upon credential login attempt
+        throw new Error("Not implemented, meow.");
+        }
     }),
     GoogleProvider({
       clientId: env.GOOGLE_CLIENT_ID,
