@@ -1,8 +1,8 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import MessagesDashboard from "../components/messagesPage/messagesDashboard";
 import Layout from "../components/layout/layout";
 import { trpc } from "../utils/trpc";
+import MessagesPageEngine from "../components/messagesPage/messagesPageEngine";
 
 const Messages: NextPage = () => {
   const dbTest = trpc.updateAccount.getOne.useQuery();
@@ -25,7 +25,7 @@ const Messages: NextPage = () => {
           name: {dbTest.data ? dbTest.data.name : "error "}
         </p> */}
 
-        <MessagesDashboard />
+        <MessagesPageEngine />
       </div>
     </>
   );
