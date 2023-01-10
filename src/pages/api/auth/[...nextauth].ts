@@ -7,6 +7,7 @@ import GoogleProvider from "next-auth/providers/google";
 
 export const authOptions: NextAuthOptions = {
   // Include user.id on session
+  debug: true,
   callbacks: {
     session({ session, user }) {
       if (session.user) {
