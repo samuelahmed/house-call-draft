@@ -7,6 +7,10 @@ import Credentials from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
 import { loginSchema } from "../../../validation/auth";
 
+// WARNING 
+// DO NOT USE FOR PRODUCTION OR COLLECT ANY SENSTIVE INFORMATION UNTIL EMAIL HASH PROCESS IS REVIEWED
+// WARNING
+
 
 export const authOptions: NextAuthOptions = {
   
