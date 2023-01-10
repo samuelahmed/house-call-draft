@@ -1,13 +1,11 @@
 import NextAuth, { type NextAuthOptions } from "next-auth";
-// Prisma adapter for NextAuth, optional and can be removed
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { env } from "../../../env/server.mjs";
 import { prisma } from "../../../server/db/client";
 import GoogleProvider from "next-auth/providers/google";
+import CredentialsProvider from "next-auth/providers/credentials";
 
 export const authOptions: NextAuthOptions = {
-  // Include user.id on session
-  // debug: true,
   callbacks: {
     session({ session, user }) {
       if (session.user) {
@@ -15,40 +13,25 @@ export const authOptions: NextAuthOptions = {
       }
       return session;
     },
-
-    // signIn() {
-    //   return true;
-    // }
-
-    
   },
-  // Configure one or more authentication providers
   adapter: PrismaAdapter(prisma),
   providers: [
-    // DiscordProvider({
-    //   clientId: env.DISCORD_CLIENT_ID,
-    //   clientSecret: env.DISCORD_CLIENT_SECRET,
-    // }),
+    CredentialsProvider({
+      type: "credentials",
+      credentials: {
+        username: { label: "Username", type: "text ", placeholder: "jsmith" },
+        password: { label: "Password", type: "password" },
+      },
+
+      authorize(credentials, req) {
+        throw new Error("Not implemented");
+      },
+    }),
     GoogleProvider({
       clientId: env.GOOGLE_CLIENT_ID,
       clientSecret: env.GOOGLE_CLIENT_SECRET,
-      // authorization: {
-      //   params: {
-      //     prompt: "consent",
-      //     access_type: "offline",
-      //     response_type: "code"
-      //   }
-      // }
-
     }),
-    // ...add more providers here
   ],
-  // secret: process.env.JWT_SECRET,
-  session: {
-    maxAge: 60 * 60 * 24 * 1, // 1 day
-    updateAge: 60 * 60 * 12, // 12 hours
-  },
-
 };
 
 export default NextAuth(authOptions);
