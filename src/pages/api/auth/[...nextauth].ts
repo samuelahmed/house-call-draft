@@ -3,9 +3,13 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { env } from "../../../env/server.mjs";
 import { prisma } from "../../../server/db/client";
 import GoogleProvider from "next-auth/providers/google";
-import CredentialsProvider from "next-auth/providers/credentials";
+import Credentials from "next-auth/providers/credentials";
+import bcrypt from "bcrypt";
+import { loginSchema } from "../../../validation/auth";
+
 
 export const authOptions: NextAuthOptions = {
+  
   callbacks: {
     session({ session, user }) {
       if (session.user) {
@@ -13,19 +17,60 @@ export const authOptions: NextAuthOptions = {
       }
       return session;
     },
+    jwt: async ({ token, user }) => {
+      if (user) {
+        token.id = user.id;
+        token.email = user.email;
+      }
+  
+      return token;
+    },
   },
+
   adapter: PrismaAdapter(prisma),
+  pages: {
+    signIn: "/login",
+    newUser: "/register",
+    error: "/login",
+  },
+  
   providers: [
-    CredentialsProvider({
-      type: "credentials",
+    Credentials({
+      name: "credentials",
       credentials: {
-        username: { label: "Username", type: "text ", placeholder: "jsmith" },
+        email: {
+          label: "Email",
+          type: "email",
+          placeholder: "jsmith@gmail.com",
+        },
         password: { label: "Password", type: "password" },
       },
-      authorize(credentials, req) {
-        //currently routes to: http://localhost:3000/api/auth/error?error=Not%20implemented%2C%20meow upon credential login attempt
-        throw new Error("Not implemented, meow.");
+      authorize: async (credentials) => {
+        const cred = await loginSchema.parseAsync(credentials);
+
+        const user = await prisma.user.findFirst({
+          where: { email: cred.email },
+        });
+
+        if (!user) {
+          return null;
         }
+
+        const isValidPassword = bcrypt.compareSync(
+          cred.password,
+          user.password
+        );
+
+        if (!isValidPassword) {
+          return null;
+        }
+
+        return {
+          id: user.id,
+          email: user.email,
+          username: user.username,
+        };
+      },
     }),
     GoogleProvider({
       clientId: env.GOOGLE_CLIENT_ID,
