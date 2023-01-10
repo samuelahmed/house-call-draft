@@ -29,7 +29,8 @@ export const authOptions: NextAuthOptions = {
     }),
     // ...add more providers here
   ],
-  secret: process.env.JWT_SECRET
+  secret: process.env.JWT_SECRET,
+  debug: true,
 };
 
 export default NextAuth(authOptions);
