@@ -1,17 +1,16 @@
-import { useState } from "react";
-import Header from "./header";
-import SideNav from "./sideNav";
+import React from "react";
 
-const Layout = () => {
-  const [showNav, setShowNav] = useState(false);
+type LayoutProps = {
+  children: React.ReactNode;
+};
 
+const Layout = ({ children }: LayoutProps) => {
   return (
-    <>
-      <Header showNav={showNav} setShowNav={setShowNav} />
-      <div className={`${showNav ? "" : "hidden"}`}>
-        <SideNav />
-      </div>
-    </>
+    <div className="min-h-screen">
+      <main className="w-12/12 mx-auto flex flex-col p-2 md:w-8/12 md:p-4 xl:w-10/12">
+        {children}
+      </main>
+    </div>
   );
 };
 

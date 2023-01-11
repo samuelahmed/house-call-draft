@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import Layout from "../components/layout/layout";
+import Layout from "../components/layout/navLayout";
 import MessagesPageEngine from "../components/messagesPage/messagesPageEngine";
 
 const Messages: NextPage = () => {

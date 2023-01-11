@@ -1,5 +1,5 @@
 import { type NextPage } from "next";
-import Layout from "../components/layout/layout";
+import Layout from "../components/layout/navLayout";
 import Head from "next/head";
 import TabsEngine from "../components/caregiverDashboard/tabsEngine";
 

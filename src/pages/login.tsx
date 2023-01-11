@@ -2,7 +2,7 @@ import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import { getServerAuthSession } from "../server/common/get-server-auth-session";
 import LoginForm from "../components/form/LoginForm";
-import Layout from "../components/layout/authLayout";
+import Layout from "../components/layout/Layout";
 
 
 const Login: NextPage = () => {
@@ -35,7 +35,9 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     };
   }
 
-  return { props: {} };
+  return { 
+    props: { message: `Next.js is awesome` }, // will be passed to the page component as props
+  }
 };
 
 export default Login;

@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import Layout from "../components/layout/layout";
+import Layout from "../components/layout/navLayout";
 import { useState } from "react";
 import ContactUs from "../components/helpPage/contactUs";
 import SupportDocumentation from "../components/helpPage/supportDocumentation";

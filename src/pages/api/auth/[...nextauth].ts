@@ -15,12 +15,12 @@ import { loginSchema } from "../../../validation/auth";
 export const authOptions: NextAuthOptions = {
   
   callbacks: {
-    session({ session, user }) {
-      if (session.user) {
-        session.user.id = user.id;
-      }
-      return session;
-    },
+    // session({ session, user }) {
+    //   if (session.user) {
+    //     session.user.id = user.id;
+    //   }
+    //   return session;
+    // },
     jwt: async ({ token, user }) => {
       if (user) {
         token.id = user.id;
@@ -29,8 +29,15 @@ export const authOptions: NextAuthOptions = {
   
       return token;
     },
-  },
+    session({ session, token }) {
+      if (token && session.user) {
+        session.user.id = token.id as string;
+      }
 
+      return session;
+    },
+  },
+  secret: env.NEXTAUTH_SECRET,
   adapter: PrismaAdapter(prisma),
   pages: {
     signIn: "/login",
