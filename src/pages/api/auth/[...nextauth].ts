@@ -39,7 +39,7 @@ export const authOptions: NextAuthOptions = {
     },
   },
   secret: env.NEXTAUTH_SECRET,
-  // adapter: PrismaAdapter(prisma),
+  adapter: PrismaAdapter(prisma),
   // pages: {
   //   signIn: "/login",
   //   newUser: "/register",
@@ -81,7 +81,7 @@ export const authOptions: NextAuthOptions = {
           id: user.id,
           email: user.email,
           username: user.username,
-        };
+        }
       },
     }),
     GoogleProvider({
