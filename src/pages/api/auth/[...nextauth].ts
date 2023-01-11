@@ -45,7 +45,7 @@ export const authOptions: NextAuthOptions = {
   //   newUser: "/register",
   //   error: "/login",
   // },
-  
+  session: { strategy: "jwt" },
   providers: [
     Credentials({
       name: "credentials",
