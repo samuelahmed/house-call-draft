@@ -39,12 +39,12 @@ export const authOptions: NextAuthOptions = {
     },
   },
   secret: env.NEXTAUTH_SECRET,
-  adapter: PrismaAdapter(prisma),
-  pages: {
-    signIn: "/login",
-    newUser: "/register",
-    error: "/login",
-  },
+  // adapter: PrismaAdapter(prisma),
+  // pages: {
+  //   signIn: "/login",
+  //   newUser: "/register",
+  //   error: "/login",
+  // },
   
   providers: [
     Credentials({

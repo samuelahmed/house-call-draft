@@ -2,6 +2,7 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { Navbar, Avatar } from "flowbite-react";
 import { Bars3CenterLeftIcon } from "@heroicons/react/24/solid";
 import ThemeManager from "./themeManager";
+import Link from "next/link";
 
 const Header = ({
   showNav,
@@ -54,6 +55,15 @@ const AuthShowcase: React.FC = () => {
       >
         {sessionData ? "Sign out" : "Sign in"}
       </button>
+
+      <Link 
+      className={sessionData ? "hidden" : "visible"}
+
+      href={"/register"}>
+            Register
+       </Link>
+
+
     </div>
   );
 };
