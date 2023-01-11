@@ -5,7 +5,7 @@ import { prisma } from "../../../server/db/client";
 
 import GoogleProvider from "next-auth/providers/google";
 import Credentials from "next-auth/providers/credentials";
-import bcrypt from "bcrypt";
+import bcryptjs from "bcryptjs";
 import { loginSchema } from "@/validation/auth";
 
 // WARNING 
@@ -14,6 +14,7 @@ import { loginSchema } from "@/validation/auth";
 
 
 export const authOptions: NextAuthOptions = {
+
   
   callbacks: {
     // session({ session, user }) {
@@ -68,7 +69,7 @@ export const authOptions: NextAuthOptions = {
           return null;
         }
 
-        const isValidPassword = bcrypt.compareSync(
+        const isValidPassword = bcryptjs.compareSync(
           cred.password,
           user.password
         );
