@@ -12,8 +12,10 @@ import { loginSchema } from "@/validation/auth";
 // DO NOT USE FOR PRODUCTION OR COLLECT ANY SENSTIVE INFORMATION UNTIL EMAIL HASH PROCESS IS REVIEWED
 // WARNING
 
+import bcrypt from 'bcryptjs';
 
 export const authOptions: NextAuthOptions = {
+
 
   
   callbacks: {
@@ -69,7 +71,7 @@ export const authOptions: NextAuthOptions = {
           return null;
         }
 
-        const isValidPassword = bcryptjs.compareSync(
+        const isValidPassword = bcrypt.compareSync(
           cred.password,
           user.password
         );
