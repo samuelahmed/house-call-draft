@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { trpc } from "../../utils/trpc";
 
+//note due to hashing password update will need its own process
+
 const AccountEditModal = () => {
   const [showModal, setShowModal] = useState(false);
   const dbTest = trpc.updateAccount.getOne.useQuery();
