@@ -29,8 +29,8 @@
  ┃ ┃ ┣ 📜contactUs.tsx
  ┃ ┃ ┗ 📜supportDocumentation.tsx
  ┃ ┣ 📂layout
+ ┃ ┃ ┣ 📜authLayout.tsx
  ┃ ┃ ┣ 📜header.tsx
- ┃ ┃ ┣ 📜layout.tsx
  ┃ ┃ ┣ 📜navLayout.tsx
  ┃ ┃ ┣ 📜sideNav.tsx
  ┃ ┃ ┗ 📜themeManager.tsx
