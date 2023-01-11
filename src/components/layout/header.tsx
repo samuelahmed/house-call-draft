@@ -45,6 +45,7 @@ export default Header;
 
 const AuthShowcase: React.FC = () => {
   const { data: sessionData } = useSession();
+  console.log(sessionData)
   return (
     <div className="flex items-center">
       <button

@@ -20,22 +20,22 @@ const Register: NextPage = () => {
   );
 };
 
-// export const getServerSideProps: GetServerSideProps = async (context) => {
-//   const session = await getServerAuthSession({
-//     req: context.req,
-//     res: context.res,
-//   });
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const session = await getServerAuthSession({
+    req: context.req,
+    res: context.res,
+  });
 
-//   if (session) {
-//     return {
-//       redirect: {
-//         destination: "/",
-//         permanent: false,
-//       },
-//     };
-//   }
+  if (session) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
 
-//   return { props: {} };
-// };
+  return { props: {} };
+};
 
 export default Register;

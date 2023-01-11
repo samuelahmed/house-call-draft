@@ -9,11 +9,12 @@ import AccountEditModal from "../components/accountPage/accountEditModal";
 
 const Account: NextPage = () => {
   const dbTest = trpc.updateAccount.getOne.useQuery();
-  const { data: sessionData } = useSession();
+  const { data: session } = useSession();
+  console.log(session)
 
   //Any issue with wrapping all return in a big if{}else{}?
   //Note: Putting else if (sessionData) causes error with Account: function.
-  if (!sessionData) {
+  if (!session) {
     return (
       <>
         <Head>
@@ -42,7 +43,7 @@ const Account: NextPage = () => {
           <div className="w-11/12 grid-rows-1 rounded bg-gray-100 dark:bg-gray-900">
             <Image
               className="ml-20 mt-20 rounded"
-              src={(sessionData.user && sessionData.user?.image) || ""}
+              src={(session.user && session.user?.image) || ""}
               alt="meow"
               width={200}
               height={200}
@@ -50,11 +51,11 @@ const Account: NextPage = () => {
             {/* NOTE: DO I WANT TO USE SESSIONDATA AND DBTEST OR ONLY ONE OF THEM? */}
             <div className="grid grid-cols-6 gap-6 py-10">
               <div className="col-span-4 col-start-2">
-                Name: {(sessionData.user && sessionData.user?.name) || "error"}
+                Name: {(session.user && session.user?.name) || "error"}
               </div>
               <div className="col-span-4 col-start-2">
                 Email:
-                {(sessionData.user && sessionData.user?.email) || "error"}
+                {(session.user && session.user?.email) || "error"}
               </div>
               <div className="col-span-4 col-start-2">
                 Address: {dbTest.data ? dbTest.data.address : "error"}
