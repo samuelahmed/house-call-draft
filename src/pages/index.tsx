@@ -22,6 +22,13 @@ const Home: NextPage = () => {
               Care in the comfort of your home
             </p>
           </div>
+
+          <Link href={"/login"} className="rounded border py-1 px-4">
+                Login
+              </Link>
+              <Link href={"/register"} className="rounded border py-1 px-4">
+                Register
+              </Link>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
             <Link
               className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
