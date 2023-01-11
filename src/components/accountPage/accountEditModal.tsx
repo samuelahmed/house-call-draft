@@ -11,6 +11,7 @@ const AccountEditModal = () => {
     name: "",
     email: "",
     address: "",
+    password: "",
   });
 
   const [selectedRole, setSelectedRole] = useState(inputs.role);
@@ -32,6 +33,7 @@ const AccountEditModal = () => {
         name: dbTest.data.name || "",
         email: dbTest.data.email || "",
         address: dbTest.data.address || "",
+        password: dbTest.data.password || "",
       });
     }
   }, [dbTest.data]);
