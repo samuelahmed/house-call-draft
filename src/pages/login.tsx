@@ -2,7 +2,7 @@ import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import { getServerAuthSession } from "@/server/common/get-server-auth-session";
 import LoginForm from "../components/form/LoginForm";
-import Layout from "../components/layout/layout";
+import Layout from "../components/layout/authLayout";
 
 const Login: NextPage = () => {
   return (
