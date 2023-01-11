@@ -22,12 +22,16 @@
  ┃ ┃ ┣ 📜scheduledSessionsTab.tsx
  ┃ ┃ ┣ 📜searchEngine.tsx
  ┃ ┃ ┗ 📜tabsEngine.tsx
+ ┃ ┣ 📂form
+ ┃ ┃ ┣ 📜LoginForm.tsx
+ ┃ ┃ ┗ 📜RegisterForm.tsx
  ┃ ┣ 📂helpPage
  ┃ ┃ ┣ 📜contactUs.tsx
  ┃ ┃ ┗ 📜supportDocumentation.tsx
  ┃ ┣ 📂layout
  ┃ ┃ ┣ 📜header.tsx
  ┃ ┃ ┣ 📜layout.tsx
+ ┃ ┃ ┣ 📜navLayout.tsx
  ┃ ┃ ┣ 📜sideNav.tsx
  ┃ ┃ ┗ 📜themeManager.tsx
  ┃ ┗ 📂messagesPage
@@ -54,7 +58,9 @@
  ┃ ┣ 📜caregiver.tsx
  ┃ ┣ 📜help.tsx
  ┃ ┣ 📜index.tsx
- ┃ ┗ 📜messages.tsx
+ ┃ ┣ 📜login.tsx
+ ┃ ┣ 📜messages.tsx
+ ┃ ┗ 📜register.tsx
 
  ┣ 📂server
  ┃ ┣ 📂common
@@ -65,6 +71,7 @@
  ┃ ┃ ┣ 📂router
  ┃ ┃ ┃ ┣ 📜_app.ts
  ┃ ┃ ┃ ┣ 📜auth.ts
+ ┃ ┃ ┃ ┣ 📜protected.ts
  ┃ ┃ ┃ ┗ 📜updateAccount.ts
  ┃ ┃ ┣ 📜context.ts
  ┃ ┃ ┗ 📜trpc.ts
@@ -75,7 +82,10 @@
  ┣ 📂types
  ┃ ┗ 📜next-auth.d.ts
 
- ┗ 📂utils
+ ┣ 📂utils
  ┃ ┗ 📜trpc.ts
+ 
+ ┗ 📂validation
+ ┃ ┗ 📜auth.ts
 
  ```
