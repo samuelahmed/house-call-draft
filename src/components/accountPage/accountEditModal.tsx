@@ -10,7 +10,7 @@ const AccountEditModal = () => {
   const roles = ["Caregiver", "Patient", "Caregiver & Patient"];
   const [inputs, setInputs] = useState({
     role: "Caregiver" || "Patient" || "Caregiver & Patient",
-    name: "",
+    username: "",
     email: "",
     address: "",
     password: "",
@@ -32,7 +32,7 @@ const AccountEditModal = () => {
     if (dbTest.data) {
       setInputs({
         role: dbTest.data.role || "",
-        name: dbTest.data.name || "",
+        username: dbTest.data.username || "",
         email: dbTest.data.email || "",
         address: dbTest.data.address || "",
         password: dbTest.data.password || "",
@@ -60,11 +60,11 @@ const AccountEditModal = () => {
                       <div className="mt-2 flex flex-row items-center px-2 text-gray-900 dark:text-white">
                         <p className="mr-2 w-28 text-lg"> Name </p>
                         <input
-                          value={inputs.name}
+                          value={inputs.username}
                           onChange={(e) =>
                             setInputs((prev) => ({
                               ...prev,
-                              name: e.target.value,
+                              username: e.target.value,
                             }))
                           }
                           type="text"
