@@ -5,14 +5,14 @@ import { prisma } from "../../../server/db/client";
 
 import GoogleProvider from "next-auth/providers/google";
 import Credentials from "next-auth/providers/credentials";
-import bcryptjs from "bcryptjs";
-import { loginSchema } from "@/validation/auth";
+// import bcryptjs from "bcryptjs";
+// import { loginSchema } from "@/validation/auth";
 
 // WARNING 
 // DO NOT USE FOR PRODUCTION OR COLLECT ANY SENSTIVE INFORMATION UNTIL EMAIL HASH PROCESS IS REVIEWED
 // WARNING
 
-import bcrypt from 'bcryptjs';
+// import bcrypt from 'bcryptjs';
 
 export const authOptions: NextAuthOptions = {
 
