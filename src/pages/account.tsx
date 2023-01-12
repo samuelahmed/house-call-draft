@@ -10,7 +10,7 @@ import AccountEditModal from "../components/accountPage/accountEditModal";
 const Account: NextPage = () => {
   const { data, isLoading } = trpc.updateAccount.getOne.useQuery();
   const session = useSession();
-  // console.log(session);
+  console.log(session);
 
   //Any issue with wrapping all return in a big if{}else{}?
   //Note: Putting else if (sessionData) causes error with Account: function.
