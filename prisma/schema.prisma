@@ -4,13 +4,13 @@
 //added   previewFeatures = ["referentialIntegrity"] to see if it fix bug in google signin.
 
 generator client {
-  provider        = "prisma-client-js"
-  // previewFeatures = ["referentialIntegrity"]
+  provider = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
 }
 
 datasource db {
-  provider             = "mysql"
-  url                  = env("DATABASE_URL")
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
   relationMode = "prisma"
 }
 
@@ -48,7 +48,6 @@ model Session {
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
-  
 }
 
 model User {
@@ -59,11 +58,11 @@ model User {
   image         String?
   role          String?
   address       String?
-    password      String?
+  password      String?
   username      String?   @unique
 
-  accounts      Account[]
-  sessions      Session[]
+  accounts Account[]
+  sessions Session[]
 }
 
 model VerificationToken {

@@ -2,73 +2,86 @@ import NextAuth, { type NextAuthOptions } from "next-auth";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { env } from "../../../env/server.mjs";
 import { prisma } from "../../../server/db/client";
-import GoogleProvider from "next-auth/providers/google";
-import CredentialsProvider from "next-auth/providers/credentials";
-// import NextAuth from "next-auth";
 
-// export default NextAuth({
-  export const authOptions: NextAuthOptions = {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  adapter: PrismaAdapter(prisma),
-  session: {
-    strategy: "jwt",
+import GoogleProvider from "next-auth/providers/google";
+import Credentials from "next-auth/providers/credentials";
+import bcrypt from "bcrypt";
+import { loginSchema } from "@/validation/auth";
+
+// WARNING 
+// DO NOT USE FOR PRODUCTION OR COLLECT ANY SENSTIVE INFORMATION UNTIL EMAIL HASH PROCESS IS REVIEWED
+// WARNING
+
+
+export const authOptions: NextAuthOptions = {
+  
+  callbacks: {
+    // session({ session, user }) {
+    //   if (session.user) {
+    //     session.user.id = user.id;
+    //   }
+    //   return session;
+    // },
+    jwt: async ({ token, user }) => {
+      if (user) {
+        token.id = user.id;
+        token.email = user.email;
+      }
+  
+      return token;
+    },
+    session({ session, token }) {
+      if (token && session.user) {
+        session.user.id = token.id as string;
+      }
+
+      return session;
+    },
   },
   secret: env.NEXTAUTH_SECRET,
+  adapter: PrismaAdapter(prisma),
   // pages: {
-  //   signIn: "/auth/login",
-  //   signOut: "/auth/logout",
-  //   error: "/auth/error",
-  //   verifyRequest: "/auth/verify",
+  //   signIn: "/login",
+  //   newUser: "/register",
+  //   error: "/login",
   // },
+  session: { strategy: "jwt" },
   providers: [
-    CredentialsProvider({
-      id: "credentials",
-      name: "HouseCall",
-      type: "credentials",
+    Credentials({
+      name: "credentials",
       credentials: {
         email: {
-          label: "Email Address",
+          label: "Email",
           type: "email",
-          placeholder: "meowcat@gmail.com",
+          placeholder: "jsmith@gmail.com",
         },
-        password: {
-          label: "Password",
-          type: "password",
-          placeholder: "secureKitty.3x14",
-        },
+        password: { label: "Password", type: "password" },
       },
-      async authorize(credentials) {
-        if (!credentials) {
-          console.error(`Meow, no credentials`);
-          throw new Error();
-        }
-        const user = await prisma.user.findUnique({
-          where: {
-            email: credentials.email.toLowerCase(),
-          },
-          select: {
-            role: true,
-            id: true,
-            username: true,
-            name: true,
-            email: true,
-            password: true,
-          },
+      authorize: async (credentials) => {
+        const cred = await loginSchema.parseAsync(credentials);
+
+        const user = await prisma.user.findFirst({
+          where: { email: cred.email },
         });
+
         if (!user) {
-          throw new Error("Meow, no user");
+          return null;
         }
-        if (!user.password) {
-          throw new Error("Meow, no password");
+
+        const isValidPassword = bcrypt.compareSync(
+          cred.password,
+          user.password as string
+        );
+
+        if (!isValidPassword) {
+          return null;
         }
+
         return {
           id: user.id,
-          username: user.username,
           email: user.email,
-          name: user.name,
-          role: user.role,
-        };
+          username: user.username,
+        }
       },
     }),
     GoogleProvider({
