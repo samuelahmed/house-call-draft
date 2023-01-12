@@ -18,29 +18,28 @@ export const authOptions: NextAuthOptions = {
 
 
   
-  callbacks: {
+  // callbacks: {
     // session({ session, user }) {
     //   if (session.user) {
     //     session.user.id = user.id;
     //   }
     //   return session;
     // },
-    jwt: async ({ token, user }) => {
-      if (user) {
-        token.id = user.id;
-        token.email = user.email;
-      }
-  
-      return token;
-    },
-    session({ session, token }) {
-      if (token && session.user) {
-        session.user.id = token.id as string;
-      }
+    // jwt: async ({ token, user }) => {
+    //   if (user) {
+    //     token.id = user.id;
+    //     token.email = user.email;
+    //   }
+    //   return token;
+    // },
+    // session({ session, token }) {
+    //   if (token && session.user) {
+    //     session.user.id = token.id as string;
+    //   }
 
-      return session;
-    },
-  },
+    //   return session;
+    // },
+  // },
   secret: env.NEXTAUTH_SECRET,
   adapter: PrismaAdapter(prisma),
   // pages: {
