@@ -6,16 +6,15 @@ import { useSession } from "next-auth/react";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import AccountEditModal from "../components/accountPage/accountEditModal";
-import { decodeBase64 } from "bcryptjs";
 
 const Account: NextPage = () => {
-  const dbTest = trpc.updateAccount.getOne.useQuery();
-  const { data: session } = useSession();
-  console.log(session)
+  const { data, isLoading } = trpc.updateAccount.getOne.useQuery();
+  const session = useSession();
+  // console.log(session);
 
   //Any issue with wrapping all return in a big if{}else{}?
   //Note: Putting else if (sessionData) causes error with Account: function.
-  if (!session) {
+  if (session.status === "unauthenticated" || session.status === "loading") {
     return (
       <>
         <Head>
@@ -33,7 +32,7 @@ const Account: NextPage = () => {
         </div>
       </>
     );
-  } else {
+  } else if (session.status === "authenticated") {
     return (
       <>
         <Head>
@@ -44,29 +43,36 @@ const Account: NextPage = () => {
           <div className="w-11/12 grid-rows-1 rounded bg-gray-100 dark:bg-gray-900">
             <Image
               className="ml-20 mt-20 rounded"
-              src={(dbTest.data && dbTest.data?.image) || "/cat.jpg"}
-              //link alt as cat.jpg from public
+              src={(data && data?.image) || "/cat.jpg"}
               alt=""
-              // alt=""
-
-
               width={200}
               height={200}
             />
             {/* NOTE: DO I WANT TO USE SESSIONDATA AND DBTEST OR ONLY ONE OF THEM? */}
             <div className="grid grid-cols-6 gap-6 py-10">
               <div className="col-span-4 col-start-2">
-                Name: {(dbTest.data && dbTest.data?.username) || "error"}
+                Name:
+                {isLoading || (data && data?.username) || (
+                  <span className="text-red-600">Meow! No Name</span>
+                )}
               </div>
               <div className="col-span-4 col-start-2">
                 Email:
-                {(dbTest.data && dbTest.data?.email) || "error"}
+                {isLoading ||
+                  (data && data?.email) ||
+                  "Meow, something went very wrong"}
               </div>
               <div className="col-span-4 col-start-2">
-                Address: {dbTest.data ? dbTest.data.address : "error"}
+                Address:
+                {isLoading || (data && data?.address) || (
+                  <span className="text-red-600">Meow! No Address</span>
+                )}
               </div>
               <div className="col-span-4 col-start-2">
-                Role: {dbTest.data ? dbTest.data.role : "Loading..."}
+                Role:
+                {isLoading || (data && data?.role) || (
+                  <span className="text-red-600">Meow! No Role</span>
+                )}
               </div>
             </div>
             <div className="flex justify-center">
@@ -75,6 +81,12 @@ const Account: NextPage = () => {
           </div>
         </div>
       </>
+    );
+  } else {
+    return (
+      <div>
+        <p>Something went very wrong</p>
+      </div>
     );
   }
 };
