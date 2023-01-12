@@ -1,28 +1,56 @@
-import NextAuth, { type NextAuthOptions } from "next-auth";
+// import NextAuth, { type NextAuthOptions } from "next-auth";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { env } from "../../../env/server.mjs";
 import { prisma } from "../../../server/db/client";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials"
+import NextAuth from "next-auth"
 
-export const authOptions: NextAuthOptions = {
+
+export default NextAuth({
   secret: env.NEXTAUTH_SECRET,
   adapter: PrismaAdapter(prisma),
   session: { strategy: "jwt" },
   providers: [
     CredentialsProvider({
-      name: "Credentials",
+      id: "credentials",
+      name: "HouseCall",
+      type: "credentials",
       credentials: {
-        username: { label: "Username", type: "text", placeholder: "jsmith" },
-        password: { label: "Password", type: "password" },
+        email: { label: "Email Address", type: "email", placeholder: "meowcat@gmail.com" },
+        password: { label: "Password", type: "password", placeholder: "secureKitty.3x14" },
       },
-      async authorize(credentials, req) {
-        const user = { id: "1", name: "J Smith", email: "jsmith@example.com" };
-        if (user) {
-          return user;
-        } else {
-          return null;
+      async authorize(credentials) {
+        if (!credentials) {
+          console.error(`Meow, no credentials`);
+          throw new Error();
         }
+        const user = await prisma.user.findUnique({
+          where: {
+            email: credentials.email.toLowerCase(),
+          },
+          select: {
+            role: true,
+            id: true,
+            username: true,
+            name: true,
+            email: true,
+            password: true,
+          },
+        });
+        if (!user) {
+          throw new Error('Meow, no user');
+        }
+        if (!user.password) {
+          throw new Error('Meow, no password');
+        }
+        return {
+          id: user.id,
+          username: user.username,
+          email: user.email,
+          name: user.name,
+          role: user.role,
+        };
       },
     }),
     GoogleProvider({
@@ -30,6 +58,5 @@ export const authOptions: NextAuthOptions = {
       clientSecret: env.GOOGLE_CLIENT_SECRET,
     }),
   ],
-};
+});
 
-export default NextAuth(authOptions);
