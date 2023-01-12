@@ -1,6 +1,6 @@
 import { registerSchema } from "@/validation/auth";
 import { TRPCError } from "@trpc/server";
-import bcrypt from "bcrypt";
+import bcryptjs from "bcryptjs";
 
 const SALT_ROUNDS = 10;
 
@@ -23,8 +23,8 @@ export const authRouter = router({
         });
       }
 
-      const salt = bcrypt.genSaltSync(SALT_ROUNDS);
-      const hash = bcrypt.hashSync(password, salt);
+      const salt = bcryptjs.genSaltSync(SALT_ROUNDS);
+      const hash = bcryptjs.hashSync(password, salt);
 
       const result = await ctx.prisma.user.create({
         data: { username, email, password: hash },
