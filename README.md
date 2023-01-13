@@ -29,7 +29,7 @@
  ┃ ┃ ┣ 📜contactUs.tsx
  ┃ ┃ ┗ 📜supportDocumentation.tsx
  ┃ ┣ 📂layout
- ┃ ┃ ┣ 📜authLayout.tsx
+ ┃ ┃ ┣ 📜Layout.tsx
  ┃ ┃ ┣ 📜header.tsx
  ┃ ┃ ┣ 📜navLayout.tsx
  ┃ ┃ ┣ 📜sideNav.tsx
@@ -44,7 +44,7 @@
  ┃ ┣ 📜client.mjs
  ┃ ┣ 📜schema.mjs
  ┃ ┗ 📜server.mjs
-
+ 
  ┣ 📂pages
  ┃ ┣ 📂api
  ┃ ┃ ┣ 📂auth
@@ -56,6 +56,7 @@
  ┃ ┣ 📜_app.tsx
  ┃ ┣ 📜account.tsx
  ┃ ┣ 📜caregiver.tsx
+ ┃ ┣ 📜dashboard.tsx
  ┃ ┣ 📜help.tsx
  ┃ ┣ 📜index.tsx
  ┃ ┣ 📜login.tsx
@@ -71,6 +72,7 @@
  ┃ ┃ ┣ 📂router
  ┃ ┃ ┃ ┣ 📜_app.ts
  ┃ ┃ ┃ ┣ 📜auth.ts
+ ┃ ┃ ┃ ┣ 📜example.ts
  ┃ ┃ ┃ ┣ 📜protected.ts
  ┃ ┃ ┃ ┗ 📜updateAccount.ts
  ┃ ┃ ┣ 📜context.ts
@@ -84,7 +86,7 @@
 
  ┣ 📂utils
  ┃ ┗ 📜trpc.ts
- 
+
  ┗ 📂validation
  ┃ ┗ 📜auth.ts
 
