@@ -54,7 +54,7 @@ export const authOptions: NextAuthOptions = {
 
         const isValidPassword = bcrypt.compareSync(
           cred.password,
-          user.password,
+          user.password as string,
         );
 
         if (!isValidPassword) {
