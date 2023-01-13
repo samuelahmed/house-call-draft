@@ -1,33 +1,19 @@
 import NextAuth, { type NextAuthOptions } from "next-auth";
-import { PrismaAdapter } from "@next-auth/prisma-adapter";
+import Credentials from "next-auth/providers/credentials";
+import bcrypt from "bcrypt";
+
 import { env } from "../../../env/server.mjs";
 import { prisma } from "../../../server/db/client";
-
-import GoogleProvider from "next-auth/providers/google";
-import Credentials from "next-auth/providers/credentials";
-import bcryptjs from "bcryptjs";
 import { loginSchema } from "@/validation/auth";
 
-// WARNING 
-// DO NOT USE FOR PRODUCTION OR COLLECT ANY SENSTIVE INFORMATION UNTIL EMAIL HASH PROCESS IS REVIEWED
-// WARNING
-
-
 export const authOptions: NextAuthOptions = {
-  
   callbacks: {
-    // session({ session, user }) {
-    //   if (session.user) {
-    //     session.user.id = user.id;
-    //   }
-    //   return session;
-    // },
     jwt: async ({ token, user }) => {
       if (user) {
         token.id = user.id;
         token.email = user.email;
       }
-  
+
       return token;
     },
     session({ session, token }) {
@@ -39,13 +25,11 @@ export const authOptions: NextAuthOptions = {
     },
   },
   secret: env.NEXTAUTH_SECRET,
-  adapter: PrismaAdapter(prisma),
-  // pages: {
-  //   signIn: "/login",
-  //   newUser: "/register",
-  //   error: "/login",
-  // },
-  session: { strategy: "jwt" },
+  pages: {
+    signIn: "/login",
+    newUser: "/register",
+    error: "/login",
+  },
   providers: [
     Credentials({
       name: "credentials",
@@ -68,9 +52,9 @@ export const authOptions: NextAuthOptions = {
           return null;
         }
 
-        const isValidPassword = bcryptjs.compareSync(
+        const isValidPassword = bcrypt.compareSync(
           cred.password,
-          user.password as string
+          user.password,
         );
 
         if (!isValidPassword) {
@@ -81,13 +65,10 @@ export const authOptions: NextAuthOptions = {
           id: user.id,
           email: user.email,
           username: user.username,
-        }
+        };
       },
     }),
-    GoogleProvider({
-      clientId: env.GOOGLE_CLIENT_ID,
-      clientSecret: env.GOOGLE_CLIENT_SECRET,
-    }),
+    // ...add more providers here
   ],
 };
 
