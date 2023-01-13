@@ -23,8 +23,7 @@
       "@/utils/*": ["utils/*"],
       "@/validation/*": ["validation/*"]
     }
-
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs", "src/components/sidebar.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs"],
   "exclude": ["node_modules"]
 }

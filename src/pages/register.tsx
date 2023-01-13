@@ -1,7 +1,7 @@
 import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import { getServerAuthSession } from "../server/common/get-server-auth-session";
-import AuthLayout from "../components/layout/authLayout";
+import AuthLayout from "../components/layout/Layout";
 import RegisterForm from "../components/form/RegisterForm";
 
 const Register: NextPage = () => {
@@ -20,22 +20,22 @@ const Register: NextPage = () => {
   );
 };
 
-// export const getServerSideProps: GetServerSideProps = async (context) => {
-//   const session = await getServerAuthSession({
-//     req: context.req,
-//     res: context.res,
-//   });
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const session = await getServerAuthSession({
+    req: context.req,
+    res: context.res,
+  });
 
-//   if (session) {
-//     return {
-//       redirect: {
-//         destination: "/",
-//         permanent: false,
-//       },
-//     };
-//   }
+  if (session) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
 
-//   return { props: {} };
-// };
+  return { props: {} };
+};
 
 export default Register;
